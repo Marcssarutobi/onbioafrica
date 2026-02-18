@@ -44,7 +44,7 @@
                             <RouterLink to="/abouts">About us</RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="/events">Events</RouterLink>
+                            <RouterLink to="/events">Programm</RouterLink>
                         </li>
                         <li>
                             <a role="button">Sponsors</a>
