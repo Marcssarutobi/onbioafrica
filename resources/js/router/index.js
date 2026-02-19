@@ -27,6 +27,13 @@ const routes =[
             },
         ]
     },
+    {
+        path:'/admins',
+        component: ()=>import('../components/adminPages/layouts/contentWrapper.vue'),
+        children:[
+            
+        ]
+    }
 ]
 
 const router = createRouter({

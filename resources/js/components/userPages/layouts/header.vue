@@ -49,17 +49,14 @@
                         <li>
                             <a role="button">Sponsors</a>
                         </li>
-                        <li>
-                            <RouterLink to="/gallery">Gallery</RouterLink>
-                        </li>
-                        <!-- <li class="has-sub-menu relative">
-                            <a role="button">Team</a>
+                        <li class="has-sub-menu relative">
+                            <a role="button">Registration</a>
 
                             <ul class="et-header-submenu">
-                                <li><a href="team.html">Team Members</a></li>
-                                <li><a href="team-member-details.html">Team Details</a></li>
+                                <li><a href="team.html">Abstracts</a></li>
+                                <li><a href="team-member-details.html">Travel Grant</a></li>
                             </ul>
-                        </li> -->
+                        </li>
                         <li><RouterLink to="/contact">Contact</RouterLink></li>
                     </ul>
 
