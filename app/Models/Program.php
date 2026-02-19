@@ -17,6 +17,7 @@ class Program extends Model
         'session_type',
         'speaker_id',
         'location',
+        'photo',
         'isPublished',
     ];
 

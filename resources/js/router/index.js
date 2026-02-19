@@ -31,7 +31,10 @@ const routes =[
         path:'/admins',
         component: ()=>import('../components/adminPages/layouts/contentWrapper.vue'),
         children:[
-            
+            {
+                path:'',
+                component: ()=>import('../components/adminPages/pages/home.vue')
+            },
         ]
     }
 ]

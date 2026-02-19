@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('session_type');
             $table->foreignId('speaker_id')->nullable()->constrained('speakers')->onDelete('cascade');
             $table->string('location');
+            $table->string('photo')->nullable();
             $table->boolean('isPublished')->default(false);
             $table->timestamps();
         });

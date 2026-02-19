@@ -1,13 +1,16 @@
-<template lang="html">
-    <div>
-        <h1>contentWrapper.vue</h1>
+<template >
+
+    <headers/>
+    <sidebars/>
+    <div class="content-page">
+        <RouterView/>
     </div>
+
 </template>
-<script>
-export default {
-    
-}
+<script setup>
+
+    import headers from './headers.vue';
+    import sidebars from './sidebars.vue';
+
 </script>
-<style >
-    
-</style>
+<style></style>

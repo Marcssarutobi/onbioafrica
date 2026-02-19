@@ -17,6 +17,7 @@ Route::get('/{any}', function () {
     return view('welcome');
 })->where('any', '^(?!api/?)(?!admins/?).*$');
 
+// route to serve admin include api
 Route::get('/admins', function () {
     return view('admin');
 });
