@@ -13,10 +13,10 @@
                         <div class="card p-4">
                             <div class="auth-brand text-center mb-2">
                                 <a href="/" class="logo-dark" style="height: 50px !important;">
-                                    <img src="/assets/images/sticky-logo2.png" alt="dark logo" style="height: 50px !important;" />
+                                    <img src="/admin/assets/images/logo-black.png" alt="dark logo" style="height: 50px !important;" />
                                 </a>
                                 <a href="/" class="logo-light">
-                                    <img src="/assets/images/sticky-logo2.png" alt="logo" />
+                                    <img src="/admin/assets/images/logo.png" alt="logo" />
                                 </a>
                                 <h4 class="fw-bold text-dark mt-3">Ravi de vous revoir. 👋</h4>
                                 <p class="text-muted w-lg-75 mx-auto">Connectez-vous. Entrez votre adresse e-mail et votre mot de passe pour continuer.</p>
@@ -80,7 +80,7 @@
 
 import { onMounted,ref } from 'vue';
 import { useRouter } from 'vue-router';
-import {postData} from '../plugins/api'
+import {postData} from '../../plugins/api'
 
 const router = useRouter();
 const dataLogin = ref({
@@ -106,18 +106,18 @@ async function LoginForm() {
         isLoader.value = true
         await postData('/login',dataLogin.value).then(res=>{
             if (res.status === 200) {
-            isLoader.value = false
-            localStorage.setItem('token', res.data.token)
-            // Rediriger vers la route sauvegardée ou par défaut
-            const redirectUrl = localStorage.getItem('redirectAfterLogin');
-            if (redirectUrl) {
-                // Forcer une redirection complète du navigateur
-                window.location.href = redirectUrl;
-                localStorage.removeItem('redirectAfterLogin');
-            } else {
-                //router.push('/');
-                window.location.href = "/admins"
-            }
+                isLoader.value = false
+                localStorage.setItem('token', res.data.token)
+                // Rediriger vers la route sauvegardée ou par défaut
+                const redirectUrl = localStorage.getItem('redirectAfterLogin');
+                if (redirectUrl) {
+                    // Forcer une redirection complète du navigateur
+                    window.location.href = redirectUrl;
+                    localStorage.removeItem('redirectAfterLogin');
+                } else {
+                    router.push('/admins');
+                    
+                }
             }
         }).catch(error=>{
             if (error.response) {

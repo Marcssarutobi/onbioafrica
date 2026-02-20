@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import axiosInstance from "../components/plugins/axios";
 
 const routes =[
     {
@@ -30,11 +31,16 @@ const routes =[
     {
         path:'/admins',
         component: ()=>import('../components/adminPages/layouts/contentWrapper.vue'),
+        meta: { requiresAuth: true },
         children:[
             {
                 path:'',
                 component: ()=>import('../components/adminPages/pages/home.vue')
             },
+            {
+              path:'speaker',
+              component: ()=>import('../components/adminPages/pages/speaker.vue')
+            }
         ]
     },
     {

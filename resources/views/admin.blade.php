@@ -113,6 +113,8 @@
       <script src="{{asset('admin/assets/js/maps/world-merc.js')}}"></script>
       <script src="{{asset('admin/assets/js/maps/world.js')}}"></script>
 
+      
+
       <script src="{{asset('admin/assets/plugins/datatables/dataTables.min.js')}}"></script>
       <script src="{{asset('admin/assets/plugins/datatables/dataTables.bootstrap5.min.js')}}"></script>
       <script src="{{asset('admin/assets/plugins/datatables/dataTables.responsive.min.js')}}"></script>
@@ -122,6 +124,9 @@
 
       <!-- Custom table -->
       <script src="{{asset('admin/assets/js/pages/custom-table.js')}}"></script>
+
+      <!-- script for tinymce plugin -->
+      <script src="{{asset('admin/vendor/tinymce/tinymce.bundle.js')}}"></script>
 
       <!-- Dashboard js -->
       <script src="{{asset('admin/assets/js/pages/dashboard-ecommerce.js')}}"></script>

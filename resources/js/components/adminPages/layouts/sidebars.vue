@@ -80,9 +80,16 @@
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins' }">
                     <RouterLink to="/admins" class="side-nav-link">
                         <span class="menu-icon"><i class="fa-light fa-gauge"></i></span>
-                        <span class="menu-text" data-lang="dashboards">Tableau de bord</span>
+                        <span class="menu-text" data-lang="dashboards">Dashboard</span>
                     </RouterLink>
                 </li>
+
+                    <li class="side-nav-item" :class="{ active: $route.path === '/admins/speaker' }">
+                        <RouterLink to="/admins/speaker" class="side-nav-link">
+                            <span class="menu-icon"><i class="fa-light fa-microphone"></i></span>
+                            <span class="menu-text" data-lang="dashboards">Speaker</span>
+                        </RouterLink>
+                    </li>
                 
             </ul>
         </div>

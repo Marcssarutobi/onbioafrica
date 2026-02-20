@@ -33,11 +33,10 @@ class UserSeeder extends Seeder
         foreach ($users as $user) {
 
             DB::table('users')->insert([
-                'full_name' => $user['full_name'],
+                'fullname' => $user['full_name'],
                 'email' => $user['email'],
                 'password' => Hash::make($user['password']), // personnalisé
                 'role' => $user['role'],
-                'is_active' => true,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
