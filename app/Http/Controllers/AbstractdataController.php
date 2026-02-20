@@ -35,14 +35,14 @@ class AbstractdataController extends Controller
             'title_resume'   => 'required|string|max:255',
             'content_resume' => 'required|string',
             'status'         => 'nullable|string|in:pending,accepted,rejected',
-            'ispaid'         => 'nullable|boolean',
-            'isinvite'       => 'nullable|boolean',
+            'ispaid'         => 'nullable|string|in:pending,paid',
+            'isinvite'       => 'nullable|string|in:nosent,sent',
         ]);
 
         // Valeurs par défaut
         $validated['status'] = $validated['status'] ?? 'pending';
-        $validated['ispaid'] = $validated['ispaid'] ?? false;
-        $validated['isinvite'] = $validated['isinvite'] ?? false;
+        $validated['ispaid'] = $validated['ispaid'] ?? 'pending';
+        $validated['isinvite'] = $validated['isinvite'] ?? 'nosent';
 
         $abstract = Abstractdata::create($validated);
 

@@ -50,11 +50,11 @@
                             <a role="button">Sponsors</a>
                         </li>
                         <li class="has-sub-menu relative">
-                            <a role="button">Registration</a>
+                            <a role="button" style="cursor: pointer;">Registration</a>
 
                             <ul class="et-header-submenu">
-                                <li><a href="team.html">Abstracts</a></li>
-                                <li><a href="team-member-details.html">Travel Grant</a></li>
+                                <li><RouterLink to="/abstract">Abstracts</RouterLink></li>
+                                <li><RouterLink to="/">Travel Grant</RouterLink></li>
                             </ul>
                         </li>
                         <li><RouterLink to="/contact">Contact</RouterLink></li>

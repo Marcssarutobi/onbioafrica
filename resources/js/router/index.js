@@ -19,6 +19,10 @@ const routes =[
                 component: ()=>import('../components/userPages/pages/events.vue')
             },
             {
+                path:'abstract',
+                component: ()=>import('../components/userPages/pages/abstract.vue')
+            },
+            {
                 path:'gallery',
                 component: ()=>import('../components/userPages/pages/gallery.vue')
             },
@@ -49,6 +53,10 @@ const routes =[
               path:'guest',
               component: ()=>import('../components/adminPages/pages/guest.vue')
             },
+            {
+              path:'abstract',
+              component: ()=>import('../components/adminPages/pages/abstract.vue')
+            }
         ]
     },
     {
