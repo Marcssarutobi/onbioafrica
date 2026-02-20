@@ -44,7 +44,11 @@ const routes =[
             {
               path:'program',
               component: ()=>import('../components/adminPages/pages/program.vue')
-            }
+            },
+            {
+              path:'guest',
+              component: ()=>import('../components/adminPages/pages/guest.vue')
+            },
         ]
     },
     {

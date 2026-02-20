@@ -97,6 +97,15 @@
                         <span class="menu-text" data-lang="dashboards">Program</span>
                     </RouterLink>
                 </li>
+
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/guest' }">
+                    <RouterLink to="/admins/guest" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-users"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Guest</span>
+                    </RouterLink>
+                </li>
+
+                
                 
             </ul>
         </div>

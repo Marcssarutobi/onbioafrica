@@ -285,40 +285,44 @@
             msgInput.value[field] = `Please enter ${field.replace('_', ' ')}`;
         }
 
-        const formData = new FormData()
+        const allEmpty = Object.values(isEmpty.value).every(value => value === false)
 
-        for (const field in data.value) {
-            if (field === 'photo') continue
-            formData.append(field, data.value[field])
-        }
+        if (allEmpty) {
+            const formData = new FormData()
 
-        if (data.value.photo) {
-            formData.append('photo', data.value.photo)
-        }
-
-        await postProgram(formData).then(res => {
-            isLoader.value = false
             for (const field in data.value) {
-                data.value[field] = ''
+                if (field === 'photo') continue
+                formData.append(field, data.value[field])
             }
-            Swal.fire({
-                icon: 'success',
-                title: 'Program created successfully',
-                showConfirmButton: false,
-                timer: 1500
-            });
-            AllProgramFunction()
-            addmodal.value.hide()
-        }).catch(err => {
-            console.error(err)
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'An error occurred while adding the program.',
+
+            if (data.value.photo) {
+                formData.append('photo', data.value.photo)
+            }
+
+            await postProgram(formData).then(res => {
+                isLoader.value = false
+                for (const field in data.value) {
+                    data.value[field] = ''
+                }
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Program created successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                AllProgramFunction()
+                addmodal.value.hide()
+            }).catch(err => {
+                console.error(err)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while adding the program.',
+                })
+            }).finally(() => {
+                isLoader.value = false
             })
-        }).finally(() => {
-            isLoader.value = false
-        })
+        }
     }
 
     window.getProgramFunction = async (id)=>{

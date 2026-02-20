@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('phone');
             $table->string('email')->unique()->nullable();
-            $table->string('reference');
+            $table->string('reference')->nullable()->unique();
             $table->boolean('prensence')->default(false);
             $table->timestamps();
         });

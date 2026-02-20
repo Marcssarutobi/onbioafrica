@@ -283,43 +283,47 @@ async function AddSpeakerFunction(){
             isEmpty.value[field] = !data.value[field]
             msgInput.value[field] = `Please enter ${field.replace('_', ' ')}`;
         }
-        
-        const formData = new FormData()
 
-        for (const field in data.value) {
-            if (field === 'photo') continue
-            formData.append(field, data.value[field])
-        }
+        const allEmpty = Object.values(isEmpty.value).every(value => value === false)
 
-        if (data.value.photo) {
-            formData.append('photo', data.value.photo)
-        }
+        if (allEmpty) {
+            
+            const formData = new FormData()
 
-        await postSpeaker(formData).then(res=>{
-            isLoader.value = false
             for (const field in data.value) {
-                data.value[field] = ''
+                if (field === 'photo') continue
+                formData.append(field, data.value[field])
             }
-            Swal.fire({
-                icon: 'success',
-                title: 'Speaker created successfully',
-                showConfirmButton: false,
-                timer: 1500
-            });
-            addmodal.hide();
-            AllSpeakerFunction()
-        }).catch(error => {
-            console.error('There was an error!', error);
-            Swal.fire({
-                icon: 'error',
-                title: 'An error occurred while adding the portfolio.',
-                text: error.message || 'Please try again later.'
-            });
-        }).finally(() => {
-            isLoader.value = false;
-        });
 
+            if (data.value.photo) {
+                formData.append('photo', data.value.photo)
+            }
 
+            await postSpeaker(formData).then(res=>{
+                isLoader.value = false
+                for (const field in data.value) {
+                    data.value[field] = ''
+                }
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Speaker created successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                addmodal.hide();
+                AllSpeakerFunction()
+            }).catch(error => {
+                console.error('There was an error!', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'An error occurred while adding the portfolio.',
+                    text: error.message || 'Please try again later.'
+                });
+            }).finally(() => {
+                isLoader.value = false;
+            });
+
+        }
 
     } catch (error) {
         

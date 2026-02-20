@@ -34,12 +34,14 @@ class GuestController extends Controller
             'prensence' => 'nullable|boolean',
         ]);
 
-        // Génération auto d'une référence si non fournie
-        if (empty($validated['reference'])) {
-            $validated['reference'] = 'GUEST-' . strtoupper(uniqid());
-        }
-
+         // 🔹 Création du guest sans référence si elle n'est pas fournie
         $guest = Guest::create($validated);
+
+        // 🔹 Génération automatique de la référence si vide
+        if (empty($validated['reference'])) {
+            $guest->reference = 'OBA-' . date('Y') . '-' . str_pad($guest->id, 4, '0', STR_PAD_LEFT);
+            $guest->save();
+        }
 
         return response()->json([
             'success' => true,
