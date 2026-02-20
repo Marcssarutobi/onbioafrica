@@ -36,7 +36,7 @@ class ProgramController extends Controller
             'speaker_id'    => 'nullable|exists:speakers,id',
             'location'      => 'nullable|string|max:255',
             'isPublished'   => 'nullable|boolean',
-            'photo'         => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'photo'         => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10048',
         ]);
 
         // Gestion de la photo
@@ -88,6 +88,20 @@ class ProgramController extends Controller
             ], 404);
         }
 
+        // ✅ Normaliser le boolean
+        $request->merge([
+            'isPublished' => filter_var(
+                $request->isPublished,
+                FILTER_VALIDATE_BOOLEAN,
+                FILTER_NULL_ON_FAILURE
+            )
+        ]);
+
+        // ✅ Si photo ≠ fichier → on l’enlève avant validation
+        if (!$request->hasFile('photo')) {
+            $request->request->remove('photo');
+        }
+
         $validated = $request->validate([
             'date'          => 'sometimes|required|date',
             'start_time'    => 'sometimes|required|date_format:H:i',
@@ -97,16 +111,19 @@ class ProgramController extends Controller
             'speaker_id'    => 'nullable|exists:speakers,id',
             'location'      => 'nullable|string|max:255',
             'isPublished'   => 'nullable|boolean',
-            'photo'         => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'photo'         => 'nullable|file|image|mimes:jpeg,png,jpg,gif|max:10048',
         ]);
 
-        // Gestion de la photo (supprime l'ancienne si nouvelle)
-        if ($request->hasFile('photo')) {
+        // ✅ Gérer la photo uniquement si nouvelle
+        if ($request->hasFile('photo') && $request->file('photo')->isValid()) {
+
             if ($program->photo) {
                 Storage::disk('public')->delete($program->photo);
             }
-            $path = $request->file('photo')->store('programs/photos', 'public');
-            $validated['photo'] = $path;
+
+            $validated['photo'] = $request
+                ->file('photo')
+                ->store('programs/photos', 'public');
         }
 
         $program->update($validated);
@@ -115,7 +132,7 @@ class ProgramController extends Controller
             'success' => true,
             'message' => 'Program mis à jour avec succès',
             'data' => $program->load('speaker')
-        ], 200);
+        ]);
     }
 
      /**

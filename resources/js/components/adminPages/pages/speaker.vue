@@ -3,13 +3,13 @@
         
         <div class="page-title-head d-flex align-items-center">
             <div class="flex-grow-1">
-                <h4 class="page-main-title m-0">Speaker List</h4>
+                <h4 class="page-main-title m-0">List of speakers</h4>
             </div>
 
             <div class="text-end">
                 <ol class="breadcrumb m-0 py-0">
                     <li class="breadcrumb-item"><RouterLink to="/admins">Home</RouterLink></li>
-                    <li class="breadcrumb-item active">Speaker List</li>
+                    <li class="breadcrumb-item active">Speaker</li>
                 </ol>
             </div>
         </div>
@@ -36,7 +36,7 @@
         <!-- Modal -->
         <div class="modal fade" id="addspeaker" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form @submit.prevent="!isEdite ? AddSpeakerFunction() : UpdatecategoryFunction()" class="modal-content">
+                <form @submit.prevent="!isEdite ? AddSpeakerFunction() : UpdateSpeakerFunction()" class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">{{ modalTitle }}</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -150,7 +150,7 @@
 import { onMounted, ref, render } from 'vue';
 import DataTable from '../Datatable/Datatable.vue'
 import {initTinyMCE,destroyTinyMCE} from '../../plugins/tinymce';
-import { allSpeakers, postSpeaker } from '../api/speaker';
+import { allSpeakers, deleteSpeaker, postSpeaker, singleSpeaker, updateSpeaker } from '../api/speaker';
 import Swal from 'sweetalert2';
 
 const data = ref({
@@ -192,6 +192,7 @@ function showModal(){
     modalBtn.value = 'Save'
     isEmpty.value = {}
     msgInput.value = {}
+    preview.value = ''
     addmodal.show()
 }
 
@@ -199,7 +200,7 @@ const handleImageUpload = (event) => {
   const file = event.target.files[0]
   if (!file) return
 
-  data.valuephoto = file
+  data.value.photo = file
   preview.value = URL.createObjectURL(file)
 }
 
@@ -261,10 +262,10 @@ const columns = [
         render: function (data, type, row) {
             return `
                 <div class="d-flex align-items-center">
-                    <a onClick="getCategoryFunction(${row.id})" class="btn btn-secondary text-white  me-2" data-bs-toggle="modal" data-bs-target="#edit_role">
+                    <a onClick="getSpeakerFunction(${row.id})" class="btn btn-secondary text-white  me-2" data-bs-toggle="modal" data-bs-target="#addspeaker">
                         <i class="fa fa-edit "></i> 
                     </a> 
-                    <a onClick="DeletePorfolioFunction(${row.id})" class="btn btn-danger text-white me-2">
+                    <a onClick="DeleteSpeakerFunction(${row.id})" class="btn btn-danger text-white me-2">
                         <i class="fa fa-trash "></i> 
                     </a> 
                 </div>`;
@@ -322,6 +323,82 @@ async function AddSpeakerFunction(){
 
     } catch (error) {
         
+    }
+}
+
+window.getSpeakerFunction = async (id)=>{
+    data.value = await singleSpeaker(id)
+    addmodal.show()
+    preview.value = `/storage/${data.value.photo}`
+    isEdite.value = true
+    modalTitle.value = 'Edit Speaker'
+    modalBtn.value = 'Update'
+}
+
+async function UpdateSpeakerFunction() {
+    isLoader.value = true
+    
+    const formData = new FormData()
+    for (const field in data.value) {
+        if (field === 'photo') continue
+        formData.append(field, data.value[field])
+    }
+
+    if (data.value.photo) {
+        formData.append('photo', data.value.photo)
+    }
+
+    formData.append('_method', 'PUT');
+
+    await updateSpeaker(data.value.id, formData).then(res => {
+        isLoader.value = false
+        Swal.fire({
+            icon: 'success',
+            title: 'Speaker updated successfully',
+            showConfirmButton: false,
+            timer: 1500
+        });
+        addmodal.hide();
+        AllSpeakerFunction()
+    }).catch(error => {
+        console.error('There was an error!', error);
+        Swal.fire({
+            icon: 'error',
+            title: 'An error occurred while updating the speaker.',
+            text: error.message || 'Please try again later.'
+        });
+    }).finally(() => {
+        isLoader.value = false;
+    });
+}
+
+window.DeleteSpeakerFunction = async (id) => {
+    const result = await Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    });
+
+    if (result.isConfirmed) {
+        await deleteSpeaker(id).then(res => {
+            Swal.fire(
+                'Deleted!',
+                'The speaker has been deleted.',
+                'success'
+            );
+            AllSpeakerFunction()
+        }).catch(error => {
+            console.error('There was an error!', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'An error occurred while deleting the speaker.',
+                text: error.message || 'Please try again later.'
+            });
+        });
     }
 }
 

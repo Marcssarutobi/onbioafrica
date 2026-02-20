@@ -52,7 +52,7 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/showprogram/{id}',[ProgramController::class, 'show']);
     Route::get('/programbydate/{date}',[ProgramController::class, 'byDate']);
     Route::post('/addprogram',[ProgramController::class, 'store']);
-    Route::put('/updateprogram/{id}',[ProgramController::class, 'update']);
+    Route::post('/updateprogram/{id}',[ProgramController::class, 'update']);
     Route::put('/publishprogram/{id}',[ProgramController::class, 'togglePublish']);
     Route::delete('/deleteprogram/{id}',[ProgramController::class, 'destroy']);
 
@@ -98,7 +98,7 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/allcomiter',[ComiterController::class, 'index']);
     Route::get('/showcomiter/{id}',[ComiterController::class, 'show']);
     Route::post('/addcomiter',[ComiterController::class, 'store']);
-    Route::put('/updatecomiter/{id}',[ComiterController::class, 'update']);
+    Route::post('/updatecomiter/{id}',[ComiterController::class, 'update']);
     Route::delete('/deletecomiter/{id}',[ComiterController::class, 'destroy']);
 
 });

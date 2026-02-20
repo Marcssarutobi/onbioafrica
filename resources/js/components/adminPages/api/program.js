@@ -36,7 +36,7 @@ export async function postProgram(data) {
 
 // 🔹 Mettre à jour un programme
 export async function updateProgram(id, data) {
-  return await putData('/updateprogram/' + id, data).then(res => {
+  return await postData('/updateprogram/' + id, data).then(res => {
     return res.data.data ?? res.data;
   });
 }

@@ -83,14 +83,24 @@ class SpeakerController extends Controller
             'country'     => 'nullable|string|max:255',
             'affiliation' => 'nullable|string|max:255',
             'bio'         => 'nullable|string',
-            'photo'       => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'photo'       => 'nullable',
             'type'        => 'nullable|string|max:255',
         ]);
 
-        // Gestion de la photo
+         // ⚡ Gestion de la photo
         if ($request->hasFile('photo')) {
+            // Nouvelle photo uploadée
             $path = $request->file('photo')->store('speakers/photos', 'public');
+
+            // Supprimer ancienne photo si elle existe
+            if ($speaker->photo && Storage::disk('public')->exists($speaker->photo)) {
+                Storage::disk('public')->delete($speaker->photo);
+            }
+
             $validated['photo'] = $path;
+        } else if (isset($validated['photo']) && is_string($validated['photo'])) {
+            // Si la Vue envoie un chemin ou URL, on garde l’ancienne photo
+            unset($validated['photo']);
         }
 
         $speaker->update($validated);

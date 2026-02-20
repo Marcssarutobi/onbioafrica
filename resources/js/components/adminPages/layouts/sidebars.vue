@@ -84,12 +84,19 @@
                     </RouterLink>
                 </li>
 
-                    <li class="side-nav-item" :class="{ active: $route.path === '/admins/speaker' }">
-                        <RouterLink to="/admins/speaker" class="side-nav-link">
-                            <span class="menu-icon"><i class="fa-light fa-microphone"></i></span>
-                            <span class="menu-text" data-lang="dashboards">Speaker</span>
-                        </RouterLink>
-                    </li>
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/speaker' }">
+                    <RouterLink to="/admins/speaker" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-microphone"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Speaker</span>
+                    </RouterLink>
+                </li>
+
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/program' }">
+                    <RouterLink to="/admins/program" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-calendar-days"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Program</span>
+                    </RouterLink>
+                </li>
                 
             </ul>
         </div>

@@ -40,6 +40,10 @@ const routes =[
             {
               path:'speaker',
               component: ()=>import('../components/adminPages/pages/speaker.vue')
+            },
+            {
+              path:'program',
+              component: ()=>import('../components/adminPages/pages/program.vue')
             }
         ]
     },

@@ -23,7 +23,7 @@ export async function postSpeaker(data) {
 
 // 🔹 Mettre à jour un speaker
 export async function updateSpeaker(id, data) {
-  return await putData('/updatespeaker/' + id, data).then(res => {
+  return await postData('/updatespeaker/' + id, data).then(res => {
     return res.data.data ?? res.data;
   });
 }
