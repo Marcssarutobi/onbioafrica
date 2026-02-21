@@ -112,6 +112,13 @@
                     </RouterLink>
                 </li>
 
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/travel' }">
+                    <RouterLink to="/admins/travel" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-plane"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Travel</span>
+                    </RouterLink>
+                </li>
+
             </ul>
         </div>
     </div>

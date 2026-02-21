@@ -18,7 +18,7 @@
 
 .et-left .image{
     width: 100%;
-    max-height: 250px;
+    max-height: 150px;
     border-radius: 18px;
     overflow: hidden;
     display: flex;
@@ -193,3 +193,167 @@
     gap: 48px;
   }
 }
+
+
+/* ==========================
+   TRAVEL GRANT – NEW STYLE
+========================== */
+
+.grant-section {
+    padding: 90px 0;
+    background: linear-gradient(180deg, #f8fafc, #eef2f7);
+    font-family: "Inter", sans-serif;
+}
+
+.grant-container {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.grant-header {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.grant-header h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 14px;
+}
+
+.grant-header p {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* LAYOUT */
+.grant-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+}
+
+@media (max-width: 992px) {
+    .grant-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* INFO CARDS */
+.grant-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 600px) {
+    .grant-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grant-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.grant-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.grant-card p {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.grant-card.highlight {
+    background: #0f766e;
+}
+
+.grant-card.highlight h4,
+.grant-card.highlight p {
+    color: #ffffff;
+}
+
+/* FORM */
+.grant-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.grant-form h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.form-note {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+/* FORM INPUTS */
+.grant-form input[type="text"],
+.grant-form input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.file-input {
+    display: block;
+    padding: 16px;
+    border: 2px dashed #94a3b8;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    color: #334155;
+    font-size: 14px;
+}
+
+.file-input input {
+    display: none;
+}
+
+/* BUTTON */
+.grant-form button {
+    width: 100%;
+    padding: 15px;
+    background: #0f766e;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grant-form button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* ==========================
+   END
+========================== */

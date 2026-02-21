@@ -25,7 +25,7 @@
                         <span class="et-section-sub-title anim-text">Abstracts Registration</span>
                         <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Abstract Submission</h2>
                         <p class="mb-[30px] text-[18px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
-                            We invite authors to submit original abstracts for evaluation for oral or poster presentation at the conference. The process is intended for scientific and clinical contributions that are relevant to the conference themes.
+                            Abstract submission is open to researchers, students, and professionals working in molecular biology and One Health-related fields. Submissions will be evaluated based on scientific quality, originality, and relevance to the symposium themes. Accepted abstracts will be presented as oral or poster communications. Detailed submission guidelines, templates, and deadlines are available on the submission portal.
                         </p>
                     </header>
 
@@ -103,8 +103,8 @@
 
                         <div class="et-form-group full">
                             <label>Abstract Text</label>
-                            <textarea rows="5" maxlength="300" required v-model="data.content_resume"></textarea>
-                            <div class="et-counter">{{ data.content_resume.length }}/300</div>
+                            <textarea rows="8" maxlength="500" required v-model="data.content_resume"></textarea>
+                            <div class="et-counter">{{ data.content_resume.length }}/500</div>
                         </div>
 
                         <div class="et-form-actions full">

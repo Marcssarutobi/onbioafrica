@@ -23,6 +23,10 @@ const routes =[
                 component: ()=>import('../components/userPages/pages/abstract.vue')
             },
             {
+                path:'travel-grant',
+                component: ()=>import('../components/userPages/pages/travel.vue')
+            },
+            {
                 path:'gallery',
                 component: ()=>import('../components/userPages/pages/gallery.vue')
             },
@@ -56,7 +60,11 @@ const routes =[
             {
               path:'abstract',
               component: ()=>import('../components/adminPages/pages/abstract.vue')
-            }
+            },
+            {
+              path:'travel',
+              component: ()=>import('../components/adminPages/pages/travel.vue')
+            },
         ]
     },
     {

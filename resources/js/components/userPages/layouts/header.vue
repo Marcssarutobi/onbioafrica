@@ -12,7 +12,7 @@
             <!-- heading -->
             <div class="et-sidebar-heading">
                 <div class="logo flex justify-between items-center">
-                    <a href="index.html"><img src="assets/img/logo-white.png" alt="logo"></a>
+                    <RouterLink to="/"><img src="assets/img/LogoW.png" alt="logo"></RouterLink>
 
                     <button type="button" class="et-sidebar-close-btn border border-white/50 w-[45px] aspect-square shrink-0 text-white text-[22px] rounded-full hover:text-etBlue hover:bg-white"><i class="fa-solid fa-xmark"></i></button>
                 </div>
@@ -28,9 +28,9 @@
         <div class="flex justify-between items-center">
             <!-- logo -->
             <div class="logo shrink-0">
-                <a href="index.html">
-                    <img src="assets/img/logo-white.png" alt="logo">
-                </a>
+                <RouterLink to="/">
+                    <img src="assets/img/LogoW.png" width="180"  alt="logo">
+                </RouterLink>
             </div>
 
             <div class="et-header-right flex items-center gap-[60px] xl:gap-[30px]">
@@ -54,7 +54,7 @@
 
                             <ul class="et-header-submenu">
                                 <li><RouterLink to="/abstract">Abstracts</RouterLink></li>
-                                <li><RouterLink to="/">Travel Grant</RouterLink></li>
+                                <li><RouterLink to="/travel-grant">Travel Grant</RouterLink></li>
                             </ul>
                         </li>
                         <li><RouterLink to="/contact">Contact</RouterLink></li>
@@ -68,7 +68,7 @@
                                 <path d="M26.0001 5.97091C26.4665 5.97091 26.8447 5.59277 26.8447 5.12625V0.844662C26.8447 0.378144 26.4665 0 26.0001 0H9.71094V16H26.0001C26.4665 16 26.8447 15.6219 26.8447 15.1553V10.8737C26.8447 10.4072 26.4665 10.029 26.0001 10.029C24.8813 10.029 23.971 9.11886 23.971 8C23.971 6.88114 24.8813 5.97091 26.0001 5.97091Z" class="fill-etBlue group-hover:fill-white transition"></path>
                             </svg>
                         </span>
-                        Get Tickets</a>
+                        Register Guest</a>
                 </div>
 
                 <!-- mobile menu button -->

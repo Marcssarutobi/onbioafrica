@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TravelSubmittedAdmin;
+use App\Mail\TravelSubmittedUser;
 use App\Models\TravelGrant;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class TravelGrantController extends Controller
@@ -53,6 +57,13 @@ class TravelGrantController extends Controller
         }
 
         $travelGrant = TravelGrant::create($validated);
+
+        Mail::to($travelGrant->email)->send(new TravelSubmittedUser($travelGrant));
+
+        $users = User::where('role', 'admin')->get();
+        foreach ($users as $user) {
+            Mail::to($user->email)->send(new TravelSubmittedAdmin($travelGrant, $user));
+        }
 
         return response()->json([
             'success' => true,

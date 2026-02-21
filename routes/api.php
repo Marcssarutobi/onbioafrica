@@ -28,6 +28,9 @@ Route::post('/login',[UserController::class, 'login']);
 Route::post('/addabstractdata',[AbstractdataController::class, 'store']);
 Route::post('/verifier-paiement',[AbstractdataController::class, 'verifier']);
 
+//Travel Grant
+Route::post('/addtravel',[TravelGrantController::class, 'store']);
+
 Route::middleware('auth:sanctum')->group(function(){
 
     //CurrentUser
@@ -83,7 +86,6 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/alltravel',[TravelGrantController::class, 'index']);
     Route::get('/showtravel/{id}',[TravelGrantController::class, 'show']);
     Route::get('/showbystatus/{status}',[TravelGrantController::class, 'byStatus']);
-    Route::post('/addtravel',[TravelGrantController::class, 'store']);
     Route::put('/updatetravel/{id}',[TravelGrantController::class, 'update']);
     Route::put('/accepttravel/{id}',[TravelGrantController::class, 'approve']);
     Route::put('/rejecttravel/{id}',[TravelGrantController::class, 'reject']);
