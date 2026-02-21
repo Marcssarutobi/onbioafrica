@@ -96,7 +96,7 @@
                     Please complete the form below to submit your abstract for scientific review.
                 </p>
 
-                <form action="#" method="post" enctype="multipart/form-data"
+                <form @submit.prevent="AddAbstractFunction"
                     class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
 
                     <!-- First name -->
@@ -104,7 +104,7 @@
                         <label class="font-lato font-semibold text-etBlack block mb-[12px]">
                             First Name*
                         </label>
-                        <input type="text" name="first_name" required
+                        <input type="text" name="first_name" required v-model="data.nom"
                             class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
                     </div>
 
@@ -113,7 +113,7 @@
                         <label class="font-lato font-semibold text-etBlack block mb-[12px]">
                             Last Name*
                         </label>
-                        <input type="text" name="last_name" required
+                        <input type="text" name="last_name" required v-model="data.prenom"
                             class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
                     </div>
 
@@ -122,7 +122,7 @@
                         <label class="font-lato font-semibold text-etBlack block mb-[12px]">
                             Email Address*
                         </label>
-                        <input type="email" name="email" required
+                        <input type="email" name="email" required v-model="data.email"
                             class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
                     </div>
 
@@ -131,7 +131,7 @@
                         <label class="font-lato font-semibold text-etBlack block mb-[12px]">
                             Phone*
                         </label>
-                        <input type="text" name="country" required
+                        <input type="tel" name="phone" required v-model="data.phone"
                             class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
                     </div>
 
@@ -140,7 +140,7 @@
                         <label class="font-lato font-semibold text-etBlack block mb-[12px]">
                             Affiliation*
                         </label>
-                        <input type="text" name="affiliation" required
+                        <input type="text" name="affiliation" required v-model="data.affiliation"
                             class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
                     </div>
 
@@ -149,7 +149,7 @@
                         <label class="font-lato font-semibold text-etBlack block mb-[12px]">
                             Abstract Title*
                         </label>
-                        <input type="text" name="title" required
+                        <input type="text" name="title" required v-model="data.title_resume"
                             class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
                     </div>
 
@@ -158,7 +158,7 @@
                         <label class="font-lato font-semibold text-etBlack block mb-[12px]">
                             Abstract Text*
                         </label>
-                        <textarea name="abstract_text" rows="6" maxlength="300" required
+                        <textarea name="abstract_text" rows="6" maxlength="300" required v-model="data.content_resume"
                                 class="border border-[#ECECEC] p-[20px] rounded-[4px] w-full focus:outline-none"></textarea>
                         <div class="flex justify-end mt-[6px] text-[14px] text-etGray">
                             <span id="charCount">0</span>/300
@@ -185,6 +185,56 @@
 
 </template>
 <script setup>
+
+    import { ref } from 'vue';
+    import { postAbstractData } from '../../adminPages/api/abstract';
+    import Swal from 'sweetalert2';
+
+    const data = ref({
+        nom: '',
+        prenom: '',
+        email: '',
+        phone: '',
+        affiliation: '',
+        title_resume: '',
+        content_resume: '',
+    })
+    const isEmpty = ref({})
+    const msgInput = ref({})
+    const isLoader = ref(false)
+
+    async function AddAbstractFunction() {
+        isLoader.value = true
+
+        for (const field in data.value) {
+            isEmpty.value[field] = !data.value[field]
+            msgInput.value[field] = `Please enter ${field.replace('_', ' ')}`;
+        }
+
+        const allEmpty = Object.values(isEmpty.value).every(value => value === false)
+
+        if (allEmpty) {
+            await postAbstractData(data.value).then(res =>{
+                isLoader.value = false
+                for (const field in data.value) {
+                    data.value[field] = ''
+                }
+                Swal.fire({
+                    toast: true,
+                    position: 'bottom-end',
+                    icon: 'success',
+                    title: 'Abstract submitted successfully',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                })
+            })
+        }
+    }
 
 </script>
 <style scoped>

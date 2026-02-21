@@ -24,6 +24,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login',[UserController::class, 'login']);
 
+//AbstractData
+Route::post('/addabstractdata',[AbstractdataController::class, 'store']);
+
 Route::middleware('auth:sanctum')->group(function(){
 
     //CurrentUser
@@ -68,7 +71,6 @@ Route::middleware('auth:sanctum')->group(function(){
     //AbstractData
     Route::get('/allabstractdata',[AbstractdataController::class, 'index']);
     Route::get('/showabstractdata/{id}',[AbstractdataController::class, 'show']);
-    Route::post('/addabstractdata',[AbstractdataController::class, 'store']);
     Route::put('/updateabstractdata/{id}',[AbstractdataController::class, 'update']);
     Route::put('/acceptabstractdata/{id}',[AbstractdataController::class, 'accept']);
     Route::put('/rejectabstractdata/{id}',[AbstractdataController::class, 'reject']);
