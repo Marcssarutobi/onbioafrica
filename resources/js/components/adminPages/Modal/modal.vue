@@ -19,7 +19,7 @@
               <span class="visually-hidden">Loading...</span>
             </div>
           </button>
-          <button v-else type="submit" class="btn btn-primary">{{ btnText }}</button>
+          <button v-else-if="btnText !== ''" type="submit" class="btn btn-primary">{{ btnText }}</button>
         </div>
       </form>
     </div>
@@ -33,7 +33,7 @@
     const props = defineProps({
         id: { type: String, required: true },
         title: { type: String, default: 'Modal Title' },
-        btnText: { type: String, default: 'Submit' },
+        btnText: { type: String, default: '' },
         isLoading: { type: Boolean, default: false },
     });
 

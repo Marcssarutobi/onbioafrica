@@ -33,6 +33,57 @@
             </div>
         </div>
 
+        <Modal :id="'detailsModal'"  :title="modalTitle" ref="addmodal">
+            <div class="p-3">
+                <div class="row">
+
+                    <div v-if="!isLoader">
+                        <div class="col-lg-12 pb-3 text-end" v-if="data.status === 'pending'">
+                            <button class="btn btn-primary btn-sm me-2" @click="ApprovedAbstractFunction(data.id)" >Approved <i class="fas fa-check ms-2"></i></button>
+                            <button class="btn btn-danger btn-sm" @click="RejectedAbstractFunction(data.id)">Rejected <i class="fas fa-times ms-2"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 pb-3 text-end" v-else>
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Full Name</small>
+                        <div class="fw-bold">{{ data.nom }} {{ data.prenom }}</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Email</small>
+                        <div><a :href="'mailto:'+data.email">{{ data.email }}</a></div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Phone</small>
+                        <div><a :href="'tel:'+data.phone">{{ data.phone }}</a></div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Affiliation</small>
+                        <div class="fw-bold">{{ data.affiliation }}</div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <small class="text-muted">Title</small>
+                        <div class="fw-bold h4">{{ data.title_resume }}</div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <small class="text-muted">Abstract</small>
+                        <div class="border rounded p-3 bg-white fs-4" style="white-space:pre-wrap">{{ data.content_resume }}</div>
+                    </div>
+
+                </div>
+            </div>
+        </Modal>
+
     </div>
 </template>
 <script setup>
@@ -41,7 +92,7 @@
     import DataTable from '../Datatable/Datatable.vue'
     import Swal from 'sweetalert2';
     import Modal from '../Modal/modal.vue';
-    import { allAbstractData, singleAbstractData } from '../api/abstract';
+    import { acceptAbstractData, allAbstractData, rejectAbstractData, singleAbstractData } from '../api/abstract';
 
     const data = ref({
         id:'',
@@ -118,7 +169,7 @@
             title: 'Status', 
             data: 'status',
             render: (data, type, row) => {
-                return `<span class='badge bg-${row.status === 'pending' ? 'warning' : row.status ==='accepted' ? 'success' : 'danger'}'>${row.status === 'pending' ? 'Pending' : row.status ==='accepted' ? 'Accepted' : 'Rejected'}</span>`;
+                return `<span class='badge bg-${row.status === 'pending' ? 'warning' : row.status ==='approved' ? 'success' : 'danger'}'>${row.status === 'pending' ? 'Pending' : row.status ==='approved' ? 'Approved' : 'Rejected'}</span>`;
             }
         },
         {
@@ -153,36 +204,100 @@
             data: null,
             render: function (data, type, row) {
 
-                const publishBtn = row.isPublished
-                    ? `
-                        <a onClick="toggleisPublishedFunction(${row.id})"
-                        class="btn btn-warning text-white me-2"
-                        title="Dépublier">
-                            <i class="fa fa-eye-slash"></i>
-                        </a>
-                    `
-                    : `
-                        <a onClick="toggleisPublishedFunction(${row.id})"
-                        class="btn btn-success text-white me-2"
-                        title="Publier">
-                            <i class="fa fa-eye"></i>
-                        </a>
-                    `;
-
                 return `
-                    <div class="d-flex align-items-center">
-                        <a onClick="getProgramFunction(${row.id})" class="btn btn-secondary text-white  me-2" data-bs-toggle="modal" data-bs-target="#addprogram">
-                            <i class="fa fa-edit "></i> 
-                        </a> 
-                        <a onClick="DeleteProgramFunction(${row.id})" class="btn btn-danger text-white me-2">
-                            <i class="fa fa-trash "></i> 
-                        </a> 
+                    <div class="dropdown">
+                        <button class="btn btn-white border " type="button" id="dropdownMenuButton${row.id}" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-light fa-ellipsis-stroke-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton${row.id}">
+                            <li>
+                                <a class="dropdown-item" href="#" onClick="getAbstractFunction(${row.id})" data-bs-toggle="modal" data-bs-target="#addprogram">
+                                    <i class="fa fa-eye me-1"></i> View
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-danger" href="#" onClick="DeleteProgramFunction(${row.id})">
+                                    <i class="fa fa-trash me-1"></i> Delete
+                                </a>
+                            </li>
+                        </ul>
                     </div>`;
             }
         }
     ]
 
-    
+    window.getAbstractFunction = async (id)=>{
+        data.value = await singleAbstractData(id)
+        modalTitle.value = 'Abstract Details'
+        modalBtn.value = 'Approved'
+        addmodal.value.show()
+    }
+
+    async function ApprovedAbstractFunction(id){
+        
+        const result = await Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, approve it!'
+        });
+
+        if (result.isConfirmed){
+            isLoader.value = true
+            await acceptAbstractData(id).then(res =>{
+                isLoader.value = false
+                Swal.fire(
+                    'Approved!',
+                    'The abstract has been approved.',
+                    'success'
+                )
+                AllAbstractFunction()
+                addmodal.value.hide()
+            }).catch(err =>{
+                Swal.fire(
+                    'Error!',
+                    'An error occurred while approving the abstract.',
+                    'error'
+                )
+            })
+        }
+    }
+
+    async function RejectedAbstractFunction(id) {
+        
+        const result = await Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, rejected it!'
+        });
+
+        if (result.isConfirmed){
+            isLoader.value = true
+            await rejectAbstractData(id).then(res =>{
+                isLoader.value = false
+                Swal.fire(
+                    'Rejected!',
+                    'The abstract has been rejected.',
+                    'success'
+                )
+                AllAbstractFunction()
+                addmodal.value.hide()
+            }).catch(err =>{
+                Swal.fire(
+                    'Error!',
+                    'An error occurred while rejecting the abstract.',
+                    'error'
+                )
+            })
+        }
+    }
 
 
     onMounted(()=>{

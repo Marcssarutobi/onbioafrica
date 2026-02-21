@@ -13,173 +13,122 @@
     </section>
     <!-- BREADCRUMB SECTION END -->
 
-    <section class="et-about py-[130px] xl:py-[80px] md:py-[60px] overflow-hidden">
-        <div class="et-1-container rev-slide-up">
+    <section class="et-about">
+        <div class="et-container">
 
-            <!-- heading -->
-            <div class="text-center mb-[52px]">
-                <h6 class="et-section-sub-title anim-text">Abstracts Registration</h6>
-                <h2 class="et-section-title anim-text">Abstract submission</h2>
-                <p class="text-[18px] mt-[30px]">We invite authors to submit original abstracts for evaluation for
-                oral or poster presentation at the conference. The process is intended for
-                scientific and clinical contributions that are relevant to the conference themes.</p>
-            </div>
+            <div class="et-grid">
 
-            <!-- cards -->
-            <div class="mx-auto max-w-[1200px] grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">
+                <!-- LEFT COLUMN -->
+                <div class="et-left">
 
-                <!-- Card 1 -->
-                <div class="rounded-[20px] bg-white overflow-hidden group">
-                    <!-- icon -->
-                    <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <i class="fa-solid fa-file-pdf text-white text-[35px] transition duration-[0.4s] group-hover:scale-110"></i>
-                    </div>
-
-                    <!-- text -->
-                    <div class="px-[30px] xxl:px-[20px] py-[23px] xxl:py-[18px]">
-                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]">
-                            Submission Format
-                        </h5>
-                        <p class="font-light text-etGray text-[16px] leading-relaxed">
-                            Abstracts must be submitted in <strong class="font-medium">PDF format</strong>,
-                            with a maximum file size of 10&nbsp;MB.
+                    <header class="et-heading">
+                        <span class="et-section-sub-title anim-text">Abstracts Registration</span>
+                        <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Abstract Submission</h2>
+                        <p class="mb-[30px] text-[18px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
+                            We invite authors to submit original abstracts for evaluation for oral or poster presentation at the conference. The process is intended for scientific and clinical contributions that are relevant to the conference themes.
                         </p>
+                    </header>
+
+                    <div class="image">
+                        <img src="assets/img/abstracts.jpg" alt="Abstract Submission" class="w-full rounded-lg">
                     </div>
+
+                    <ul class="et-info-list">
+                        <li>
+                            <span class="et-icon"><i class="fa-solid fa-pencil"></i></span>
+                            <div>
+                                <strong>Submission format</strong>
+                                <span>Text only, maximum 30 characters</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="et-icon"><i class="fa-solid fa-language"></i></span>
+                            <div>
+                            <strong>Language</strong>
+                            <span>English or French</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="et-icon"><i class="fa-solid fa-user-check"></i></span>
+                            <div>
+                            <strong>Review process</strong>
+                            <span>Evaluation by the Scientific Committee</span>
+                            </div>
+                        </li>
+                    </ul>
+
                 </div>
 
-                <!-- Card 2 -->
-                <div class="rounded-[20px] bg-white overflow-hidden group">
-                    <!-- icon -->
-                    <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <i class="fa-solid fa-language text-white text-[35px] transition duration-[0.4s] group-hover:scale-110"></i>
-                    </div>
+                <!-- RIGHT : FORM -->
+                <aside class="et-form-card">
 
-                    <!-- text -->
-                    <div class="px-[30px] xxl:px-[20px] py-[23px] xxl:py-[18px]">
-                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]">
-                            Language
-                        </h5>
-                        <p class="font-light text-etGray text-[16px] leading-relaxed">
-                            Abstracts may be written in <strong class="font-medium">English or French</strong>.
-                            Please specify the language in the title if applicable.
-                        </p>
-                    </div>
-                </div>
+                    <h3>Submit your abstract</h3>
+                    <p class="et-form-subtitle">
+                        Complete the form carefully. All fields are required.
+                    </p>
 
-                <!-- Card 3 -->
-                <div class="rounded-[20px] bg-white overflow-hidden group">
-                    <!-- icon -->
-                    <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <i class="fa-solid fa-user-check text-white text-[35px] transition duration-[0.4s] group-hover:scale-110"></i>
-                    </div>
+                    <form class="et-form-grid" @submit.prevent="AddAbstractFunction">
 
-                    <!-- text -->
-                    <div class="px-[30px] xxl:px-[20px] py-[23px] xxl:py-[18px]">
-                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]">
-                            Review Process
-                        </h5>
-                        <p class="font-light text-etGray text-[16px] leading-relaxed">
-                            All abstracts will be reviewed by the
-                            <strong class="font-medium">Scientific Committee</strong>.
-                            Authors will be notified by email.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div>
-                <h2 class="text-[40px] md:text-[35px] sm:text-[30px] xxs:text-[28px] font-medium text-etBlack mb-[7px]">
-                    Abstract Submission
-                </h2>
-                <p class="text-etGray font-light text-[16px] mb-[38px]">
-                    Please complete the form below to submit your abstract for scientific review.
-                </p>
-
-                <form @submit.prevent="AddAbstractFunction"
-                    class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
-
-                    <!-- First name -->
-                    <div>
-                        <label class="font-lato font-semibold text-etBlack block mb-[12px]">
-                            First Name*
-                        </label>
-                        <input type="text" name="first_name" required v-model="data.nom"
-                            class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
-                    </div>
-
-                    <!-- Last name -->
-                    <div>
-                        <label class="font-lato font-semibold text-etBlack block mb-[12px]">
-                            Last Name*
-                        </label>
-                        <input type="text" name="last_name" required v-model="data.prenom"
-                            class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
-                    </div>
-
-                    <!-- Email -->
-                    <div class="col-span-2 xxs:col-span-1">
-                        <label class="font-lato font-semibold text-etBlack block mb-[12px]">
-                            Email Address*
-                        </label>
-                        <input type="email" name="email" required v-model="data.email"
-                            class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
-                    </div>
-
-                    <!-- Country -->
-                    <div>
-                        <label class="font-lato font-semibold text-etBlack block mb-[12px]">
-                            Phone*
-                        </label>
-                        <input type="tel" name="phone" required v-model="data.phone"
-                            class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
-                    </div>
-
-                    <!-- Affiliation -->
-                    <div>
-                        <label class="font-lato font-semibold text-etBlack block mb-[12px]">
-                            Affiliation*
-                        </label>
-                        <input type="text" name="affiliation" required v-model="data.affiliation"
-                            class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
-                    </div>
-
-                    <!-- Abstract title -->
-                    <div class="col-span-2 xxs:col-span-1">
-                        <label class="font-lato font-semibold text-etBlack block mb-[12px]">
-                            Abstract Title*
-                        </label>
-                        <input type="text" name="title" required v-model="data.title_resume"
-                            class="border border-[#ECECEC] h-[55px] px-[20px] rounded-[4px] w-full focus:outline-none">
-                    </div>
-
-                    <!-- Abstract text -->
-                    <div class="col-span-2 xxs:col-span-1">
-                        <label class="font-lato font-semibold text-etBlack block mb-[12px]">
-                            Abstract Text*
-                        </label>
-                        <textarea name="abstract_text" rows="6" maxlength="300" required v-model="data.content_resume"
-                                class="border border-[#ECECEC] p-[20px] rounded-[4px] w-full focus:outline-none"></textarea>
-                        <div class="flex justify-end mt-[6px] text-[14px] text-etGray">
-                            <span id="charCount">0</span>/300
+                        <div class="et-form-group">
+                            <label>First Name</label>
+                            <input type="text" required v-model="data.nom">
                         </div>
-                    </div>
 
-                    
+                        <div class="et-form-group">
+                            <label>Last Name</label>
+                            <input type="text" required v-model="data.prenom">
+                        </div>
 
-                    <!-- Submit -->
-                    <div class=" flex justify-end col-span-2 xxs:col-span-1">
-                        <button type="submit"
-                                class="bg-etBlue h-[55px] px-[24px] rounded-[10px] text-[16px] font-medium text-white hover:bg-etBlack inline-flex items-center gap-[10px]">
-                            Submit Abstract
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                    </div>
+                        <div class="et-form-group">
+                            <label>Email</label>
+                            <input type="email" required v-model="data.email">
+                        </div>
 
-                </form>
+                        <div class="et-form-group">
+                            <label>Phone</label>
+                            <input type="tel" required v-model="data.phone">
+                        </div>
+
+                        <div class="et-form-group">
+                            <label>Affiliation</label>
+                            <input type="text" required v-model="data.affiliation">
+                        </div>
+
+                        <div class="et-form-group">
+                            <label>Abstract Title</label>
+                            <input type="text" required v-model="data.title_resume">
+                        </div>
+
+                        <div class="et-form-group full">
+                            <label>Abstract Text</label>
+                            <textarea rows="5" maxlength="300" required v-model="data.content_resume"></textarea>
+                            <div class="et-counter">{{ data.content_resume.length }}/300</div>
+                        </div>
+
+                        <div class="et-form-actions full">
+                            <button type="submit" :disabled="isLoader">
+                                <span v-if="!isLoader">
+                                    Submit Abstract
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </span>
+                                <span v-else>
+                                    Submitting...
+                                    <i class="fa-solid fa-spinner fa-spin"></i>
+                                </span>
+                            </button>
+                        </div>
+
+                        <!-- Messages d'alerte -->
+                        <div v-if="alertMsg" :class="['alert', alertType]" style="margin-top:10px; font-size: 15px;">
+                            {{ alertMsg }}
+                        </div>
+
+                    </form>
+                </aside>
+
             </div>
-
-        
         </div>
     </section>
 
@@ -202,6 +151,8 @@
     const isEmpty = ref({})
     const msgInput = ref({})
     const isLoader = ref(false)
+    const alertMsg = ref('')
+    const alertType = ref('')
 
     async function AddAbstractFunction() {
         isLoader.value = true
@@ -219,6 +170,9 @@
                 for (const field in data.value) {
                     data.value[field] = ''
                 }
+
+                alertMsg.value = 'Abstract submitted successfully'
+                alertType.value = 'success'
                 Swal.fire({
                     toast: true,
                     position: 'bottom-end',
@@ -232,11 +186,31 @@
                         toast.onmouseleave = Swal.resumeTimer;
                     }
                 })
+            }).catch(err => {
+                isLoader.value = false
+                alertMsg.value = 'The email has already been taken. Please use a different email address.'
+                alertType.value = 'danger'
+            }).finally(() => {
+                isLoader.value = false
             })
         }
     }
 
 </script>
 <style scoped>
-    
+    .alert.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.alert.danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+}
 </style>

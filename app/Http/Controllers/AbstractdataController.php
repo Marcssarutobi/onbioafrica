@@ -2,8 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AbstractAcceptedMsg;
+use App\Mail\AbstractRejectedMsg;
+use App\Mail\AbstractSubmittedAdmin;
 use App\Models\Abstractdata;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\AbstractSubmittedUser;
+use App\Models\User;
+use FedaPay\FedaPay;
+use FedaPay\Transaction;
 
 class AbstractdataController extends Controller
 {
@@ -45,6 +53,13 @@ class AbstractdataController extends Controller
         $validated['isinvite'] = $validated['isinvite'] ?? 'nosent';
 
         $abstract = Abstractdata::create($validated);
+
+        Mail::to($abstract->email)->send(new AbstractSubmittedUser($abstract));
+
+        $users = User::where('role','admin')->get();
+        foreach ($users as $admin) {
+            Mail::to($admin->email)->send(new AbstractSubmittedAdmin($abstract, $admin));
+        }
 
         return response()->json([
             'success' => true,
@@ -160,6 +175,8 @@ class AbstractdataController extends Controller
 
         $abstract->update(['status' => 'approved']);
 
+        Mail::to($abstract->email)->send(new AbstractAcceptedMsg($abstract));
+
         return response()->json([
             'success' => true,
             'message' => 'Abstract approuvé',
@@ -183,6 +200,8 @@ class AbstractdataController extends Controller
 
         $abstract->update(['status' => 'rejected']);
 
+        Mail::to($abstract->email)->send(new AbstractRejectedMsg($abstract));
+
         return response()->json([
             'success' => true,
             'message' => 'Abstract rejeté',
@@ -204,7 +223,7 @@ class AbstractdataController extends Controller
             ], 404);
         }
 
-        $abstract->update(['ispaid' => true]);
+        $abstract->update(['ispaid' => 'paid']);
 
         return response()->json([
             'success' => true,
@@ -227,13 +246,30 @@ class AbstractdataController extends Controller
             ], 404);
         }
 
-        $abstract->update(['isinvite' => true]);
+        $abstract->update(['isinvite' => 'sent']);
 
         return response()->json([
             'success' => true,
             'message' => 'Invitation envoyée',
             'data' => $abstract
         ]);
+    }
+
+    public function verifier(Request $request){
+        FedaPay::setApiKey(config('services.fedapay.secret_key'));
+        FedaPay::setEnvironment(config('services.fedapay.env')); // ou 'live'
+
+        $transaction = Transaction::retrieve($request->transaction_id);
+
+        if ($transaction->status === 'approved') {
+            return response()->json([
+                'status' => 'approved'
+            ]);
+        }
+
+        return response()->json([
+            'status' => 'failed'
+        ], 400);
     }
 
 }

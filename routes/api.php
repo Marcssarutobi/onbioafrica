@@ -26,6 +26,7 @@ Route::post('/login',[UserController::class, 'login']);
 
 //AbstractData
 Route::post('/addabstractdata',[AbstractdataController::class, 'store']);
+Route::post('/verifier-paiement',[AbstractdataController::class, 'verifier']);
 
 Route::middleware('auth:sanctum')->group(function(){
 

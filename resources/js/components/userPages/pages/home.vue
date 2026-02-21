@@ -1347,6 +1347,117 @@
 </template>
 <script setup>
 
+    import { useRoute } from 'vue-router';
+    import Swal from 'sweetalert2';
+    import { postData } from '../../plugins/api';
+    import { onMounted } from 'vue';
+import { markAbstractDataAsPaid, singleAbstractData } from '../../adminPages/api/abstract';
+
+    const route = useRoute()
+
+    const id = route.query.id
+    const action = route.query.action
+
+    async function PaiementRequestService(){
+        if (route.query.id && route.query.action === 'paiement') {
+
+            Swal.fire({
+                title: 'Check is in progress...',
+                text: 'Please wait',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            })
+
+            const data = await singleAbstractData(id)
+
+            if(data.ispaid === 'pending'){
+                FedaPay.init({
+                    public_key: 'pk_sandbox_5OnNHVYU_bEh8gKO4RpLXF2F',
+                    transaction: {
+                        amount: 100000,
+                        description: "Abstract Payment",
+                    },
+                    customer: {
+                        email: data.email,
+                        lastname: data.nom,
+                        firstname: data.prenom,
+                    },
+                    onComplete: (response)=>{
+                        if (response.transaction.id) {
+                            Swal.fire({
+                                title: 'Check is in progress...',
+                                text: 'Please wait',
+                                allowOutsideClick: false,
+                                allowEscapeKey: false,
+                                didOpen: () => {
+                                    Swal.showLoading()
+                                }
+                            })
+                            verifierPaiement(response.transaction.id)
+                        }
+                    }
+                }).open()
+            }else{
+                Swal.fire({
+                    toast: true,
+                    position: "top-end",
+                    icon: 'info',
+                    title: 'Payment already processed',
+                    showConfirmButton: false,
+                    timer: 4000
+                });
+                window.location.href = '/'
+            }
+
+            
+        }
+    }
+
+    async function verifierPaiement(transactionId){
+        try {
+            await postData('/verifier-paiement',{
+                transaction_id: transactionId
+            }).then(async(res)=>{
+                if (res.data.status === 'approved') {
+                    await markAbstractDataAsPaid(route.query.id)
+                    Swal.fire({
+                        icon: 'success',
+                        text: 'Payment confirmed',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    window.location.href = '/'
+                }else{
+                    Swal.fire({
+                        toast: true,
+                        position: "top-end",
+                        icon: 'error',
+                        title: 'Payment not confirmed',
+                        showConfirmButton: false,
+                        timer: 4000
+                    });
+                }
+            })
+        } catch (e) {
+            Swal.fire({
+                toast: true,
+                position: "top-end",
+                icon: 'error',
+                title: 'Erreur de vérification du paiement',
+                showConfirmButton: false,
+                timer: 4000
+            });
+        }
+    }
+
+    onMounted(() => {
+        PaiementRequestService()
+        console.log(route.query)
+    })
+
 </script>
 <style>
     
