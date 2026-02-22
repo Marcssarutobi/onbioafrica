@@ -33,6 +33,73 @@
             </div>
         </div>
 
+        <Modal :id="'detailsModal'"  :title="modalTitle" ref="addmodal">
+            <div class="p-3">
+                <div class="row">
+
+                    <div v-if="!isLoader">
+                        <div class="col-lg-12 pb-3 text-end" v-if="getTravel.status === 'pending'">
+                            <button class="btn btn-primary btn-sm me-2" @click="ApprovedTravelFunction(getTravel.id)" >Approved <i class="fas fa-check ms-2"></i></button>
+                            <button class="btn btn-danger btn-sm" @click="RejectedTravelFunction(getTravel.id)">Rejected <i class="fas fa-times ms-2"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 pb-3 text-end" v-else>
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Full Name</small>
+                        <div class="fw-bold">{{ getTravel.nom }} {{ getTravel.prenom }}</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Email</small>
+                        <div><a :href="'mailto:'+getTravel.email">{{ getTravel.email }}</a></div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Phone</small>
+                        <div><a :href="'tel:'+getTravel.phone">{{ getTravel.phone }}</a></div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Institution</small>
+                        <div class="fw-bold">{{ getTravel.institution }}</div>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <small class="text-muted d-block mb-2">Documents</small>
+
+                        <div class="row g-3">
+                            <div
+                                v-for="(doc, index) in getTravel.doc_path"
+                                :key="index"
+                                class="col-6 col-sm-4 col-lg-3"
+                            >
+                                <a
+                                    :href="'/storage/' + doc"
+                                    target="_blank"
+                                    class="text-decoration-none"
+                                >
+                                    <div class="border rounded-3 p-3 text-center h-100 doc-card">
+                                        <i class="fa-solid fa-file-pdf fa-3x text-danger mb-2"></i>
+
+                                        <div class="small fw-semibold text-truncate">
+                                            {{ doc.split('/').pop() }}
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </Modal>
+
     </div>
 </template>
 <script setup>
@@ -41,13 +108,14 @@
     import DataTable from '../Datatable/Datatable.vue'
     import Swal from 'sweetalert2';
     import Modal from '../Modal/modal.vue';
-import { allTravelGrants } from '../api/travelGrant';
+    import { acceptTravelGrant, allTravelGrants, rejectTravelGrant, singleTravelGrant } from '../api/travelGrant';
 
     const isLoader = ref(false)
     const modalTitle = ref('')
     const modalBtn = ref('')
     const addmodal = ref(null)
     const alltravel = ref([])
+    const getTravel = ref({})
 
     async function AllTravelGrantFunction() {
         alltravel.value = await allTravelGrants()
@@ -114,7 +182,7 @@ import { allTravelGrants } from '../api/travelGrant';
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton${row.id}">
                             <li>
-                                <a class="dropdown-item" href="#" onClick="getAbstractFunction(${row.id})" data-bs-toggle="modal" data-bs-target="#addprogram">
+                                <a class="dropdown-item" href="#" onClick="getTravelGrantFunction(${row.id})" data-bs-toggle="modal" data-bs-target="#addprogram">
                                     <i class="fa fa-eye me-1"></i> View
                                 </a>
                             </li>
@@ -128,6 +196,81 @@ import { allTravelGrants } from '../api/travelGrant';
             }
         }
     ]
+
+    window.getTravelGrantFunction = async function(id){
+        getTravel.value = await singleTravelGrant(id)
+        modalTitle.value = 'Travel Grant Details'
+        addmodal.value.show()
+        console.log(getTravel.value)
+    }
+
+    async function ApprovedTravelFunction(id){
+
+        const result = await Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, approved it!'
+        });
+
+        if (result.isConfirmed){
+            isLoader.value = true
+            await acceptTravelGrant(id).then(res =>{
+                isLoader.value = false
+                Swal.fire(
+                    'Approved!',
+                    'The travel grant has been approved.',
+                    'success'
+                )
+                AllTravelGrantFunction()
+                addmodal.value.hide()
+            }).catch(err =>{
+                Swal.fire(
+                    'Error!',
+                    'An error occurred while approving the travel grant.',
+                    'error'
+                )
+            })
+        }
+
+    }
+
+    async function RejectedTravelFunction(id){
+
+        const result = await Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, rejected it!'
+        });
+
+        if (result.isConfirmed){
+            isLoader.value = true
+            await rejectTravelGrant(id).then(res =>{
+                isLoader.value = false
+                Swal.fire(
+                    'Rejected!',
+                    'The travel grant has been rejected.',
+                    'success'
+                )
+                AllTravelGrantFunction()
+                addmodal.value.hide()
+            }).catch(err =>{
+                Swal.fire(
+                    'Error!',
+                    'An error occurred while rejecting the travel grant.',
+                    'error'
+                )
+            })
+        }
+
+    }
 
     onMounted(() => {
         AllTravelGrantFunction()

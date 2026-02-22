@@ -15,6 +15,14 @@ const routes =[
                 component: ()=>import('../components/userPages/pages/abouts.vue')
             },
             {
+                path:'comitee',
+                component: ()=>import('../components/userPages/pages/comitee.vue')
+            },
+            {
+                path:'sponsor',
+                component: ()=>import('../components/userPages/pages/sponsor.vue')
+            },
+            {
                 path:'events',
                 component: ()=>import('../components/userPages/pages/events.vue')
             },
@@ -64,6 +72,10 @@ const routes =[
             {
               path:'travel',
               component: ()=>import('../components/adminPages/pages/travel.vue')
+            },
+            {
+              path:'sponsor',
+              component: ()=>import('../components/adminPages/pages/sponsor.vue')
             },
         ]
     },

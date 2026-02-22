@@ -96,7 +96,7 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/allsponsor',[SponsorController::class, 'index']);
     Route::get('/showsponsor/{id}',[SponsorController::class, 'show']);
     Route::post('/addsponsor',[SponsorController::class, 'store']);
-    Route::put('/updatesponsor/{id}',[SponsorController::class, 'update']);
+    Route::post('/updatesponsor/{id}',[SponsorController::class, 'update']);
     Route::delete('/deletesponsor/{id}',[SponsorController::class, 'destroy']);
 
     //Comiter

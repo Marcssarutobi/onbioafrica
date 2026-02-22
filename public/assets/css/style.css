@@ -33,7 +33,7 @@ CSS INDEX
 @import url("../../css2-2");
 @import url("../../css2-3");
 :root {
-  --et-blue: #1260FE;
+  --et-blue: #062d63;
   --et-purple: #550ECA;
   --et-purple-rgb: 85, 14, 202;
   --et-pink: #DE0977;
@@ -521,7 +521,7 @@ button {
   transition: background-color 0.4s ease;
 }
 .et-header.et-sticky {
-  background-color: #18377e;
+  background-color: #062d63;
 }
 @media screen and (max-width: 991px) {
   .et-header-nav {
@@ -548,7 +548,7 @@ button {
   }
 }
 .et-header-nav a:hover {
-  color: var(--et-blue);
+  color: #196c38;
 }
 .et-header-nav .has-sub-menu {
   display: grid;

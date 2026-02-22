@@ -213,4 +213,15 @@
     padding: 10px;
     border-radius: 4px;
 }
+.et-breadcrumb {
+    position: relative;
+    z-index: 1;
+
+    /* Background color */
+    background-color: #062d63;
+
+    /* Padding desktop */
+    padding-top: 210px;
+    padding-bottom: 130px;
+}
 </style>

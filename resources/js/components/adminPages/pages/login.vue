@@ -13,10 +13,10 @@
                         <div class="card p-4">
                             <div class="auth-brand text-center mb-2">
                                 <a href="/" class="logo-dark" style="height: 50px !important;">
-                                    <img src="/admin/assets/images/logo-black.png" alt="dark logo" style="height: 50px !important;" />
+                                    <img src="/admin/assets/images/logos/logoA.png" alt="dark logo" style="height: 50px !important;" />
                                 </a>
                                 <a href="/" class="logo-light">
-                                    <img src="/admin/assets/images/logo.png" alt="logo" />
+                                    <img src="/admin/assets/images/logos/logoA.png" alt="logo" />
                                 </a>
                                 <h4 class="fw-bold text-dark mt-3">Ravi de vous revoir. 👋</h4>
                                 <p class="text-muted w-lg-75 mx-auto">Connectez-vous. Entrez votre adresse e-mail et votre mot de passe pour continuer.</p>

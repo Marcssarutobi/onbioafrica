@@ -9,15 +9,15 @@
                     <div class="bg-no-repeat bg-cover bg-[url('../assets/img/banner-bg-1.jpg')] bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]">
                         <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
                             <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
-                                <div class="left relative z-[20] w-[55%] md:w-full">
-                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">Business expo 2024</h6>
+                                <div class="left relative z-[20] w-[65%] md:w-full">
+                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">OneBioAfrica Symposium</h6>
 
-                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">Big Conference <span class="font-normal tracking-tighter"> & Workshop</span></h1>
+                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">Strengthening One Health <span class="font-normal tracking-tighter"> Networks Through Molecular Data</span></h1>
 
                                     <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
-                                        <a href="contact.html" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Register Now</a>
+                                        <RouterLink to="/abouts" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Abouts us</RouterLink>
 
-                                        <a href="#" class="et-btn bg-white inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-etBlue font-normal text-[17px] rounded-full">View More</a>
+                                        <RouterLink to="/contact" class="et-btn bg-white inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-etBlue font-normal text-[17px] rounded-full">Contact us</RouterLink>
                                     </div>
 
                                     <!-- vectors -->
@@ -27,15 +27,11 @@
                                     </div>
                                 </div>
 
-                                <!-- video button -->
-                                <div class="et-banner-video-btn w-[40%] md:w-full shrink-0">
-                                    <a href="https://www.youtube.com/watch?v=AQleI8oFqZo&t=1s" data-fslightbox="banner-video-1" class="w-[135px] aspect-square rounded-full border border-white/20 flex justify-center items-center text-etBlue ml-auto mr-[230px] lg:mr-[150px] md:mr-auto md:ml-0 relative z-[1] text-[18px] before:absolute before:w-[70px] before:h-[70px] before:bg-white before:rounded-full before:-z-[1] before:transition before:duration-[400ms] hover:text-white hover:before:bg-etBlue hover:border-etBlue"><i class="fa-solid fa-play"></i></a>
-                                </div>
                             </div>
                         </div>
 
                         <!-- bottom title -->
-                        <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">BUSINESS EXPO</span>
+                        <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">OneBioAfrica </span>
                     </div>
                 </div>
 
@@ -44,10 +40,10 @@
                     <div class="bg-no-repeat bg-cover bg-[url('../assets/img/banner-bg-2.jpg')] bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]">
                         <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
                             <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
-                                <div class="left relative z-[20] w-[55%] md:w-full">
-                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">Business expo 2024</h6>
+                                <div class="left relative z-[20] w-[65%] md:w-full">
+                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">Genomics & Biodiversity</h6>
 
-                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">Big Conference <span class="font-normal tracking-tighter"> & Workshop</span></h1>
+                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">Connecting <br> Science <span class="font-normal tracking-tighter"> For Sustainable African Futures</span></h1>
 
                                     <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
                                         <a href="contact.html" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Register Now</a>
@@ -62,15 +58,12 @@
                                     </div>
                                 </div>
 
-                                <!-- video button -->
-                                <div class="et-banner-video-btn w-[40%] md:w-full shrink-0">
-                                    <a href="https://www.youtube.com/watch?v=AQleI8oFqZo&t=1s" data-fslightbox="banner-video-1" class="w-[135px] aspect-square rounded-full border border-white/20 flex justify-center items-center text-etBlue ml-auto mr-[230px] lg:mr-[150px] md:mr-auto md:ml-0 relative z-[1] text-[18px] before:absolute before:w-[70px] before:h-[70px] before:bg-white before:rounded-full before:-z-[1] before:transition before:duration-[400ms] hover:text-white hover:before:bg-etBlue hover:border-etBlue"><i class="fa-solid fa-play"></i></a>
-                                </div>
+                                
                             </div>
                         </div>
 
                         <!-- bottom title -->
-                        <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">BUSINESS EXPO</span>
+                        <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">OneBioAfrica </span>
                     </div>
                 </div>
 
@@ -79,10 +72,10 @@
                     <div class="bg-no-repeat bg-cover bg-[url('../assets/img/banner-bg-3.jpg')] bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]">
                         <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
                             <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
-                                <div class="left relative z-[20] w-[55%] md:w-full">
-                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">Business expo 2024</h6>
+                                <div class="left relative z-[20] w-[65%] md:w-full">
+                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">Capacity Building</h6>
 
-                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">Big Conference <span class="font-normal tracking-tighter"> & Workshop</span></h1>
+                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">From <br> Molecular Data <span class="font-normal tracking-tighter"> To Policy Action</span></h1>
 
                                     <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
                                         <a href="contact.html" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Register Now</a>
@@ -97,15 +90,11 @@
                                     </div>
                                 </div>
 
-                                <!-- video button -->
-                                <div class="et-banner-video-btn w-[40%] md:w-full shrink-0">
-                                    <a href="https://www.youtube.com/watch?v=AQleI8oFqZo&t=1s" data-fslightbox="banner-video-1" class="w-[135px] aspect-square rounded-full border border-white/20 flex justify-center items-center text-etBlue ml-auto mr-[230px] lg:mr-[150px] md:mr-auto md:ml-0 relative z-[1] text-[18px] before:absolute before:w-[70px] before:h-[70px] before:bg-white before:rounded-full before:-z-[1] before:transition before:duration-[400ms] hover:text-white hover:before:bg-etBlue hover:border-etBlue"><i class="fa-solid fa-play"></i></a>
-                                </div>
                             </div>
                         </div>
 
                         <!-- bottom title -->
-                        <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">BUSINESS EXPO</span>
+                        <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">OneBioAfrica </span>
                     </div>
                 </div>
             </div>
@@ -116,7 +105,7 @@
     <!-- BANNER SECTION END -->
 
     <!-- ABOUT SECTION START -->
-    <section class="et-about pt-[60px] pb-[130px] xl:pb-[80px] md:pb-[60px] overflow-hidden relative">
+    <section class="et-about pt-[40px] pb-[130px] xl:pb-[80px] md:pb-[60px] overflow-hidden relative" style="padding: 80px 0;">
         <div class="et-1-container">
             <div class="flex items-center md:flex-wrap gap-x-[60px] xxl:gap-x-[40px] lg:gap-x-[30px] gap-y-[40px] sm:gap-y-[40px] lg:justify-center">
                 <!-- left -->
@@ -138,39 +127,13 @@
                 </div>
 
                 <!-- right -->
-                <div class="et-about__txt">
-                    <h6 class="et-section-sub-title anim-text">About Eventek</h6>
-                    <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Know More About The Eventek </h2>
+                <div class="et-about__txt" >
+                    <h6 class="et-section-sub-title anim-text">About The Symposium</h6>
+                    <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Advancing One Health Through Molecular Science in Africa</h2>
 
-                    <p class="mb-[30px] text-[16px] font-light text-etGray md:mb-[30px] rev-slide-up">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                    <p class="mb-[30px] text-[16px] font-light text-etGray md:mb-[30px] rev-slide-up" style='text-align:justify;'>
+                        OneBioAfrica is a regional scientific symposium dedicated to strengthening One Health networks across Africa through molecular biology, genomics, and bioinformatics. As emerging infectious diseases, antimicrobial resistance, biodiversity loss, and ecosystem disruptions continue to rise, the need for integrated, data-driven approaches has never been greater. This symposium brings together molecular biologists, medical and veterinary researchers, ecologists, bioinformaticians, and policymakers to foster interdisciplinary collaboration and data sharing.
                     </p>
-
-                    <div class="flex xxs:flex-wrap items-center gap-[20px] pt-[30px] border-t border-[#D9D9D9] mb-[50px] xxs:mb-[30px] rev-slide-up">
-                        <div class="shrink-0 h-[80px] w-[80px] rounded-[6px] shadow-[0_4px_50px_10px_rgba(18,96,254,0.10)] flex items-center justify-center">
-                            <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_6038_295)">
-                                    <path d="M35.4168 33.3346H28.4501C27.7601 33.3346 27.2001 32.7746 27.2001 32.0846C27.2001 31.3946 27.7601 30.8346 28.4501 30.8346H34.5401L36.9651 24.168H3.03343L5.45843 30.8346H11.5501C12.2401 30.8346 12.8001 31.3946 12.8001 32.0846C12.8001 32.7746 12.2401 33.3346 11.5501 33.3346H4.58343C4.05843 33.3346 3.58843 33.0063 3.40843 32.5113L0.0751012 23.3446C-0.0632322 22.9613 -0.00823216 22.5346 0.226768 22.1996C0.460101 21.8663 0.841768 21.668 1.2501 21.668H38.7501C39.1584 21.668 39.5401 21.8663 39.7734 22.2013C40.0084 22.5346 40.0634 22.963 39.9251 23.3463L36.5918 32.513C36.4118 33.0063 35.9418 33.3346 35.4168 33.3346Z" fill="#1260FE"></path>
-                                    <path d="M27.0849 40.0013C27.0216 40.0013 26.9583 39.9963 26.8933 39.9863C26.2116 39.8813 25.7433 39.243 25.8483 38.5613L27.2933 29.168H12.7066L14.1516 38.5613C14.2566 39.2446 13.7883 39.8813 13.1066 39.9863C12.4249 40.098 11.7849 39.6246 11.6816 38.9413L10.0149 28.108C9.95994 27.748 10.0633 27.3796 10.3016 27.103C10.5399 26.8263 10.8849 26.668 11.2499 26.668H28.7499C29.1149 26.668 29.4616 26.828 29.6983 27.1046C29.9349 27.3813 30.0399 27.748 29.9849 28.1096L28.3183 38.943C28.2249 39.5596 27.6916 40.0013 27.0849 40.0013Z" fill="#1260FE"></path>
-                                    <path d="M37.5 23.7498C36.81 23.7498 36.25 23.1898 36.25 22.4998C36.25 19.2015 34.4866 16.0798 31.6483 14.3515C31.0583 13.9915 30.8716 13.2232 31.2316 12.6332C31.5916 12.0432 32.36 11.8565 32.95 12.2165C36.5266 14.3965 38.7483 18.3365 38.7483 22.4998C38.75 23.1898 38.19 23.7498 37.5 23.7498Z" fill="#1260FE"></path>
-                                    <path d="M30.8333 15C32.214 15 33.3333 13.8807 33.3333 12.5C33.3333 11.1193 32.214 10 30.8333 10C29.4525 10 28.3333 11.1193 28.3333 12.5C28.3333 13.8807 29.4525 15 30.8333 15Z" fill="#1260FE"></path>
-                                    <path d="M19.9999 13.3333C16.3233 13.3333 13.3333 10.3433 13.3333 6.66667C13.3333 2.99 16.3233 0 19.9999 0C23.6766 0 26.6666 2.99 26.6666 6.66667C26.6666 10.3433 23.6766 13.3333 19.9999 13.3333ZM19.9999 2.5C17.7016 2.5 15.8333 4.37 15.8333 6.66667C15.8333 8.96333 17.7016 10.8333 19.9999 10.8333C22.2983 10.8333 24.1666 8.96333 24.1666 6.66667C24.1666 4.37 22.2983 2.5 19.9999 2.5Z" fill="#1260FE"></path>
-                                    <path d="M32.5 24.1667C31.81 24.1667 31.25 23.6067 31.25 22.9167C31.25 19.93 28.82 17.5 25.8333 17.5H14.1667C11.18 17.5 8.75 19.93 8.75 22.9167C8.75 23.6067 8.19 24.1667 7.5 24.1667C6.81 24.1667 6.25 23.6067 6.25 22.9167C6.25 18.5517 9.80167 15 14.1667 15H25.8333C30.1983 15 33.75 18.5517 33.75 22.9167C33.75 23.6067 33.19 24.1667 32.5 24.1667Z" fill="#1260FE"></path>
-                                </g>
-                                <defs>
-                                    <clippath id="clip0_6038_295">
-                                        <rect width="40" height="40" fill="white"></rect>
-                                    </clippath>
-                                </defs>
-                            </svg>
-                        </div>
-
-                        <!-- txt -->
-                        <div>
-                            <h6 class="font-medium text-[18px] text-black mb-[8px]">Whence at the Conference</h6>
-                            <p class="text-[16px] font-light text-etGray">Embarrassing hidden in the middle All the Lorem Ipsum generators on the Internet repeat predefined chunks</p>
-                        </div>
-                    </div>
 
                     <div class="flex flex-wrap items-center gap-x-[30px] gap-y-[16px] rev-slide-up">
                         <a href="contact.html" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-black hover:!text-white">Register Now</a>
@@ -201,8 +164,8 @@
     <div class="et-1-container rev-slide-up relative z-[2]">
         <div class="bg-etBlue relative z-[1] p-[60px] sm:p-[40px] xs:px-[20px] rounded-[20px] overflow-hidden -mb-[114px] shadow-[0_4px_50px_rgba(18,96,254,0.2)] after:absolute after:inset-0 after:-z-[1] after:bg-[url(../assets/img/et-counter-bg.jpg)] after:bg-cover after:bg-no-repeat after:mix-blend-screen flex items-center md:flex-wrap gap-y-[20px]">
             <div class="pr-[54px] border-r md:border-r-0 border-white/20 md:text-center md:pr-0 md:w-full">
-                <h2 class="et-section-title !text-white mb-[28px] anim-text">Count Every Second Until Event.</h2>
-                <a href="contact.html" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full border-white border hover:!bg-white hover:!text-etBlue">Buy Ticket</a>
+                <h2 class="et-section-title !text-white mb-[28px] anim-text">Advancing One Health Through Molecular Science</h2>
+                <RouterLink to="/abstract" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full border-white border hover:!bg-white hover:!text-etBlue">Submit Abstract</RouterLink>
             </div>
 
             <!-- counter -->
@@ -242,8 +205,8 @@
         <div class="et-1-container rev-slide-up">
             <!-- heading -->
             <div class="text-center mb-[52px]">
-                <h6 class="et-section-sub-title anim-text">Event Features</h6>
-                <h2 class="et-section-title anim-text">Unifying For A Better World</h2>
+                <h6 class="et-section-sub-title anim-text">Why Attend</h6>
+                <h2 class="et-section-title anim-text">Unifying For A Better Africa</h2>
             </div>
 
             <!-- cards -->
@@ -252,13 +215,13 @@
                 <div class="rounded-[20px] bg-white overflow-hidden group">
                     <!-- icon -->
                     <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <img src="assets/img/feature-1.png" alt="Feature icon" class="transition duration-[0.4s] group-hover:-scale-x-100">
+                        <i class="fa-light fa-user-group transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
                     </div>
 
                     <!-- text -->
                     <div class="px-[30px] xxl:px-[20px] py-[23px] xxl:py-[18px]">
-                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]"><a href="#" class="hover:text-etBlue">Speaker Lineup</a></h5>
-                        <p class="font-light text-etGray text-[16px]">Mauris ultrices ligula eget volutpat aliquet nullam</p>
+                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]"><a href="#" class="hover:text-etBlue">Expert Network</a></h5>
+                        <p class="font-light text-etGray text-[16px]">Engage with leading African and international experts across One Health discipline</p>
                     </div>
                 </div>
 
@@ -266,13 +229,13 @@
                 <div class="rounded-[20px] bg-white overflow-hidden group">
                     <!-- icon -->
                     <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <img src="assets/img/feature-2.png" alt="Feature icon" class="transition duration-[0.4s] group-hover:-scale-x-100">
+                        <i class="fa-light fa-atom transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
                     </div>
 
                     <!-- text -->
                     <div class="px-[30px] xxl:px-[20px] py-[23px] xxl:py-[18px]">
-                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]"><a href="#" class="hover:text-etBlue">Networking People</a></h5>
-                        <p class="font-light text-etGray text-[16px]">Mauris ultrices ligula eget volutpat aliquet nullam</p>
+                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]"><a href="#" class="hover:text-etBlue">Scientific advances</a></h5>
+                        <p class="font-light text-etGray text-[16px]">Discover advances in molecular biology, genomics, and bioinformatics</p>
                     </div>
                 </div>
 
@@ -280,13 +243,13 @@
                 <div class="rounded-[20px] bg-white overflow-hidden group">
                     <!-- icon -->
                     <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <img src="assets/img/feature-3.png" alt="Feature icon" class="transition duration-[0.4s] group-hover:-scale-x-100">
+                        <i class="fa-light fa-database transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
                     </div>
 
                     <!-- text -->
                     <div class="px-[30px] xxl:px-[20px] py-[23px] xxl:py-[18px]">
-                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]"><a href="#" class="hover:text-etBlue">Engaging Keynote</a></h5>
-                        <p class="font-light text-etGray text-[16px]">Mauris ultrices ligula eget volutpat aliquet nullam</p>
+                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]"><a href="#" class="hover:text-etBlue">Innovative Tools</a></h5>
+                        <p class="font-light text-etGray text-[16px]">Explore tools for pathogen surveillance, biodiversity monitoring, and data sharing</p>
                     </div>
                 </div>
 
@@ -294,13 +257,13 @@
                 <div class="rounded-[20px] bg-white overflow-hidden group">
                     <!-- icon -->
                     <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <img src="assets/img/feature-4.png" alt="Feature icon" class="transition duration-[0.4s] group-hover:-scale-x-100">
+                        <i class="fa-light fa-comments transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
                     </div>
 
                     <!-- text -->
                     <div class="px-[30px] xxl:px-[20px] py-[23px] xxl:py-[18px]">
-                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]"><a href="#" class="hover:text-etBlue">Exhibition Space</a></h5>
-                        <p class="font-light text-etGray text-[16px]">Mauris ultrices ligula eget volutpat aliquet nullam</p>
+                        <h5 class="font-medium text-[22px] text-etBlack mb-[8px]"><a href="#" class="hover:text-etBlue">Partnerships</a></h5>
+                        <p class="font-light text-etGray text-[16px]">Build partnerships with scientists, policymakers, and global health leaders</p>
                     </div>
                 </div>
             </div>
@@ -1062,24 +1025,29 @@
             <div class="flex xs:flex-col gap-x-[77px] sm:gap-x-[57px] gap-y-[15px] justify-center border-b border-white/20 pb-[35px]">
                 <!-- single stat -->
                 <div class="et-single-stat text-white">
-                    <h5 class="number font-semibold text-[55px]">50+</h5>
-                    <h6 class="font-medium text-[16px]">Workshop We Offer</h6>
+                    <h5 class="number font-semibold text-[55px]">80-100</h5>
+                    <h6 class="font-medium text-[16px]">Expected Participants</h6>
                 </div>
                 <!-- single stat -->
                 <div class="et-single-stat text-white">
-                    <h5 class="number font-semibold text-[55px]">25+</h5>
-                    <h6 class="font-medium text-[16px]">Visionary Speaker</h6>
+                    <h5 class="number font-semibold text-[55px]">15+</h5>
+                    <h6 class="font-medium text-[16px]">Countries Represented</h6>
                 </div>
                 <!-- single stat -->
                 <div class="et-single-stat text-white">
-                    <h5 class="number font-semibold text-[55px]">70k+</h5>
-                    <h6 class="font-medium text-[16px]">Event Participants</h6>
+                    <h5 class="number font-semibold text-[55px]">60+</h5>
+                    <h6 class="font-medium text-[16px]">Oral Presentations</h6>
+                </div>
+
+                <div class="et-single-stat text-white">
+                    <h5 class="number font-semibold text-[55px]">4</h5>
+                    <h6 class="font-medium text-[16px]">Day Symposium</h6>
                 </div>
             </div>
 
-            <h2 class="et-section-title anim-text !text-white text-center max-w-[55%] md:max-w-[65%] sm:max-w-full mx-auto mt-[30px] mb-[40px]">Never Miss Another Speaker Announcement</h2>
+            <h2 class="et-section-title anim-text !text-white text-center max-w-[55%] md:max-w-[65%] sm:max-w-full mx-auto mt-[30px] mb-[40px]">Share your research with the OneBioAfrica community</h2>
 
-            <a href="contact.html" class="bg-white inline-flex items-center gap-[12px] rounded-full text-etBlue h-[54px] px-[15px] text-[17px] group hover:bg-etBlue hover:text-white">
+            <RouterLink to="/abstract" class="bg-white inline-flex items-center gap-[12px] rounded-full text-etBlue h-[54px] px-[15px] text-[17px] group hover:bg-etBlue hover:text-white">
                 <span class="icon">
                     <svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.1023 17.6473C13.0496 17.6473 12.9979 17.6511 12.9471 17.6578C12.4966 16.1361 11.1883 14.9794 9.5848 14.7503V13.6641H8.41524V14.7503C6.81011 14.9796 5.50077 16.1384 5.05156 17.6624C4.99031 17.6526 4.92753 17.6473 4.86351 17.6473C4.21347 17.6473 3.68652 18.1742 3.68652 18.8242C3.68652 19.4742 4.21347 20.0012 4.86351 20.0012C5.4544 20.0012 5.94345 19.5657 6.0276 18.9982C6.04471 18.9433 6.05393 18.8848 6.05393 18.8242C6.05393 17.3999 7.06993 16.2086 8.41524 15.9366V17.791C8.04998 17.9908 7.80223 18.3786 7.80223 18.8242C7.80223 19.4742 8.32918 20.0012 8.97918 20.0012C9.62922 20.0012 10.1562 19.4742 10.1562 18.8242C10.1562 18.3957 9.92708 18.0208 9.5848 17.815V15.9366C10.8716 16.1968 11.8565 17.2982 11.9398 18.6401C11.9303 18.7001 11.9253 18.7616 11.9253 18.8243C11.9253 19.4743 12.4523 20.0012 13.1023 20.0012C13.7523 20.0012 14.2793 19.4743 14.2793 18.8243C14.2793 18.1743 13.7523 17.6473 13.1023 17.6473Z" class="fill-etBlue group-hover:fill-white transition duration-[0.4s]"></path>
@@ -1087,8 +1055,8 @@
                         <path d="M13.1157 2.14739C13.1157 0.963338 12.1524 0 10.9683 0H7.03167C5.84758 0 4.88428 0.963299 4.88428 2.14739V8.38037H13.1157V2.14739Z" class="fill-etBlue group-hover:fill-white transition duration-[0.4s]"></path>
                     </svg>
                 </span>
-                <span>Register Now</span>
-            </a>
+                <span>Submit Abstract</span>
+            </RouterLink>
         </div>
 
         <!-- vectors -->
@@ -1351,7 +1319,7 @@
     import Swal from 'sweetalert2';
     import { postData } from '../../plugins/api';
     import { onMounted } from 'vue';
-import { markAbstractDataAsPaid, singleAbstractData } from '../../adminPages/api/abstract';
+    import { markAbstractDataAsPaid, singleAbstractData } from '../../adminPages/api/abstract';
 
     const route = useRoute()
 
@@ -1453,9 +1421,33 @@ import { markAbstractDataAsPaid, singleAbstractData } from '../../adminPages/api
         }
     }
 
+    const countdown = () => {
+        const eventDate = new Date("2026-07-15T09:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        if (distance < 0) {
+            document.querySelector(".et-countdown").innerHTML =
+                "<span class='text-white text-lg'>The event has started</span>";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.querySelector(".days").textContent = days;
+        document.querySelector(".hours").textContent = hours;
+        document.querySelector(".minutes").textContent = minutes;
+        document.querySelector(".seconds").textContent = seconds;
+    };
+
+
     onMounted(() => {
         PaiementRequestService()
-        console.log(route.query)
+        countdown();
+        setInterval(countdown, 1000);
     })
 
 </script>

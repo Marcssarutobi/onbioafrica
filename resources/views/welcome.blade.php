@@ -105,6 +105,6 @@
       <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
 
       <script src="{{asset('assets/js/main.js')}}"></script>
-      <script src="{{asset('assets/js/countdown.js')}}"></script>
+      {{-- <script src="{{asset('assets/js/countdown.js')}}"></script> --}}
     </body>
 </html>

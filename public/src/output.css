@@ -4202,9 +4202,9 @@
   .before\:bg-etBlue\/40 {
     &::before {
       content: var(--tw-content);
-      background-color: var(--color-etBlue);
+      background-color: #062d63;
       @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-etBlue) 40%, transparent);
+        background-color: color-mix(in oklab, #062d63 70%, transparent);
       }
     }
   }

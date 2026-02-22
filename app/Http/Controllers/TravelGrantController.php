@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TravelApproved;
+use App\Mail\TravelRejected;
 use App\Mail\TravelSubmittedAdmin;
 use App\Mail\TravelSubmittedUser;
 use App\Models\TravelGrant;
@@ -50,7 +52,13 @@ class TravelGrantController extends Controller
         if ($request->hasFile('documents')) {
             $paths = [];
             foreach ($request->file('documents') as $file) {
-                $path = $file->store('travel-grants/documents', 'public');
+                $originalName = $file->getClientOriginalName();
+                $filename = time().'_'.$originalName;
+                $path = $file->storeAs(
+                    'travel-grants/documents',
+                    $filename,
+                    'public'
+                );
                 $paths[] = $path;
             }
             $validated['doc_path'] = $paths;
@@ -234,6 +242,8 @@ class TravelGrantController extends Controller
 
         $travelGrant->update(['status' => 'approved']);
 
+        Mail::to($travelGrant->email)->send(new TravelApproved($travelGrant));
+
         return response()->json([
             'success' => true,
             'message' => 'Travel grant approuvé',
@@ -256,6 +266,8 @@ class TravelGrantController extends Controller
         }
 
         $travelGrant->update(['status' => 'rejected']);
+
+        Mail::to($travelGrant->email)->send(new TravelRejected($travelGrant));
 
         return response()->json([
             'success' => true,

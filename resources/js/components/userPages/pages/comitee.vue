@@ -1,148 +1,27 @@
-<template lang="html">
-    
+<template>
     <!-- BREADCRUMB SECTION START -->
     <section class="et-breadcrumb bg-[#000D83] pt-[210px] lg:pt-[190px] sm:pt-[160px] pb-[130px] lg:pb-[110px] sm:pb-[80px] relative z-[1] before:absolute before:inset-0 before:bg-[url('../assets/img/breadcrumb.jpg')] before:bg-no-repeat before:bg-cover before:bg-center before:-z-[1] before:opacity-30" >
         <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full text-center text-white">
-            <h1 class="et-breadcrumb-title font-medium text-[56px] md:text-[50px] xs:text-[45px]">About us</h1>
+            <h1 class="et-breadcrumb-title font-medium text-[56px] md:text-[50px] xs:text-[45px]">Organizing Committee</h1>
             <ul class="inline-flex items-center gap-[10px] font-medium text-[16px]">
                 <li class="opacity-80"><RouterLink to="/" class="hover:text-etBlue">Home</RouterLink></li>
                 <li><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-angle-right"></i></li>
-                <li class="current-page">About us</li>
+                <li class="current-page">Organizing Committee</li>
             </ul>
         </div>
     </section>
     <!-- BREADCRUMB SECTION END -->
 
-    <!-- ABOUT SECTION START -->
-    <section class="et-about py-[130px] xl:py-[80px] md:py-[60px] overflow-hidden relative" style="padding: 70px 0 ;">
-        <div class="et-1-container">
-            <div class="flex items-center md:flex-wrap gap-x-[60px] xxl:gap-x-[40px] lg:gap-x-[30px] gap-y-[40px] sm:gap-y-[40px] lg:justify-center">
-                <!-- left -->
-                <div class="et-about-img relative z-[1] md:w-auto shrink-0 max-w-full mr-[70px] md:mr-0 ml-[28px] xxxl:ml-[47px] md:ml-0 xs:w-[70%] xxs:w-[90%] xxs:ml-[47px]">
-                    <img src="assets/img/about-img.jpg" alt="image" class="shrink-0 rounded-[10px]">
-                    <img src="assets/img/about-img-3.jpg" alt="image" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden">
-
-                    <!-- vectors -->
-                    <div class="et-about-vectors xs:hidden">
-                        <img src="assets/img/about-img-vector-1.png" alt="vector" class="et-about-vector-1 absolute -left-[47px] top-[20px] -z-[1]">
-                        <img src="assets/img/about-img-vector-2.png" alt="vector" class="et-about-vector-2 absolute -left-[27px] top-[41px] -z-[1]">
-                        <img src="assets/img/about-img-vector-3.png" alt="vector" class="et-about-vector absolute -right-[24px] bottom-[34px] -z-[1]">
-                    </div>
-
-                    <!-- video btn -->
-                    <div class="absolute bottom-[50px] -left-[47px] lg:-left-[27px] md:-left-[47px] w-[180px] lg:w-[160px] aspect-square bg-[url('../assets/img/about-video-btn-bg.jpg')] text-center text-[22px] text-white z-[1] flex items-center justify-center before:absolute before:bg-etBlue/80 before:-z-[1] before:inset-0 after:bg-etBlack after:w-[47px] after:h-[30px] after:absolute after:top-[100%] after:left-0 after:-z-[2] after:skew-y-[30deg] after:-translate-y-[17px]">
-                        <a href="https://www.youtube.com/watch?v=AQleI8oFqZo&t=1s" data-fslightbox="about-video" class="w-[107px] aspect-square rounded-full border border-white/20 flex justify-center items-center text-etBlue relative z-[1] text-[18px] before:absolute before:w-[56px] before:h-[56px] before:bg-white before:rounded-full before:-z-[1] hover:text-black"><i class="fa-solid fa-play"></i></a>
-                    </div>
-                </div>
-
-                <!-- right -->
-                <div class="et-about__txt">
-                    <h6 class="et-section-sub-title anim-text">About The Symposium</h6>
-                    <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Advancing One Health Through Molecular Science in Africa</h2>
-
-                    <p class="mb-[30px] text-[16px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
-                        Africa faces interconnected challenges linking human, animal, plant, and environmental health. Yet molecular data generation, analysis, and sharing capacities remain uneven across the continent. OneBioAfrica was created to address this gap by building collaborative networks, strengthening bioinformatics expertise, and fostering genomic data exchange to support health surveillance, biodiversity conservation, and sustainable development.
-                    </p>
-
-                    
-                </div>
-            </div>
-        </div>
-
-        <!-- vectors -->
-        <div class="xs:hidden">
-            <img src="assets/img/about-vector-1.png" alt="vector" class="pointer-events-none absolute top-[340px] left-[90px] -z-[1]">
-            <img src="assets/img/about-vector-2.png" alt="vector" class="pointer-events-none absolute top-[153px] right-0 -z-[1]">
-        </div>
-    </section>
-    <!-- ABOUT SECTION END -->
-
-
-    <section class="et-mission">
-        <div class="et-container">
-
-            <!-- HEADER -->
-            <header class="et-heading-center">
-                <span class="et-section-sub-title anim-text">Our Purpose</span>
-                <h2 class="et-section-title anim-text">
-                    Mission & Scientific Objectives
-                </h2>
-                <p class="et-section-desc">
-                    OneBioAfrica is committed to strengthening One Health research networks across Africa
-                    through integrated, data-driven scientific collaboration.
-                </p>
-            </header>
-
-            <div class="et-mission-grid">
-
-                <!-- OBJECTIVES -->
-                <div class="et-objectives-card">
-                    <h3>Scientific Objectives</h3>
-
-                    <ul class="et-objectives-list">
-                        <li>
-                            <span class="et-bullet"></span>
-                            Promote molecular data sharing across African research institutions
-                        </li>
-                        <li>
-                            <span class="et-bullet"></span>
-                            Strengthen bioinformatics and genomics capacities
-                        </li>
-                        <li>
-                            <span class="et-bullet"></span>
-                            Advance pathogen surveillance and antimicrobial resistance research
-                        </li>
-                        <li>
-                            <span class="et-bullet"></span>
-                            Support biodiversity monitoring using environmental DNA
-                        </li>
-                        <li>
-                            <span class="et-bullet"></span>
-                            Foster interdisciplinary One Health collaborations
-                        </li>
-                        <li>
-                            <span class="et-bullet"></span>
-                            Encourage early-career training and mentorship
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- MISSION -->
-                <div class="et-mission-card">
-                    <h3>Our Mission</h3>
-
-                    <p>
-                        One Bio Africa promotes integrated scientific approaches linking molecular biology,
-                        ecosystem health, and public health.
-                    </p>
-
-                    <p>
-                        Its mission is to foster collaboration, capacity building, and knowledge exchange
-                        to address Africa’s One Health challenges through innovation, inclusivity,
-                        and sustainable research networks.
-                    </p>
-
-                    <div class="et-mission-values">
-                        <span>Collaboration</span>
-                        <span>Innovation</span>
-                        <span>Inclusivity</span>
-                        <span>Sustainability</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- TEAM SECTION START -->
+     <!-- TEAM SECTION START -->
     <section class="et-speakers py-[100px] lg:py-[80px] md:py-[60px] overflow-hidden relative z-[1]" style="padding: 70px 0;">
         <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
             <!-- heading -->
             <div class="et-speakers-heading text-center mb-[46px] xl:mb-[26px] lg:mb-[16px] gap-[15px]">
-                <h6 class="et-section-sub-title anim-text">Event Speakers</h6>
-                <h2 class="et-section-title anim-text">Meet Our Creative Speakers</h2>
+                <h6 class="et-section-sub-title anim-text">Organizing Committee</h6>
+                <h2 class="et-section-title anim-text">Scientific Committee</h2>
+                <p class="max-w-[800px] mx-auto mt-[20px] text-etGray text-[16px] font-light leading-[1.6]" style="margin-top: 20px;">
+                    The symposium is organised by an interdisciplinary committee of African and international scientists committed to advancing molecular One Health research. The scientific committee brings together experts in genomics, bioinformatics, epidemiology, and biodiversity conservation to ensure high-quality scientific programming and equitable regional representation.
+                </p>
             </div>
 
             <div class="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 justify-center gap-[30px] lg:gap-[20px]">
@@ -224,13 +103,13 @@
         </div>
     </section>
     <!-- TEAM SECTION END -->
-
 </template>
-<script setup>
-
+<script>
+export default {
+    
+}
 </script>
 <style scoped>
-
 .et-breadcrumb {
     position: relative;
     z-index: 1;
@@ -273,113 +152,4 @@
         padding-bottom: 80px;
     }
 }
-
-
-/* =========================
-   MISSION & OBJECTIVES
-========================= */
-
-.et-mission {
-    padding: 50px 0;
-    background-color: #f7f9fc;
-}
-
-.et-heading-center {
-    max-width: 720px;
-    margin: 0 auto 60px;
-    text-align: center;
-}
-
-.et-section-desc {
-    font-size: 18px;
-    color: #6b7280;
-    margin-top: 18px;
-    line-height: 1.6;
-}
-
-/* GRID */
-.et-mission-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 50px;
-}
-
-/* OBJECTIVES CARD */
-.et-objectives-card,
-.et-mission-card {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 18px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-}
-
-.et-objectives-card h3,
-.et-mission-card h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    color: #0f172a;
-}
-
-/* OBJECTIVES LIST */
-.et-objectives-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.et-objectives-list li {
-    display: flex;
-    gap: 14px;
-    font-size: 16.5px;
-    line-height: 1.6;
-    color: #374151;
-    margin-bottom: 14px;
-}
-
-.et-bullet {
-    width: 10px;
-    height: 10px;
-    margin-top: 8px;
-    border-radius: 50%;
-    background-color: #054072;
-    flex-shrink: 0;
-}
-
-/* MISSION TEXT */
-.et-mission-card p {
-    font-size: 16.5px;
-    line-height: 1.7;
-    color: #4b5563;
-    margin-bottom: 18px;
-}
-
-/* VALUES TAGS */
-.et-mission-values {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 25px;
-}
-
-.et-mission-values span {
-    padding: 8px 16px;
-    font-size: 14px;
-    background-color: rgba(5, 64, 114, 0.08);
-    color: #054072;
-    border-radius: 999px;
-    font-weight: 500;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .et-mission-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .et-mission {
-        padding: 80px 0;
-    }
-}
-    
 </style>

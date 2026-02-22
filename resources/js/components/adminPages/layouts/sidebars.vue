@@ -119,6 +119,13 @@
                     </RouterLink>
                 </li>
 
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/sponsor' }">
+                    <RouterLink to="/admins/sponsor" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-handshake-simple"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Sponsor</span>
+                    </RouterLink>
+                </li>   
+
             </ul>
         </div>
     </div>
