@@ -97,7 +97,7 @@
                 <tr>
                     <td class="email-header">
                         <!-- Remplace le src par ton logo -->
-                        <img src="https://cloudfilesdm.com/postcards/Logo_5-fe9039d6.png" alt="OneBioAfrica">
+                        <img src="https://api-postcards.designmodo.com/files/images/user-153343/LogoW.png?v=fbfd8b60" alt="OneBioAfrica">
                     </td>
                 </tr>
 
