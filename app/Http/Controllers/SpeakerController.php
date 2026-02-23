@@ -21,6 +21,22 @@ class SpeakerController extends Controller
         ]);
     }
 
+    public function allSpeakers(){
+        $data = Speaker::orderBy('id','desc')->paginate(9);
+        return response()->json([
+            'success' => true,
+            'data' => $data
+        ]);
+    }
+
+    public function showSpeaker($id){
+        $speaker = Speaker::with('programs')->find($id);
+        return response()->json([
+            'success' => true,
+            'data' => $speaker
+        ]);
+    }
+
     
     /**
      * Créer un nouveau speaker

@@ -69,8 +69,8 @@
                 <div class="flex md:flex-wrap xs:w-full gap-x-[65px] xxl:gap-x-[45px] xl:gap-[30px] gap-y-[25px] justify-between md:justify-center xxs:justify-start">
                     <!-- footer about -->
                     <div class="et-footer-about max-w-[295px] lg:max-w-none md:max-w-[300px] xs:max-w-full">
-                        <a href="#" class="mb-[25px] inline-block"><img src="assets/img/logo-white.png" alt="logo"></a>
-                        <p class="font-light text-[#f2f2f2] text-[16px] mb-[25px]">Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus sit amet magna elemen facilisis</p>
+                        <a href="#" class="mb-[25px] inline-block"><img src="assets/img/LogoW.png" width="100" alt="logo"></a>
+                        <p class="font-light text-[#f2f2f2] text-[16px] mb-[25px]">Advancing One Health collaboration across Africa through genomics, bioinformatics, and integrated scientific innovation</p>
 
                         <!-- social media -->
                         <div class="et-socials flex gap-[10px] text-[14px] *:border *:border-[#9EAACB] *:text-[#9EAACB] *:w-[40px] *:aspect-square *:shrink-0 *:inline-flex *:items-center *:justify-center *:rounded-full ">
@@ -83,59 +83,30 @@
 
                     <!-- widget -->
                     <div class="et-footer-widget shrink-0 xs:grow">
-                        <h5 class="text-[20px] font-medium mb-[16px]">Find <span class="text-etBlue">Events</span></h5>
+                        <h5 class="text-[20px] font-medium mb-[16px]">Registration<span class="text-etBlue"></span></h5>
 
                         <ul class="space-y-[17px] text-[16px] font-light text-[#f2f2f2]">
                             <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
+                                <RouterLink to="/abstract" class="flex items-center gap-[10px] hover:text-etBlue group">
                                     <span class="icon">
                                         <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
                                         </svg>
                                     </span>
-                                    <span class="txt">Outdoor Concerts</span>
-                                </a>
+                                    <span class="txt">Submit an abstract</span>
+                                </RouterLink>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
+                                <RouterLink to="/travel-grant" class="flex items-center gap-[10px] hover:text-etBlue group">
                                     <span class="icon">
                                         <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
                                         </svg>
                                     </span>
-                                    <span class="txt">Indoor Concerts</span>
-                                </a>
+                                    <span class="txt">Submit an Travel grant</span>
+                                </RouterLink>
                             </li>
-                            <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
-                                    <span class="icon">
-                                        <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
-                                        </svg>
-                                    </span>
-                                    <span class="txt">Festivals</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
-                                    <span class="icon">
-                                        <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
-                                        </svg>
-                                    </span>
-                                    <span class="txt">Concerts</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
-                                    <span class="icon">
-                                        <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
-                                        </svg>
-                                    </span>
-                                    <span class="txt">Event Calendar</span>
-                                </a>
-                            </li>
+                           
                         </ul>
                     </div>
 
@@ -145,43 +116,53 @@
 
                         <ul class="space-y-[17px] text-[16px] font-light text-[#f2f2f2]">
                             <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
+                                <RouterLink to="/abouts" class="flex items-center gap-[10px] hover:text-etBlue group">
                                     <span class="icon">
                                         <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
                                         </svg>
                                     </span>
-                                    <span class="txt">Log In</span>
-                                </a>
+                                    <span class="txt">Abouts</span>
+                                </RouterLink>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
+                                <RouterLink to="/comitee" class="flex items-center gap-[10px] hover:text-etBlue group">
                                     <span class="icon">
                                         <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
                                         </svg>
                                     </span>
-                                    <span class="txt">Register</span>
-                                </a>
+                                    <span class="txt">Committee</span>
+                                </RouterLink>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
+                                <RouterLink to="/events" class="flex items-center gap-[10px] hover:text-etBlue group">
                                     <span class="icon">
                                         <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
                                         </svg>
                                     </span>
-                                    <span class="txt">About Eventek</span>
-                                </a>
+                                    <span class="txt">Program</span>
+                                </RouterLink>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center gap-[10px] hover:text-etBlue group">
+                                <RouterLink to="/contact" class="flex items-center gap-[10px] hover:text-etBlue group">
                                     <span class="icon">
                                         <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
                                         </svg>
                                     </span>
-                                    <span class="txt">How It Works</span>
+                                    <span class="txt">Contacts</span>
+                                </RouterLink>
+                            </li>
+                            <li>
+                                <a href="/admins" target="_blank" class="flex items-center gap-[10px] hover:text-etBlue group">
+                                    <span class="icon">
+                                        <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="txt">Admins</span>
                                 </a>
                             </li>
                         </ul>

@@ -103,7 +103,7 @@
 
 </script>
 <style scoped>
-    .et-breadcrumb {
+.et-breadcrumb {
     position: relative;
     z-index: 1;
 
@@ -113,5 +113,19 @@
     /* Padding desktop */
     padding-top: 210px;
     padding-bottom: 130px;
+}
+/* Image de fond en overlay */
+.et-breadcrumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/assets/img/breadcrumb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.3;
+    z-index: -1;
 }
 </style>

@@ -201,5 +201,31 @@ class ProgramController extends Controller
         ]);
     }
 
+    public function programsByDays()
+    {
+        $programs = Program::with('speaker')
+            ->orderBy('date')
+            ->orderBy('start_time')
+            ->get()
+            ->groupBy('date');
+
+        $days = [];
+        $dayIndex = 1;
+
+        foreach ($programs as $date => $items) {
+            $days[] = [
+                'day'  => 'Day ' . $dayIndex,
+                'date' => $date,
+                'programs' => $items
+            ];
+            $dayIndex++;
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $days
+        ]);
+    }
+
 
 }

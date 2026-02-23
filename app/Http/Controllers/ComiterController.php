@@ -22,6 +22,16 @@ class ComiterController extends Controller
         ]);
     }
 
+    public function allComiters(){
+        $data = Comiter::orderBy('created_at', 'desc')->paginate(9);
+        return response()->json([
+            'success' => true,
+            'data' => $data
+        ]);
+    }
+
+   
+
     /**
      * Créer un nouveau membre du comité
      */

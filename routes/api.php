@@ -31,6 +31,17 @@ Route::post('/verifier-paiement',[AbstractdataController::class, 'verifier']);
 //Travel Grant
 Route::post('/addtravel',[TravelGrantController::class, 'store']);
 
+//Program
+Route::get('/programbyday',[ProgramController::class, 'programsByDays']);
+Route::get('/showprogram/{id}',[ProgramController::class, 'show']);
+
+//Speakers
+Route::get('/allpublicspeakers',[SpeakerController::class, 'allSpeakers']);
+Route::get('/showpublicspeaker/{id}',[SpeakerController::class, 'showSpeaker']);
+
+//Comiter
+Route::get('/allpubliccomiters',[ComiterController::class, 'allComiters']);
+
 Route::middleware('auth:sanctum')->group(function(){
 
     //CurrentUser
@@ -56,7 +67,6 @@ Route::middleware('auth:sanctum')->group(function(){
 
     //Program
     Route::get('/allprogram',[ProgramController::class, 'index']);
-    Route::get('/showprogram/{id}',[ProgramController::class, 'show']);
     Route::get('/programbydate/{date}',[ProgramController::class, 'byDate']);
     Route::post('/addprogram',[ProgramController::class, 'store']);
     Route::post('/updateprogram/{id}',[ProgramController::class, 'update']);
