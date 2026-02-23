@@ -276,7 +276,7 @@
     ]
 
     async function AddProgramFunction() {
-        isLoader.value = true
+        
 
         const ignoredFields = ['id','photo']
         for (const field in data.value) {
@@ -288,6 +288,7 @@
         const allEmpty = Object.values(isEmpty.value).every(value => value === false)
 
         if (allEmpty) {
+            isLoader.value = true
             const formData = new FormData()
 
             for (const field in data.value) {

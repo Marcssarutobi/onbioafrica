@@ -208,7 +208,7 @@
     ]
 
     async function AddGuestFunction() {
-        isLoader.value = true
+        
 
         const ignoredFields = ['id']
         for (const field in data.value) {
@@ -220,6 +220,7 @@
         const allEmpty = Object.values(isEmpty.value).every(value => value === false)
 
         if (allEmpty) {
+            isLoader.value = true
             await postGuest(data.value).then(res => {
                 isLoader.value = false
                 for (const field in data.value) {

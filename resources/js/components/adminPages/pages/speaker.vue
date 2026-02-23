@@ -274,7 +274,7 @@ const columns = [
 ]
 
 async function AddSpeakerFunction(){
-    isLoader.value = true
+    
     try {
 
         const ignoredFields = ['id','photo']
@@ -287,7 +287,7 @@ async function AddSpeakerFunction(){
         const allEmpty = Object.values(isEmpty.value).every(value => value === false)
 
         if (allEmpty) {
-            
+            isLoader.value = true
             const formData = new FormData()
 
             for (const field in data.value) {

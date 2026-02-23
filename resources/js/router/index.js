@@ -77,6 +77,14 @@ const routes =[
               path:'sponsor',
               component: ()=>import('../components/adminPages/pages/sponsor.vue')
             },
+            {
+              path:'comite',
+              component: ()=>import('../components/adminPages/pages/comite.vue')
+            },
+            {
+              path:'user',
+              component: ()=>import('../components/adminPages/pages/user.vue')
+            },
         ]
     },
     {

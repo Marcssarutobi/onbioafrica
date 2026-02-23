@@ -126,6 +126,20 @@
                     </RouterLink>
                 </li>   
 
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/comite' }">
+                    <RouterLink to="/admins/comite" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-user-hat-tie"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Comite</span>
+                    </RouterLink>
+                </li>
+
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/user' }">
+                    <RouterLink to="/admins/user" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-user"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Users</span>
+                    </RouterLink>
+                </li>
+
             </ul>
         </div>
     </div>
