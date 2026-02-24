@@ -39,6 +39,10 @@ const routes =[
                 component: ()=>import('../components/userPages/pages/gallery.vue')
             },
             {
+                path:'singleSpeaker/:id',
+                component: ()=>import('../components/userPages/pages/singleSpeaker.vue')
+            },
+            {
                 path:'contact',
                 component: ()=>import('../components/userPages/pages/contact.vue')
             },

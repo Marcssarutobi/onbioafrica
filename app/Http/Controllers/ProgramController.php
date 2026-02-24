@@ -206,6 +206,7 @@ class ProgramController extends Controller
         $programs = Program::with('speaker')
             ->orderBy('date')
             ->orderBy('start_time')
+            ->where('isPublished',true)
             ->get()
             ->groupBy('date');
 

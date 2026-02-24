@@ -22,7 +22,7 @@ class SpeakerController extends Controller
     }
 
     public function allSpeakers(){
-        $data = Speaker::orderBy('id','desc')->paginate(9);
+        $data = Speaker::orderBy('id','desc')->get();
         return response()->json([
             'success' => true,
             'data' => $data
