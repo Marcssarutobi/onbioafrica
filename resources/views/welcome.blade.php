@@ -4,13 +4,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>One Bio Africa</title>
+        <title>One Bio Africa | Strengthening Molecular Biology & Bioinformatics in Africa</title>
+        <meta name="description" content="One Bio Africa is a collaborative initiative addressing interconnected human, animal, plant, and environmental health challenges by strengthening bioinformatics capacity, genomic data sharing, and molecular research across Africa.">
+        <meta name="keywords" content="One Bio Africa, One Health Africa, Bioinformatics Africa, Genomics Africa, Molecular Biology Africa, Health Surveillance, Biodiversity Conservation, Genomic Data Sharing">
+        <meta name="author" content="One Bio Africa">
+        <meta property="og:title" content="One Bio Africa | Advancing One Health Through Genomics">
+        <meta property="og:description" content="Building collaborative networks and strengthening bioinformatics expertise to support health surveillance, biodiversity conservation, and sustainable development across Africa.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.onebioafrica.org">
+        <meta property="og:image" content="https://onebioafrica.com/build/assets/logoA-CBQmTzZC.png">
 
         <link rel="stylesheet" href="{{asset('assets/vendor/font-awesome/all.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/vendor/splide/splide.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/vendor/slim-select/slimselect.css')}}">
-        <title>Eventics</title>
+
+        <link rel="icon" href="{{asset('admin/assets/images/logos/logoA.png')}}" type="image/x-icon">
+        
         <!-- custom css -->
         <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 
