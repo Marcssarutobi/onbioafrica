@@ -23,7 +23,7 @@ class ComiterController extends Controller
     }
 
     public function allComiters(){
-        $data = Comiter::orderBy('created_at', 'desc')->paginate(9);
+        $data = Comiter::orderBy('created_at', 'desc')->get();
         return response()->json([
             'success' => true,
             'data' => $data

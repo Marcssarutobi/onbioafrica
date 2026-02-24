@@ -45,6 +45,9 @@ Route::post('/addguest',[GuestController::class, 'store']);
 //Comiter
 Route::get('/allpubliccomiters',[ComiterController::class, 'allComiters']);
 
+//Sponsors
+Route::get('/allsponsor',[SponsorController::class, 'index']);
+
 Route::middleware('auth:sanctum')->group(function(){
 
     //CurrentUser
@@ -105,7 +108,6 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::delete('/travel-grants/{id}/documents/{documentIndex}', [TravelGrantController::class, 'deleteDocument']);
 
     //Sponsor
-    Route::get('/allsponsor',[SponsorController::class, 'index']);
     Route::get('/showsponsor/{id}',[SponsorController::class, 'show']);
     Route::post('/addsponsor',[SponsorController::class, 'store']);
     Route::post('/updatesponsor/{id}',[SponsorController::class, 'update']);
