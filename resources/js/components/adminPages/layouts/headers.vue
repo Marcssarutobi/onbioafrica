@@ -820,10 +820,33 @@
 
 </template>
 
-<script>
-export default {
+<script setup>
 
+import { onMounted, ref } from 'vue';
+import { RouterLink } from 'vue-router';
+import { isAuthenticated } from '../../../router';
+import { postData } from '../../plugins/api';
+
+const currentUser = ref({})
+
+async function Userinfo() {
+  currentUser.value = await isAuthenticated()
 }
+
+async function LogoutFunction() {
+  await postData('/logout',null).then(res=>{
+    if (res.status === 200) {
+      localStorage.removeItem('token')
+      currentUser.value = {}
+      window.location.href = '/admins/login'
+    }
+  })
+}
+
+onMounted(()=>{
+  Userinfo()
+})
+
 </script>
 
 <style>

@@ -60,6 +60,7 @@
                             <ul class="et-header-submenu">
                                 <li><RouterLink to="/abstract">Abstracts</RouterLink></li>
                                 <li><RouterLink to="/travel-grant">Travel Grant</RouterLink></li>
+                                <li><RouterLink to="/guest">Guest Registration</RouterLink></li>
                             </ul>
                         </li>
                         <li>

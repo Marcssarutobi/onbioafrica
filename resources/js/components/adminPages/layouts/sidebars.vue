@@ -4,13 +4,13 @@
     <!-- Brand Logo -->
     <RouterLink to="/admins" class="logo">
         <span class="logo logo-light">
-            <span class="logo-lg"><img src="/admin/assets/images/logo.png" alt="logo" /></span>
-            <span class="logo-sm"><img src="/admin/assets/images/logo-sm.png" alt="small logo" /></span>
+            <span class="logo-lg"><img src="/admin/assets/images/logos/logoW.png" height="50" style="height: 50px !important;" alt="logo" /></span>
+            <span class="logo-sm"><img src="/admin/assets/images/logos/logoW.png" height="50" style="height: 50px !important;" alt="small logo" /></span>
         </span>
 
         <span class="logo logo-dark">
-            <span class="logo-lg"><img src="/admin/assets/images/logo-black.png" alt="dark logo" /></span>
-            <span class="logo-sm"><img src="/admin/assets/images/logo-sm.png" alt="small logo" /></span>
+            <span class="logo-lg"><img src="/admin/assets/images/logos/logoW.png" height="50" style="height: 50px !important;" alt="dark logo" /></span>
+            <span class="logo-sm"><img src="/admin/assets/images/logos/logoW.png" height="50" style="height: 50px !important;" alt="small logo" /></span>
         </span>
     </RouterLink>
 
@@ -99,7 +99,7 @@
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/guest' }">
-                    <RouterLink to="/admins/guest" class="side-nav-link">
+                        <RouterLink to="/admins/guest" class="side-nav-link">
                         <span class="menu-icon"><i class="fa-light fa-users"></i></span>
                         <span class="menu-text" data-lang="dashboards">Guest</span>
                     </RouterLink>

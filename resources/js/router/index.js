@@ -35,6 +35,10 @@ const routes =[
                 component: ()=>import('../components/userPages/pages/travel.vue')
             },
             {
+                path:'guest',
+                component: ()=>import('../components/userPages/pages/guest.vue')
+            },
+            {
                 path:'gallery',
                 component: ()=>import('../components/userPages/pages/gallery.vue')
             },

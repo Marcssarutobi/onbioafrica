@@ -1,13 +1,13 @@
 <template>
-    
+  
     <!-- BREADCRUMB SECTION START -->
     <section class="et-breadcrumb bg-[#000D83] pt-[210px] lg:pt-[190px] sm:pt-[160px] pb-[130px] lg:pb-[110px] sm:pb-[80px] relative z-[1] before:absolute before:inset-0 before:bg-[url('../assets/img/breadcrumb-bg.jpg')] before:bg-no-repeat before:bg-cover before:bg-center before:-z-[1] before:opacity-30">
         <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full text-center text-white">
-            <h1 class="et-breadcrumb-title font-medium text-[56px] md:text-[50px] xs:text-[45px]">Abstracts Registration</h1>
+            <h1 class="et-breadcrumb-title font-medium text-[56px] md:text-[50px] xs:text-[45px]">Guest Registration</h1>
             <ul class="inline-flex items-center gap-[10px] font-medium text-[16px]">
                 <li class="opacity-80"><RouterLink to="/" class="hover:text-etBlue">Home</RouterLink></li>
                 <li><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-angle-right"></i></li>
-                <li class="current-page">Abstracts Registration</li>
+                <li class="current-page">Guest Registration</li>
             </ul>
         </div>
     </section>
@@ -18,67 +18,65 @@
 
             <div class="et-grid">
 
-                <!-- LEFT COLUMN -->
+                <!-- LEFT COLUMN : INFO -->
                 <div class="et-left">
 
                     <header class="et-heading">
-                        <span class="et-section-sub-title anim-text">Abstracts Registration</span>
-                        <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Abstract Submission</h2>
+                        <span class="et-section-sub-title anim-text">Guest Registration</span>
+                        <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Register as a Guest</h2>
                         <p class="mb-[30px] text-[18px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
-                            Abstract submission is open to researchers, students, and professionals working in molecular biology and One Health-related fields. Submissions will be evaluated based on scientific quality, originality, and relevance to the symposium themes. Accepted abstracts will be presented as oral or poster communications. Detailed submission guidelines, templates, and deadlines are available on the submission portal.
+                            Welcome! Please register as a guest to participate in our event. Fill in your personal details carefully. All fields are mandatory. Once submitted, you will receive a confirmation email with further instructions.
                         </p>
                     </header>
 
-                    <div class="image">
-                        <img src="assets/img/abstracts.jpg" alt="Abstract Submission" class="w-full rounded-lg">
-                    </div>
+                    
 
                     <ul class="et-info-list">
                         <li>
-                            <span class="et-icon"><i class="fa-solid fa-pencil"></i></span>
+                            <span class="et-icon"><i class="fa-solid fa-user"></i></span>
                             <div>
-                                <strong>Submission format</strong>
-                                <span>Text only, maximum 30 characters</span>
+                                <strong>Who can register</strong>
+                                <span>Researchers, students, professionals</span>
                             </div>
                         </li>
 
                         <li>
-                            <span class="et-icon"><i class="fa-solid fa-language"></i></span>
+                            <span class="et-icon"><i class="fa-solid fa-envelope"></i></span>
                             <div>
-                            <strong>Language</strong>
-                            <span>English or French</span>
+                                <strong>Email</strong>
+                                <span>A valid email is required for confirmation</span>
                             </div>
                         </li>
 
                         <li>
-                            <span class="et-icon"><i class="fa-solid fa-user-check"></i></span>
+                            <span class="et-icon"><i class="fa-solid fa-phone"></i></span>
                             <div>
-                            <strong>Review process</strong>
-                            <span>Evaluation by the Scientific Committee</span>
+                                <strong>Phone</strong>
+                                <span>Provide a reachable phone number</span>
                             </div>
                         </li>
                     </ul>
 
                 </div>
 
-                <!-- RIGHT : FORM -->
+                <!-- RIGHT COLUMN : FORM -->
                 <aside class="et-form-card">
 
-                    <h3>Submit your abstract</h3>
+                    <h3>Guest Registration Form</h3>
                     <p class="et-form-subtitle">
-                        Complete the form carefully. All fields are required.
+                        Complete all fields carefully to secure your spot.
                     </p>
 
-                    <form class="et-form-grid" @submit.prevent="AddAbstractFunction">
+                    <form class="et-form-grid" @submit.prevent="AddGuestFunction">
 
                         <div class="et-form-group">
                             <label>First Name</label>
-                            <input type="text" required v-model="data.nom">
+                            <input type="text" required v-model="data.prenom">
                         </div>
 
                         <div class="et-form-group">
                             <label>Last Name</label>
-                            <input type="text" required v-model="data.prenom">
+                            <input type="text" required v-model="data.nom">
                         </div>
 
                         <div class="et-form-group">
@@ -91,26 +89,10 @@
                             <input type="tel" required v-model="data.phone">
                         </div>
 
-                        <div class="et-form-group">
-                            <label>Affiliation</label>
-                            <input type="text" required v-model="data.affiliation">
-                        </div>
-
-                        <div class="et-form-group">
-                            <label>Abstract Title</label>
-                            <input type="text" required v-model="data.title_resume">
-                        </div>
-
-                        <div class="et-form-group full">
-                            <label>Abstract Text</label>
-                            <textarea rows="8" maxlength="500" required v-model="data.content_resume"></textarea>
-                            <div class="et-counter">{{ data.content_resume.length }}/500</div>
-                        </div>
-
                         <div class="et-form-actions full">
                             <button type="submit" :disabled="isLoader">
                                 <span v-if="!isLoader">
-                                    Submit Abstract
+                                    Register
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </span>
                                 <span v-else>
@@ -126,6 +108,7 @@
                         </div>
 
                     </form>
+
                 </aside>
 
             </div>
@@ -133,20 +116,17 @@
     </section>
 
 </template>
-<script setup>
 
-    import { ref } from 'vue';
-    import { postAbstractData } from '../../adminPages/api/abstract';
-    import Swal from 'sweetalert2';
+<script setup>
+    import { ref } from 'vue'
+import { postGuest } from '../../adminPages/api/guest'
+
 
     const data = ref({
-        nom: '',
-        prenom: '',
-        email: '',
-        phone: '',
-        affiliation: '',
-        title_resume: '',
-        content_resume: '',
+        nom:'',
+        prenom:'',
+        phone:'',
+        email:'',
     })
     const isEmpty = ref({})
     const msgInput = ref({})
@@ -154,9 +134,7 @@
     const alertMsg = ref('')
     const alertType = ref('')
 
-    async function AddAbstractFunction() {
-        
-
+    async function AddGuestFunction(){
         for (const field in data.value) {
             isEmpty.value[field] = !data.value[field]
             msgInput.value[field] = `Please enter ${field.replace('_', ' ')}`;
@@ -164,42 +142,34 @@
 
         const allEmpty = Object.values(isEmpty.value).every(value => value === false)
 
-        if (allEmpty) {
+        if (allEmpty){
             isLoader.value = true
-            await postAbstractData(data.value).then(res =>{
+            await postGuest(data.value).then(res=>{
                 isLoader.value = false
-                for (const field in data.value) {
-                    data.value[field] = ''
-                }
-
-                alertMsg.value = 'Abstract submitted successfully'
+                alertMsg.value = 'Registration successful! Please check your email for confirmation.'
                 alertType.value = 'success'
-                Swal.fire({
-                    toast: true,
-                    position: 'bottom-end',
-                    icon: 'success',
-                    title: 'Abstract submitted successfully',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.onmouseenter = Swal.stopTimer;
-                        toast.onmouseleave = Swal.resumeTimer;
-                    }
-                })
-            }).catch(err => {
+                data.value = {
+                    nom:'',
+                    prenom:'',
+                    phone:'',
+                    email:'',
+                }
+            }).catch(err=>{
                 isLoader.value = false
-                alertMsg.value = 'The email has already been taken. Please use a different email address.'
-                alertType.value = 'danger'
-            }).finally(() => {
-                isLoader.value = false
+                alertMsg.value = 'An error occurred during registration. Please try again later.'
+                alertType.value = 'error'
+            }).finally(()=>{
+                setTimeout(() => {
+                    alertMsg.value = ''
+                }, 5000)
             })
         }
     }
 
 </script>
+
 <style scoped>
-    .alert.success {
+.alert.success {
     color: #155724;
     background-color: #d4edda;
     border: 1px solid #c3e6cb;

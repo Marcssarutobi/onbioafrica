@@ -35,7 +35,7 @@
         }
 
         .email-header img {
-            height: 42px;
+            height: 100px;
         }
 
         /* Content */
@@ -97,7 +97,7 @@
                 <tr>
                     <td class="email-header">
                         <!-- Remplace le src par ton logo -->
-                        <img src="https://api-postcards.designmodo.com/files/images/user-153343/LogoW.png?v=fbfd8b60" alt="OneBioAfrica">
+                        <img src="https://cloudfilesdm.com/postcards/LogoW-cb3888b3.png" alt="OneBioAfrica">
                     </td>
                 </tr>
 

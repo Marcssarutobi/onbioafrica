@@ -362,16 +362,7 @@
                                 </div>
 
                                 <div class="flex shrink-0 xxl:flex-col flex-wrap items-center xxl:items-start gap-x-[30px] gap-y-[16px]">
-                                    <a href="event-details.html" class="et-btn border border-etBlue text-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] font-normal text-[17px] rounded-full hover:!bg-etBlue hover:!text-white">Buy Tickets</a>
-                                    <div class="flex items-center">
-                                        <div class="flex *:-ml-[20px]">
-                                            <img src="assets/img/reviewer-1.png" alt="Person" class="w-[45px] h-[45px] rounded-full border-[3px] border-white first:ml-0">
-                                            <img src="assets/img/reviewer-2.png" alt="Person" class="w-[45px] h-[45px] rounded-full border-[3px] border-white first:ml-0">
-                                            <img src="assets/img/reviewer-3.png" alt="Person" class="w-[45px] h-[45px] rounded-full border-[3px] border-white first:ml-0">
-                                            <div class="w-[45px] h-[45px] rounded-full border-[3px] border-white first:ml-0 text-white bg-etBlue font-semibold flex items-center justify-center text-[16px]"></div>
-                                        </div>
-                                        <span class="font-semibold text-etBlue text-[16px] -ml-[29px]"><span class="text-white">Spe</span>akers</span>
-                                    </div>
+                                    <RouterLink to="/guest" class="et-btn border border-etBlue text-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] font-normal text-[17px] rounded-full hover:!bg-etBlue hover:!text-white">Getting to the event</RouterLink>
                                 </div>
                             </div>
                         </div>
@@ -485,7 +476,7 @@
             <div class="flex items-center md:flex-col gap-x-[42px] gap-y-[25px] border border-[#D9D9D9] rounded-[20px] py-[30px] xxs:py-[20px] px-[34px] xxs:px-[16px] mb-[130px] lg:mb-[80px] md:mb-[60px]">
                 <!-- left -->
                 <div class="flex xxs:flex-wrap items-end gap-[40px] xxs:gap-x-[10px] gap-y-[10px] pr-[42px] md:pr-0 border-r md:border-r-0 border-[#D9D9D9] max-w-[230px] md:max-w-full shrink-0">
-                    <h5 class="font-medium text-[20px] text-etBlack anim-text">Trusted By Top sponsors</h5>
+                    <h5 class="font-medium text-[20px] text-etBlack anim-text">Our Sponsors</h5>
                     <a href="#" class="inline-block mb-[8px] group">
                         <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 13.4121L11.1668 2.24543H3.87542V0H15V11.1246H12.7546V3.8332L1.58789 15L0 13.4121Z" class="fill-etBlue group-hover:fill-etBlack transition duration-[400ms]"></path>

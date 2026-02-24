@@ -110,7 +110,7 @@
               <tbody class="pc-g-b">
                <tr class="pc-g-b">
                 <td class="pc-g-rb pc-g-rpt pc-g-rpb pc-w620-itemsVSpacings-20" valign="middle" style="padding-top: 0px; padding-bottom: 0px;">
-                 <img src="https://cloudfilesdm.com/postcards/Logo_5-fe9039d6.png" style="display: block; outline: 0; line-height: 100%; -ms-interpolation-mode: bicubic; width: 192px; height: auto; max-width: 100%; border: 0;" width="192" height="64" alt="" />
+                 <img src="https://cloudfilesdm.com/postcards/LogoW-cb3888b3.png" style="display: block; outline: 0; line-height: 100%; -ms-interpolation-mode: bicubic; width: 125px; height: auto; max-width: 100%; border: 0;" width="125" height="125" alt="" />
                 </td>
                </tr>
               </tbody>

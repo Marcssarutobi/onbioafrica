@@ -9,11 +9,11 @@
     <table align="center" width="600" style="background-color:#ffffff; padding: 40px;">
         <tr>
             <td style="text-align:center; padding-bottom:30px; padding-top:30px; background-color:#054072;">
-                <img src="https://cloudfilesdm.com/postcards/Logo_5-fe9039d6.png" alt="Logo" width="192" style="display:block; margin:0 auto;" />
+                <img src="https://cloudfilesdm.com/postcards/LogoW-cb3888b3.png" alt="Logo" width="80" style="display:block; margin:0 auto;" />
             </td>
         </tr>
         <tr>
-            <td style="padding-bottom:20px; color:#5aa236; font-weight:600; margin-top:20px; font-size:14px;">New abstract submission</td>
+            <td style="padding-bottom:20px; color:#5aa236; font-weight:600; padding-top:20px; font-size:14px;">New abstract submission</td>
         </tr>
         <tr>
             <td style="font-size:24px; font-weight:700; color:#151515; padding-bottom:20px;">

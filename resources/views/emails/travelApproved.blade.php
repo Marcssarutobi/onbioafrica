@@ -35,7 +35,7 @@
         }
 
         .email-header img {
-            height: 42px;
+            height: 100px;
         }
 
         /* Content */
@@ -105,7 +105,7 @@
                 <!-- HEADER -->
                 <tr>
                     <td class="email-header">
-                        <img src="https://cloudfilesdm.com/postcards/Logo_5-fe9039d6.png" alt="OneBioAfrica">
+                        <img src="https://cloudfilesdm.com/postcards/LogoW-cb3888b3.png" alt="OneBioAfrica">
                     </td>
                 </tr>
 

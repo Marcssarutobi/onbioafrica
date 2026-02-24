@@ -12,8 +12,8 @@
                     <div class="col-xxl-5 col-md-6 col-sm-8">
                         <div class="card p-4">
                             <div class="auth-brand text-center mb-2">
-                                <a href="/" class="logo-dark" style="height: 50px !important;">
-                                    <img src="/admin/assets/images/logos/logoA.png" alt="dark logo" style="height: 50px !important;" />
+                                <a href="/" class="logo-dark" style="height: 80px !important;">
+                                    <img src="/admin/assets/images/logos/logoA.png" alt="dark logo" style="height: 80px !important;" />
                                 </a>
                                 <a href="/" class="logo-light">
                                     <img src="/admin/assets/images/logos/logoA.png" alt="logo" />

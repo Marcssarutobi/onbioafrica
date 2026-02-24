@@ -39,6 +39,9 @@ Route::get('/showprogram/{id}',[ProgramController::class, 'show']);
 Route::get('/allpublicspeakers',[SpeakerController::class, 'allSpeakers']);
 Route::get('/showpublicspeaker/{id}',[SpeakerController::class, 'showSpeaker']);
 
+//Guests
+Route::post('/addguest',[GuestController::class, 'store']);
+
 //Comiter
 Route::get('/allpubliccomiters',[ComiterController::class, 'allComiters']);
 
@@ -77,7 +80,6 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/allguest',[GuestController::class, 'index']);
     Route::get('/showguest/{id}',[GuestController::class, 'show']);
     Route::get('/showpresenceguest/{status}',[GuestController::class, 'byPresence']);
-    Route::post('/addguest',[GuestController::class, 'store']);
     Route::put('/updateguest/{id}',[GuestController::class, 'update']);
     Route::put('/updateguestpresence/{id}',[GuestController::class, 'togglePresence']);
     Route::delete('/deleteguest/{id}',[GuestController::class, 'destroy']);

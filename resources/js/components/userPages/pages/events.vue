@@ -98,16 +98,7 @@
                                     </div>
 
                                     <div class="flex shrink-0 xxl:flex-col flex-wrap items-center xxl:items-start gap-x-[30px] gap-y-[16px]">
-                                        <a href="event-details.html" class="et-btn border border-etBlue text-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] font-normal text-[17px] rounded-full hover:!bg-etBlue hover:!text-white">Buy Tickets</a>
-                                        <div class="flex items-center">
-                                            <div class="flex *:-ml-[20px]">
-                                                <img src="assets/img/reviewer-1.png" alt="Person" class="w-[45px] h-[45px] rounded-full border-[3px] border-white first:ml-0">
-                                                <img src="assets/img/reviewer-2.png" alt="Person" class="w-[45px] h-[45px] rounded-full border-[3px] border-white first:ml-0">
-                                                <img src="assets/img/reviewer-3.png" alt="Person" class="w-[45px] h-[45px] rounded-full border-[3px] border-white first:ml-0">
-                                                <div class="w-[45px] h-[45px] rounded-full border-[3px] border-white first:ml-0 text-white bg-etBlue font-semibold flex items-center justify-center text-[16px]"></div>
-                                            </div>
-                                            <span class="font-semibold text-etBlue text-[16px] -ml-[29px]"><span class="text-white">Spe</span>akers</span>
-                                        </div>
+                                        <RouterLink to="/guest" class="et-btn border border-etBlue text-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] font-normal text-[17px] rounded-full hover:!bg-etBlue hover:!text-white">Getting to the event</RouterLink>
                                     </div>
                                 </div>
                             </div>
