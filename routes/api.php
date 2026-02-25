@@ -7,6 +7,8 @@ use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\SpeakerController;
 use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\TravelGrantController;
+use App\Http\Controllers\TypeSpeakerController;
+use App\Http\Controllers\TypeSponsorsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -71,6 +73,13 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::put('/updatespeaker/{id}',[SpeakerController::class, 'update']);
     Route::delete('/deletespeaker/{id}',[SpeakerController::class, 'destroy']);
 
+    //speaker type
+    Route::get('/alltypespeaker',[TypeSpeakerController::class, 'index']);
+    Route::post('/addtypespeaker',[TypeSpeakerController::class, 'store']);
+    Route::get('/showtypespeaker/{id}',[TypeSpeakerController::class, 'show']);
+    Route::put('/updatetypespeaker/{id}',[TypeSpeakerController::class, 'update']);
+    Route::delete('/deletetypespeaker/{id}',[TypeSpeakerController::class, 'destroy']);
+
     //Program
     Route::get('/allprogram',[ProgramController::class, 'index']);
     Route::get('/programbydate/{date}',[ProgramController::class, 'byDate']);
@@ -112,6 +121,13 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('/addsponsor',[SponsorController::class, 'store']);
     Route::post('/updatesponsor/{id}',[SponsorController::class, 'update']);
     Route::delete('/deletesponsor/{id}',[SponsorController::class, 'destroy']);
+
+    //Sponsor Type
+    Route::get('/allsponsortype',[TypeSponsorsController::class, 'index']);
+    Route::post('/addsponsortype',[TypeSponsorsController::class, 'store']);
+    Route::get('/showsponsortype/{id}',[TypeSponsorsController::class, 'show']);
+    Route::put('/updatesponsortype/{id}',[TypeSponsorsController::class, 'update']);
+    Route::delete('/deletesponsortype/{id}',[TypeSponsorsController::class, 'destroy']);
 
     //Comiter
     Route::get('/allcomiter',[ComiterController::class, 'index']);

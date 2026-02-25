@@ -111,9 +111,12 @@
                             <div class="col-lg-6 mb-3">
                                 <div class="form-group">
                                     <label for="type">Type</label>
-                                    <input type="text" class="form-control" :class="isEmpty.type ? 'is-invalid border border-danger' : ''" id="type" placeholder="ex: keynote, panelist,..." v-model="data.type">
-                                    <div v-if="isEmpty.type" class="invalid-feedback">
-                                        {{ msgInput.type }}
+                                    <select name="type_speaker_id" id="type_speaker_id" class="form-select" v-model="data.type_speaker_id">
+                                        <option value="">Select a type</option>
+                                        <option v-for="type in allspeakertype" :key="type.id" :value="type.id">{{ type.name }}</option>
+                                    </select>
+                                    <div v-if="isEmpty.type_speaker_id" class="invalid-feedback">
+                                        {{ msgInput.type_speaker_id }}
                                     </div>
                                 </div>
                             </div>
@@ -152,6 +155,7 @@ import DataTable from '../Datatable/Datatable.vue'
 import {initTinyMCE,destroyTinyMCE} from '../../plugins/tinymce';
 import { allSpeakers, deleteSpeaker, postSpeaker, singleSpeaker, updateSpeaker } from '../api/speaker';
 import Swal from 'sweetalert2';
+import { allTypeSpeaker } from '../api/typespeaker';
 
 const data = ref({
     id:'',
@@ -162,7 +166,7 @@ const data = ref({
     affiliation:'',
     bio:'',
     photo:'',
-    type:'',
+    type_speaker_id:'',
 })
 
 const isEmpty = ref({})
@@ -173,6 +177,7 @@ const modalTitle = ref('')
 const modalBtn = ref('')
 const preview = ref('')
 const allspeaker = ref([])
+const allspeakertype = ref([])
 let addmodal
 
 function showModal(){
@@ -185,7 +190,7 @@ function showModal(){
         affiliation:'',
         bio:'',
         photo:'',
-        type:'',
+        type_speaker_id:'',
     }
     isEdite.value = false
     modalTitle.value = 'Add Speaker'
@@ -214,6 +219,10 @@ const removeImage  = ()=>{
 
 async function AllSpeakerFunction() {
     allspeaker.value = await allSpeakers()
+}
+
+async function AllSpeakertypeFunction() {
+    allspeakertype.value = await allTypeSpeaker()
 }
 
 const columns = [
@@ -433,6 +442,7 @@ onMounted(()=>{
     });
 
     AllSpeakerFunction()
+    AllSpeakertypeFunction()
 })
 
 </script>

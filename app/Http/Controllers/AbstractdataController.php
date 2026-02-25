@@ -9,6 +9,7 @@ use App\Models\Abstractdata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AbstractSubmittedUser;
+use App\Mail\GuestInvitation;
 use App\Models\User;
 use FedaPay\FedaPay;
 use FedaPay\Transaction;
@@ -252,6 +253,8 @@ class AbstractdataController extends Controller
                 'message' => 'Abstract non trouvé'
             ], 404);
         }
+
+        Mail::to($abstract->email)->send(new GuestInvitation($abstract));
 
         $abstract->update(['isinvite' => 'sent']);
 

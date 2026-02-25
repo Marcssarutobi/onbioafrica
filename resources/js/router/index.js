@@ -62,6 +62,10 @@ const routes =[
                 component: ()=>import('../components/adminPages/pages/home.vue')
             },
             {
+              path:'speaker-type',
+              component: ()=>import('../components/adminPages/pages/speakerType.vue')
+            },
+            {
               path:'speaker',
               component: ()=>import('../components/adminPages/pages/speaker.vue')
             },
@@ -80,6 +84,10 @@ const routes =[
             {
               path:'travel',
               component: ()=>import('../components/adminPages/pages/travel.vue')
+            },
+            {
+              path:'sponsor-type',
+              component: ()=>import('../components/adminPages/pages/sponsorsType.vue')
             },
             {
               path:'sponsor',

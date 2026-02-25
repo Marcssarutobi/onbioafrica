@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\GuestInvitation;
 use App\Mail\TravelApproved;
 use App\Mail\TravelRejected;
 use App\Mail\TravelSubmittedAdmin;
@@ -243,6 +244,7 @@ class TravelGrantController extends Controller
         $travelGrant->update(['status' => 'approved']);
 
         Mail::to($travelGrant->email)->send(new TravelApproved($travelGrant));
+        Mail::to($travelGrant->email)->send(new GuestInvitation($travelGrant));
 
         return response()->json([
             'success' => true,

@@ -84,6 +84,13 @@
                     </RouterLink>
                 </li>
 
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/speaker-type' }">
+                    <RouterLink to="/admins/speaker-type" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-tag"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Speaker Type</span>
+                    </RouterLink>
+                </li>
+
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/speaker' }">
                     <RouterLink to="/admins/speaker" class="side-nav-link">
                         <span class="menu-icon"><i class="fa-light fa-microphone"></i></span>
@@ -116,6 +123,13 @@
                     <RouterLink to="/admins/travel" class="side-nav-link">
                         <span class="menu-icon"><i class="fa-light fa-plane"></i></span>
                         <span class="menu-text" data-lang="dashboards">Travel</span>
+                    </RouterLink>
+                </li>
+
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/sponsor-type' }">
+                    <RouterLink to="/admins/sponsor-type" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-tag"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Sponsor Type</span>
                     </RouterLink>
                 </li>
 

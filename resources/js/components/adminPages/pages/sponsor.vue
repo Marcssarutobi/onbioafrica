@@ -52,10 +52,19 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 mb-3">
+                <div class="col-lg-6 mb-3">
                     <label for="name" class="form-label">Name Sponsor</label>
-                    <input type="text" class="form-control" id="name" v-model="data.name">
+                    <input type="text" class="form-control" id="name" v-model="data.name" placeholder="Name Sponsors">
                     <div class="text-danger mt-1" v-if="msgInput.name">{{ msgInput.name }}</div>
+                </div>
+
+                <div class="col-lg-6 mb-3">
+                    <label for="type_sponsor_id" class="form-label">Type Sponsor</label>
+                    <select class="form-select" id="type_sponsor_id" v-model="data.type_sponsor_id">
+                        <option value="">Select Type Sponsor</option>
+                        <option v-for="type in allsponsortype" :key="type.id" :value="type.id">{{ type.name }}</option>
+                    </select>
+                    <div class="text-danger mt-1" v-if="msgInput.type_sponsor_id">{{ msgInput.type_sponsor_id }}</div>
                 </div>
 
             </div>
@@ -70,12 +79,14 @@
     import DataTable from '../Datatable/Datatable.vue'
     import Swal from 'sweetalert2';
     import Modal from '../Modal/modal.vue';
-import { allSponsors, deleteSponsor, postSponsor, singleSponsor, updateSponsor } from '../api/sponsor';
+    import { allSponsors, deleteSponsor, postSponsor, singleSponsor, updateSponsor } from '../api/sponsor';
+import { allTypeSponsor } from '../api/typesponsor';
 
     const data = ref({
         id:'',
         name:'',
         logo:'',
+        type_sponsor_id:'',
     })
 
     const isEmpty = ref({})
@@ -85,6 +96,7 @@ import { allSponsors, deleteSponsor, postSponsor, singleSponsor, updateSponsor }
     const modalTitle = ref('')
     const modalBtn = ref('')
     const allsponsors = ref([])
+    const allsponsortype = ref([])
     const addmodal = ref(null)
     const preview = ref('')
 
@@ -93,6 +105,7 @@ import { allSponsors, deleteSponsor, postSponsor, singleSponsor, updateSponsor }
             id:'',
             name:'',
             logo:'',
+            type_sponsor_id:'',
         }
         isEdite.value = false
         modalTitle.value = 'Add Sponsor'
@@ -105,6 +118,10 @@ import { allSponsors, deleteSponsor, postSponsor, singleSponsor, updateSponsor }
 
     async function AllSponsorFunction() {
         allsponsors.value = await allSponsors()
+    }
+
+    async function AllSponsorTypeFunction() {
+        allsponsortype.value = await allTypeSponsor()
     }
 
     const columns = [
@@ -120,6 +137,13 @@ import { allSponsors, deleteSponsor, postSponsor, singleSponsor, updateSponsor }
             data: null,
             render: (data, type, row)=>{
                 return `<span class='fw-bold'>${row.name}</span>`
+            }
+        },
+        {
+            title: 'Type Sponsor',
+            data: null,
+            render: (data, type, row) => {
+                return `<span class=''>${row.type_sponsor?.name || 'No Type'}</span>`
             }
         },
         {
@@ -311,6 +335,7 @@ import { allSponsors, deleteSponsor, postSponsor, singleSponsor, updateSponsor }
 
     onMounted(()=>{
         AllSponsorFunction()
+        AllSponsorTypeFunction()
     })
 
 </script>

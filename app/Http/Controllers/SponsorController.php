@@ -16,9 +16,15 @@ class SponsorController extends Controller
     {
         $sponsors = Sponsor::with('typeSponsor')->orderBy('id','desc')->get();
 
+        // Grouper les sponsors par type de sponsor
+        $sponsorsByType = $sponsors->groupBy(function ($sponsor) {
+            return $sponsor->typeSponsor->name ?? 'Unknown';
+        });
+
         return response()->json([
             'success' => true,
-            'data' => $sponsors
+            'data' => $sponsors,
+            'by_type' => $sponsorsByType
         ]);
     }
 

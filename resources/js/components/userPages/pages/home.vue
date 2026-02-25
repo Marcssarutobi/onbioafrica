@@ -539,7 +539,7 @@
     import { onMounted, ref } from 'vue';
     import { getData } from '../../plugins/api';
     import { Main } from '../../plugins/main';
-    import { markAbstractDataAsPaid, singleAbstractData } from '../../adminPages/api/abstract';
+    import { markAbstractDataAsInvited, markAbstractDataAsPaid, singleAbstractData } from '../../adminPages/api/abstract';
 
     const route = useRoute()
 
@@ -616,6 +616,7 @@
             }).then(async(res)=>{
                 if (res.data.status === 'approved') {
                     await markAbstractDataAsPaid(route.query.id)
+                    await markAbstractDataAsInvited(route.query.id)
                     Swal.fire({
                         icon: 'success',
                         text: 'Payment confirmed',
