@@ -14,7 +14,7 @@ class SponsorController extends Controller
      */
     public function index()
     {
-        $sponsors = Sponsor::all();
+        $sponsors = Sponsor::with('typeSponsor')->orderBy('id','desc')->get();
 
         return response()->json([
             'success' => true,
@@ -30,6 +30,7 @@ class SponsorController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:sponsors,name',
             'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'type_sponsor_id'  => 'nullable',
         ]);
 
         // Gestion du logo
@@ -84,6 +85,7 @@ class SponsorController extends Controller
         $validated = $request->validate([
             'name' => 'sometimes|required|string|max:255|unique:sponsors,name,' . $id,
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'type_sponsor_id'  => 'nullable',
         ]);
 
         // Gestion du logo (supprime l'ancien si nouveau)

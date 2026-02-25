@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('affiliation');
             $table->longText('bio');
             $table->string('photo')->nullable();
-            $table->string('type'); // e.g., keynote, panelist, etc.
+            $table->foreignId('type_speaker_id')->constrained('type_speakers')->onDelete('cascade');
             $table->timestamps();
         });
     }

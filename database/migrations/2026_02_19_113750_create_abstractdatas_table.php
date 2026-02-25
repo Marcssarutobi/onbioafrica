@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('email');
             $table->string('phone');
-            $table->string('affiliation');
+            $table->json('affiliation');
+            $table->json('authors');
             $table->string('title_resume');
             $table->text('content_resume');
             $table->enum('status',['pending','approved','rejected'])->default('pending');

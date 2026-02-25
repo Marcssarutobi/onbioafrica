@@ -236,8 +236,8 @@ const columns = [
         data: 'email',
     },
     { 
-        title: 'Type', 
-        data: 'type',
+        title: 'Type Speaker', 
+        data: 'type_speaker.name',
     },
     { 
         title: 'Affiliation', 

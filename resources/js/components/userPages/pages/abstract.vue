@@ -73,37 +73,42 @@
 
                         <div class="et-form-group">
                             <label>First Name</label>
-                            <input type="text" required v-model="data.nom">
+                            <input type="text" required v-model="data.nom" placeholder="ex: Jane">
                         </div>
 
                         <div class="et-form-group">
                             <label>Last Name</label>
-                            <input type="text" required v-model="data.prenom">
+                            <input type="text" required v-model="data.prenom" placeholder="ex: Smith">
                         </div>
 
                         <div class="et-form-group">
                             <label>Email</label>
-                            <input type="email" required v-model="data.email">
+                            <input type="email" required v-model="data.email" placeholder="ex: jane@example.com">
                         </div>
 
                         <div class="et-form-group">
                             <label>Phone</label>
-                            <input type="tel" required v-model="data.phone">
+                            <input type="tel" required v-model="data.phone" placeholder="ex: 0161000000">
                         </div>
 
                         <div class="et-form-group">
-                            <label>Affiliation</label>
-                            <input type="text" required v-model="data.affiliation">
+                            <label>Affiliation (separated by commas)</label>
+                            <input type="text" required v-model="data.affiliation_text" placeholder="ex: University A, University B">
                         </div>
 
                         <div class="et-form-group">
+                            <label>Authors (separated by commas)</label>
+                            <input type="text" required v-model="data.authors_text" placeholder="ex: John Doe, Jane Smith">
+                        </div>
+
+                        <div class="et-form-group full">
                             <label>Abstract Title</label>
-                            <input type="text" required v-model="data.title_resume">
+                            <input type="text" required v-model="data.title_resume" placeholder="Your Title">
                         </div>
 
                         <div class="et-form-group full">
                             <label>Abstract Text</label>
-                            <textarea rows="8" maxlength="500" required v-model="data.content_resume"></textarea>
+                            <textarea rows="8" maxlength="500" required v-model="data.content_resume" placeholder="Your Abstract"></textarea>
                             <div class="et-counter">{{ data.content_resume.length }}/500</div>
                         </div>
 
@@ -144,7 +149,10 @@
         prenom: '',
         email: '',
         phone: '',
-        affiliation: '',
+        affiliation_text: '',
+        authors_text: '',
+        affiliation: [],
+        authors: [],
         title_resume: '',
         content_resume: '',
     })
@@ -156,6 +164,15 @@
 
     async function AddAbstractFunction() {
         
+        data.value.affiliation = data.value.affiliation_text
+            .split(',')
+            .map(item => item.trim())
+            .filter(item => item !== '')
+
+        data.value.authors = data.value.authors_text
+            .split(',')
+            .map(item => item.trim())
+            .filter(item => item !== '')
 
         for (const field in data.value) {
             isEmpty.value[field] = !data.value[field]

@@ -15,10 +15,16 @@ class Abstractdata extends Model
         'email',
         'phone',
         'affiliation',
+        'authors',
         'title_resume',
         'content_resume',
         'status',
         'ispaid',
         'isinvite',
+    ];
+
+    protected $casts = [
+        'affiliation' => 'array',
+        'authors'     => 'array',
     ];
 }

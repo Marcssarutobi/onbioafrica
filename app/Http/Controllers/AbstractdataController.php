@@ -39,7 +39,14 @@ class AbstractdataController extends Controller
             'prenom'         => 'required|string|max:255',
             'email'          => 'required|email|unique:abstractdatas,email',
             'phone'          => 'nullable|string|max:255',
-            'affiliation'    => 'nullable|string|max:255',
+
+            // JSON → tableaux
+            'affiliation'    => 'nullable|array',
+            'affiliation.*'  => 'string|max:255',
+
+            'authors'        => 'nullable|array',
+            'authors.*' => 'required|string|max:255',
+
             'title_resume'   => 'required|string|max:255',
             'content_resume' => 'required|string',
             'status'         => 'nullable|string|in:pending,accepted,rejected',

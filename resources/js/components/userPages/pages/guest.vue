@@ -25,13 +25,14 @@
                         <span class="et-section-sub-title anim-text">Guest Registration</span>
                         <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Register as a Guest</h2>
                         <p class="mb-[30px] text-[18px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
-                            Welcome! Please register as a guest to participate in our event. Fill in your personal details carefully. All fields are mandatory. Once submitted, you will receive a confirmation email with further instructions.
+                            Welcome! Please register as a guest to participate in our event. Whether you represent an organization or are a researcher wishing to attend the event, please fill in your personal information carefully. All fields are mandatory. <br>
+                            Please note that registration is followed by a participation fee of 10,000 F. Once your registration has been submitted and payment confirmed, you will receive a confirmation email with further instructions.
                         </p>
                     </header>
 
                     
 
-                    <ul class="et-info-list">
+                    <!-- <ul class="et-info-list">
                         <li>
                             <span class="et-icon"><i class="fa-solid fa-user"></i></span>
                             <div>
@@ -55,7 +56,7 @@
                                 <span>Provide a reachable phone number</span>
                             </div>
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
 
@@ -67,7 +68,7 @@
                         Complete all fields carefully to secure your spot.
                     </p>
 
-                    <form class="et-form-grid" @submit.prevent="AddGuestFunction">
+                    <form class="et-form-grid" @submit.prevent="PaiementRequestService">
 
                         <div class="et-form-group">
                             <label>First Name</label>
@@ -120,6 +121,8 @@
 <script setup>
     import { ref } from 'vue'
 import { postGuest } from '../../adminPages/api/guest'
+import { postData } from '../../plugins/api'
+import Swal from 'sweetalert2'
 
 
     const data = ref({
@@ -134,36 +137,96 @@ import { postGuest } from '../../adminPages/api/guest'
     const alertMsg = ref('')
     const alertType = ref('')
 
-    async function AddGuestFunction(){
+    async function PaiementRequestService(){
+
         for (const field in data.value) {
             isEmpty.value[field] = !data.value[field]
             msgInput.value[field] = `Please enter ${field.replace('_', ' ')}`;
         }
-
         const allEmpty = Object.values(isEmpty.value).every(value => value === false)
-
-        if (allEmpty){
+        if(allEmpty){
             isLoader.value = true
-            await postGuest(data.value).then(res=>{
-                isLoader.value = false
-                alertMsg.value = 'Registration successful! Please check your email for confirmation.'
-                alertType.value = 'success'
-                data.value = {
-                    nom:'',
-                    prenom:'',
-                    phone:'',
-                    email:'',
+            FedaPay.init({
+                public_key: 'pk_sandbox_5OnNHVYU_bEh8gKO4RpLXF2F',
+                transaction: {
+                    amount: 10000,
+                    description: "Abstract Payment",
+                },
+                customer: {
+                    email: data.value.email,
+                    lastname: data.value.nom,
+                    firstname: data.value.prenom,
+                },
+                onComplete: (response)=>{
+                    if (response.transaction.id) {
+                        // Swal.fire({
+                        //     title: 'Check is in progress...',
+                        //     text: 'Please wait',
+                        //     allowOutsideClick: false,
+                        //     allowEscapeKey: false,
+                        //     didOpen: () => {
+                        //         Swal.showLoading()
+                        //     }
+                        // })
+                        verifierPaiement(response.transaction.id)
+                    }
                 }
-            }).catch(err=>{
-                isLoader.value = false
-                alertMsg.value = 'An error occurred during registration. Please try again later.'
-                alertType.value = 'error'
-            }).finally(()=>{
-                setTimeout(() => {
-                    alertMsg.value = ''
-                }, 5000)
-            })
+            }).open()
         }
+    }
+
+    async function verifierPaiement(transactionId){
+        try {
+            await postData('/verifier-paiement',{
+                transaction_id: transactionId
+            }).then(async(res)=>{
+                if (res.data.status === 'approved') {
+                    AddGuestFunction()
+                }else{
+                    Swal.fire({
+                        toast: true,
+                        position: "top-end",
+                        icon: 'error',
+                        title: 'Payment not confirmed',
+                        showConfirmButton: false,
+                        timer: 4000
+                    });
+                }
+            })
+        } catch (e) {
+            Swal.fire({
+                toast: true,
+                position: "top-end",
+                icon: 'error',
+                title: 'Erreur de vérification du paiement',
+                showConfirmButton: false,
+                timer: 4000
+            });
+        }
+    }
+
+
+    async function AddGuestFunction(){
+        isLoader.value = true
+        await postGuest(data.value).then(res=>{
+            isLoader.value = false
+            alertMsg.value = 'Registration successful! Please check your email for confirmation.'
+            alertType.value = 'success'
+            data.value = {
+                nom:'',
+                prenom:'',
+                phone:'',
+                email:'',
+            }
+        }).catch(err=>{
+            isLoader.value = false
+            alertMsg.value = 'An error occurred during registration. Please try again later.'
+            alertType.value = 'error'
+        }).finally(()=>{
+            setTimeout(() => {
+                alertMsg.value = ''
+            }, 5000)
+        })
     }
 
 </script>

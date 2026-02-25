@@ -12,5 +12,11 @@ class Sponsor extends Model
     protected $fillable = [
         'name',
         'logo',
+        'type_sponsor_id'
     ];
+
+    public function typeSponsor()
+    {
+        return $this->belongsTo(TypeSponsors::class);
+    }
 }

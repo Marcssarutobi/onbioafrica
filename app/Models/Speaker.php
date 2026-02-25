@@ -17,12 +17,17 @@ class Speaker extends Model
         'affiliation',
         'bio',
         'photo',
-        'type',
+        'type_speaker_id'
     ];
 
     // 🔁 Relations
     public function programs()
     {
         return $this->hasMany(Program::class);
+    }
+
+    public function typeSpeaker()
+    {
+        return $this->belongsTo(TypeSpeaker::class);
     }
 }

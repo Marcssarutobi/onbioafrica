@@ -67,7 +67,7 @@
 
                     <div class="col-md-6 mb-3">
                         <small class="text-muted">Affiliation</small>
-                        <div class="fw-bold">{{ data.affiliation }}</div>
+                        <div class="fw-bold">{{ data.affiliation.join(', ') }}</div>
                     </div>
 
                     <div class="col-12 mb-3">
@@ -77,7 +77,12 @@
 
                     <div class="col-12 mb-3">
                         <small class="text-muted">Abstract</small>
-                        <div class="border rounded p-3 bg-white fs-4" style="white-space:pre-wrap">{{ data.content_resume }}</div>
+                        <div class="border rounded p-3 bg-white fs-4" style="white-space:pre-wrap; text-align: justify;">{{ data.content_resume }}</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Authors</small>
+                        <div class="fw-bold">{{ data.authors.join(', ') }}</div>
                     </div>
 
                 </div>
@@ -100,7 +105,8 @@
         prenom: '',
         email: '',
         phone: '',
-        affiliation: '',
+        affiliation: [],
+        authors: [],
         title_resume: '',
         content_resume: '',
     })

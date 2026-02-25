@@ -13,7 +13,7 @@ class SpeakerController extends Controller
      */
     public function index()
     {
-        $speakers = Speaker::with('programs')->orderBy('id','desc')->get();
+        $speakers = Speaker::with(['programs','typeSpeaker'])->orderBy('id','desc')->get();
 
         return response()->json([
             'success' => true,
@@ -22,7 +22,7 @@ class SpeakerController extends Controller
     }
 
     public function allSpeakers(){
-        $data = Speaker::orderBy('id','desc')->get();
+        $data = Speaker::with('typeSpeaker')->orderBy('id','desc')->get();
         return response()->json([
             'success' => true,
             'data' => $data
@@ -51,7 +51,7 @@ class SpeakerController extends Controller
             'affiliation' => 'nullable|string|max:255',
             'bio'         => 'nullable|string',
             'photo'       => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'type'        => 'nullable|string|max:255',
+            'type_speaker_id'  => 'nullable',
         ]);
 
         // Gestion de la photo
@@ -100,7 +100,7 @@ class SpeakerController extends Controller
             'affiliation' => 'nullable|string|max:255',
             'bio'         => 'nullable|string',
             'photo'       => 'nullable',
-            'type'        => 'nullable|string|max:255',
+            'type_speaker_id'        => 'nullable',
         ]);
 
          // ⚡ Gestion de la photo

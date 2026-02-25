@@ -67,7 +67,7 @@
                             <RouterLink to="/events">Programm</RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="/sponsor">Industry/Sponsors</RouterLink>
+                            <RouterLink to="/sponsor">Partners/Sponsors</RouterLink>
                         </li>
                         
                         <li><RouterLink to="/contact">Contact</RouterLink></li>

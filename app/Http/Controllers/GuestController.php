@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\GuestInvitation;
 use App\Models\Guest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class GuestController extends Controller
 {
@@ -42,6 +44,8 @@ class GuestController extends Controller
             $guest->reference = 'OBA-' . date('Y') . '-' . str_pad($guest->id, 4, '0', STR_PAD_LEFT);
             $guest->save();
         }
+
+        Mail::to($guest->email)->send(new GuestInvitation($guest));
 
         return response()->json([
             'success' => true,

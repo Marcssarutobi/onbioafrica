@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Speaker;
+use App\Models\TypeSpeaker;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,6 +14,9 @@ class SpeakerSeeder extends Seeder
      */
     public function run(): void
     {
+
+        
+
         $speakers = [
             [
                 'firstname'   => 'Jean',
@@ -82,7 +86,24 @@ class SpeakerSeeder extends Seeder
         ];
 
         foreach ($speakers as $speaker) {
-            Speaker::create($speaker);
+
+             // ✅ récupère OU crée le type
+            $type = TypeSpeaker::firstOrCreate([
+                'name' => $speaker['type']
+            ]);
+
+            Speaker::create([
+                'firstname'        => $speaker['firstname'],
+                'lastname'         => $speaker['lastname'],
+                'email'            => $speaker['email'],
+                'country'          => $speaker['country'],
+                'affiliation'      => $speaker['affiliation'],
+                'photo'            => $speaker['photo'],
+                'bio'              => $speaker['bio'],
+
+                // ✅ remplacement clé
+                'type_speaker_id'  => $type->id,
+            ]);
         }
     }
 }
