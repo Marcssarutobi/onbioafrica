@@ -6,13 +6,13 @@
             <div class="swiper-wrapper">
                 <!-- single slide -->
                 <div class="swiper-slide">
-                    <div class="bg-no-repeat bg-cover bg-[url('../assets/img/banner-bg-1.jpg')] bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]">
+                    <div class="bg-no-repeat bg-cover bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]" style="background-image: url('/assets/img/carou1.jpeg')">
                         <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
                             <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
                                 <div class="left relative z-[20] w-[65%] md:w-full">
                                     <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">OneBioAfrica Symposium</h6>
 
-                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">Strengthening One Health <span class="font-normal tracking-tighter"> Networks Through Molecular Data</span></h1>
+                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">Strengthening One Health <span class="font-normal tracking-tighter"> Networks Through <br> Molecular Data</span></h1>
 
                                     <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
                                         <RouterLink to="/abouts" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Abouts us</RouterLink>
@@ -37,7 +37,7 @@
 
                 <!-- single slide -->
                 <div class="swiper-slide">
-                    <div class="bg-no-repeat bg-cover bg-[url('../assets/img/banner-bg-2.jpg')] bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]">
+                    <div class="bg-no-repeat bg-cover  bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]" style="background-image: url('/assets/img/carou2.jpeg')">
                         <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
                             <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
                                 <div class="left relative z-[20] w-[65%] md:w-full">
@@ -69,13 +69,13 @@
 
                 <!-- single slide -->
                 <div class="swiper-slide">
-                    <div class="bg-no-repeat bg-cover bg-[url('../assets/img/banner-bg-3.jpg')] bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]">
+                    <div class="bg-no-repeat bg-cover  bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]" style="background-image: url('/assets/img/carou3.jpeg')">
                         <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
                             <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
                                 <div class="left relative z-[20] w-[65%] md:w-full">
                                     <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">Capacity Building</h6>
 
-                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">From <br> Molecular Data <span class="font-normal tracking-tighter"> To Policy Action</span></h1>
+                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">From Molecular <br> Data <span class="font-normal tracking-tighter"> To Policy <br> Action</span></h1>
 
                                     <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
                                         <a href="contact.html" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Register Now</a>
@@ -110,8 +110,8 @@
             <div class="flex items-center md:flex-wrap gap-x-[60px] xxl:gap-x-[40px] lg:gap-x-[30px] gap-y-[40px] sm:gap-y-[40px] lg:justify-center">
                 <!-- left -->
                 <div class="et-about-img relative z-[1] md:w-auto shrink-0 max-w-full mr-[70px] md:mr-0 ml-[28px] xxxl:ml-[47px] md:ml-0 xs:w-[70%] xxs:w-[90%] xxs:ml-[47px]">
-                    <img src="assets/img/about-img.jpg" alt="image" class="shrink-0 rounded-[10px]">
-                    <img src="assets/img/about-img-3.jpg" alt="image" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden">
+                    <img src="assets/img/about7.jpeg" alt="image" width="423" height="526" class="shrink-0 rounded-[10px]">
+                    <img src="assets/img/aboutH.JPG.jpeg" width="201" height="241" alt="image" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden">
 
                     <!-- vectors -->
                     <div class="et-about-vectors xs:hidden">
@@ -120,10 +120,7 @@
                         <img src="assets/img/about-img-vector-3.png" alt="vector" class="et-about-vector absolute -right-[24px] bottom-[34px] -z-[1]">
                     </div>
 
-                    <!-- video btn -->
-                    <div class="absolute bottom-[50px] -left-[47px] lg:-left-[27px] md:-left-[47px] w-[180px] lg:w-[160px] aspect-square bg-[url('../assets/img/about-video-btn-bg.jpg')] text-center text-[22px] text-white z-[1] flex items-center justify-center before:absolute before:bg-etBlue/80 before:-z-[1] before:inset-0 after:bg-etBlack after:w-[47px] after:h-[30px] after:absolute after:top-[100%] after:left-0 after:-z-[2] after:skew-y-[30deg] after:-translate-y-[17px]">
-                        <a href="https://www.youtube.com/watch?v=AQleI8oFqZo&t=1s" data-fslightbox="about-video" class="w-[107px] aspect-square rounded-full border border-white/20 flex justify-center items-center text-etBlue relative z-[1] text-[18px] before:absolute before:w-[56px] before:h-[56px] before:bg-white before:rounded-full before:-z-[1] hover:text-black"><i class="fa-solid fa-play"></i></a>
-                    </div>
+                    
                 </div>
 
                 <!-- right -->
@@ -470,12 +467,12 @@
     <!-- SPEAKERS SECTION END -->
 
     <!-- SPONSORS & CTA SECTION START -->
-    <section class="et-cta py-[130px] lg:py-[80px] md:py-[60px] relative z-[1]" style="padding: 50px 0 !important;" v-if="allsponsors.length > 0">
+    <section class="et-cta py-[130px] lg:py-[80px] md:py-[60px] relative z-[1]" style="padding: 50px 0 !important;" >
         <div class="et-1-container">
             <!-- sponsors -->
             <div class="flex items-center md:flex-col gap-x-[42px] gap-y-[25px] border border-[#D9D9D9] rounded-[20px] py-[30px] xxs:py-[20px] px-[34px] xxs:px-[16px] mb-[130px] lg:mb-[80px] md:mb-[60px]">
                 <!-- left -->
-                <div class="flex xxs:flex-wrap items-end gap-[40px] xxs:gap-x-[10px] gap-y-[10px] pr-[42px] md:pr-0 border-r md:border-r-0 border-[#D9D9D9] max-w-[230px] md:max-w-full shrink-0">
+                <div class="flex xxs:flex-wrap items-end gap-[40px] xxs:gap-x-[10px] gap-y-[10px] pr-[42px] md:pr-0 border-r md:border-r-0 border-[#D9D9D9] max-w-[230px] md:max-w-full shrink-0" v-if="allsponsors.length > 0">
                     <h5 class="font-medium text-[20px] text-etBlack anim-text">Our Sponsors</h5>
                     <a href="#" class="inline-block mb-[8px] group">
                         <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
