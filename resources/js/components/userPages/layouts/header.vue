@@ -49,10 +49,11 @@
                             <ul class="et-header-submenu">
                                 <li><RouterLink to="/abouts">Abouts</RouterLink></li>
                                 <li><RouterLink to="/comitee">Local Organizing Committee</RouterLink></li>
+                                <li><RouterLink to="/speaker">Speaker</RouterLink></li>
                             </ul>
                         </li>
                         <li>
-                            <a role="button">General Information</a>
+                            <RouterLink to="/general-information">General Information</RouterLink>
                         </li>
                         <li class="has-sub-menu relative">
                             <a role="button" style="cursor: pointer;">Registration</a>

@@ -23,9 +23,16 @@ class SpeakerController extends Controller
 
     public function allSpeakers(){
         $data = Speaker::with('typeSpeaker')->orderBy('id','desc')->get();
+
+        // Regroupe par type de speaker
+        $speakersByType = $data->groupBy(function($speaker) {
+            return $speaker->typeSpeaker ? $speaker->typeSpeaker->name : 'Autres';
+        });
+
         return response()->json([
             'success' => true,
-            'data' => $data
+            'data' => $data,
+            'byType' => $speakersByType
         ]);
     }
 

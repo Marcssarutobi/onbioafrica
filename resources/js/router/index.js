@@ -15,8 +15,16 @@ const routes =[
                 component: ()=>import('../components/userPages/pages/abouts.vue')
             },
             {
+                path:'general-information',
+                component: ()=>import('../components/userPages/pages/information.vue')
+            },
+            {
                 path:'comitee',
                 component: ()=>import('../components/userPages/pages/comitee.vue')
+            },
+            {
+                path:'speaker',
+                component: ()=>import('../components/userPages/pages/speaker.vue')
             },
             {
                 path:'sponsor',

@@ -67,9 +67,27 @@
                     </p>
 
                      <!-- SPONSORS LOGOS -->
-                    <div class="et-sponsors-logos rev-slide-up">
-                        <img v-for="(sps,index) in allsponsors" :key="index" :src="'/storage/'+sps.logo" :alt="sps.name"  height="60">
+                    <div v-for="(sponsors, type) in allsponsors" :key="type" class="mb-[70px]">
+
+                        <!-- Type title -->
+                        <h3 class="text-start text-[24px] md:text-[20px] font-semibold text-etBlack mb-[30px]">
+                            {{ type }}
+                        </h3>
+
+                        <!-- Sponsors logos -->
+                        <div class="et-sponsors-logos ">
+                             <div class="et-sponsors-logos">
+                                <img
+                                    v-for="sponsor in sponsors"
+                                    :key="sponsor.id"
+                                    :src="'/storage/' + sponsor.logo"
+                                    :alt="sponsor.name"
+                                >
+                            </div>
+                        </div>
+
                     </div>
+
 
                 </div>
 
@@ -90,7 +108,7 @@
     async function AllSponsorsFunction(){
         await getData('/allsponsor').then(res=>{
             if (res.status === 200) {
-                allsponsors.value = res.data.data
+                allsponsors.value = res.data.by_type
                 setTimeout(()=>{
                     Main()
                 },0)
@@ -267,7 +285,7 @@
 
 /* SPONSORS LOGOS */
 .et-sponsors-logos {
-    margin-top: 80px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
