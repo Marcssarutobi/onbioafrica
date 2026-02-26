@@ -312,23 +312,23 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="#" alt="Parc Pendjari">
+                    <img src="assets/img/parc.jpg" alt="Parc Pendjari">
                     <div class="gallery-overlay">
                         <h4>Parc de la Pendjari</h4>
                         <p>Nord Bénin - Safari</p>
                     </div>
                 </div>
 
-                <div class="gallery-item wide">
-                    <img src="#" alt="Marché Dantokpa">
+                <div class="gallery-item ">
+                    <img src="assets/img/tokpa.jpg" alt="Marché Dantokpa">
                     <div class="gallery-overlay">
                         <h4>Marché Dantokpa</h4>
                         <p>Cotonou - Plus grand marché de l'Afrique de l'Ouest</p>
                     </div>
                 </div>
 
-                <div class="gallery-item wide">
-                    <img src="#" alt="Plage">
+                <div class="gallery-item ">
+                    <img src="assets/img/plage.jpg" alt="Plage">
                     <div class="gallery-overlay">
                         <h4>Plages de Grand-Popo</h4>
                         <p>Côte atlantique</p>
