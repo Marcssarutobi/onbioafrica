@@ -83,6 +83,7 @@
                             </svg>
                         </span>
                         Register Guest</a> -->
+                    <div class="gtranslate_wrapper " ></div>
                 </div>
 
                 <!-- mobile menu button -->
@@ -94,8 +95,40 @@
 
 </template>
 <script setup>
+import { onMounted } from 'vue'
+
+
+onMounted(()=>{
+    // Forcer English
+    document.cookie = "googtrans=/en/en; path=/; domain=" + window.location.hostname;
+
+    // 1️⃣ Définir la configuration globale
+    window.gtranslateSettings = {
+        default_language: "en",
+        languages: ["en", "fr"],
+        wrapper_selector: ".gtranslate_wrapper"
+    }
+
+    // 2️⃣ Créer et injecter le script
+    const script = document.createElement('script')
+    script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js"
+    script.defer = true
+
+    // Optionnel : quand le script est chargé
+    script.onload = () => {
+        console.log("GTranslate widget loaded")
+    }
+
+    document.body.appendChild(script)
+})
 
 </script>
 <style>
-    
+    .gt_selector {
+        background: #fff;
+        color: #000;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
 </style>

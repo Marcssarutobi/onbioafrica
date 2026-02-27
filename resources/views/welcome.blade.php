@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -113,6 +113,8 @@
       <script src="{{asset('assets/vendor/gsap/gsap-scroll-trigger.min.js')}}"></script>
 
       <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+
+      <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 
       <script src="{{asset('assets/js/main.js')}}"></script>
       {{-- <script src="{{asset('assets/js/countdown.js')}}"></script> --}}
