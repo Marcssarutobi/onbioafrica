@@ -495,6 +495,12 @@
     const activeIndex = ref(0)
     const allsponsors = ref([])
 
+    const tarif = {
+        "etudiant/doctorants":10000,
+        "postdoctorant/chercheurs/enseignant": 15000,
+        "institution/ongs":30000
+    }
+
     async function PaiementRequestService(){
         if (route.query.id && route.query.action === 'paiement') {
 
@@ -510,11 +516,13 @@
 
             const data = await singleAbstractData(id)
 
+            const montant = tarif[data.type] || 0
+
             if(data.ispaid === 'pending'){
                 FedaPay.init({
                     public_key: 'pk_sandbox_5OnNHVYU_bEh8gKO4RpLXF2F',
                     transaction: {
-                        amount: 100000,
+                        amount: montant,
                         description: "Abstract Payment",
                     },
                     customer: {

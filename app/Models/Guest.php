@@ -15,6 +15,7 @@ class Guest extends Model
         'phone',
         'email',
         'reference',
+        'type',
         'prensence'
     ];
 

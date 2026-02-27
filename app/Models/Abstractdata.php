@@ -14,6 +14,7 @@ class Abstractdata extends Model
         'prenom',
         'email',
         'phone',
+        'type',
         'affiliation',
         'authors',
         'title_resume',

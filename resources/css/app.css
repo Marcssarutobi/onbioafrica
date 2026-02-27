@@ -132,6 +132,7 @@
 }
 
 .et-form-group input,
+.et-form-group select,
 .et-form-group textarea {
   width: 100%;
   border: 1px solid #e5e7eb;
@@ -142,6 +143,7 @@
 }
 
 .et-form-group input:focus,
+.et-form-group select:focus,
 .et-form-group textarea:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37,99,235,0.12);

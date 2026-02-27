@@ -57,6 +57,18 @@
                             <span>Evaluation by the Scientific Committee</span>
                             </div>
                         </li>
+
+                        <li>
+                            <span class="et-icon"><i class="fa-solid fa-money-bill"></i></span>
+                            <div>
+                                <strong>Payment fees</strong>
+                                <span>
+                                    Students/Doctoral students: 10,000 FCFA<br>
+                                    Postdoctoral/Researchers/Teachers: 15,000 FCFA<br>
+                                    Institutions/NGOs: 30,000 FCFA
+                                </span>
+                            </div>
+                        </li>
                     </ul>
 
                 </div>
@@ -91,6 +103,16 @@
                             <input type="tel" required v-model="data.phone" placeholder="ex: 0161000000">
                         </div>
 
+                        <div class="et-form-group full">
+                            <label>Profile</label>
+                            <select name="" id="" v-model="data.type">
+                                <option value="" disabled selected>Select your profile</option>
+                                <option value="etudiant/doctorants">Students/Doctoral students</option>
+                                <option value="postdoctorant/chercheurs/enseignant">Postdoctoral Fellow/Researchers/Teacher</option>
+                                <option value="institution/ongs">Institution/NGOs</option>
+                            </select>
+                        </div>
+
                         <div class="et-form-group">
                             <label>Affiliation (separated by commas)</label>
                             <input type="text" required v-model="data.affiliation_text" placeholder="ex: University A, University B">
@@ -108,8 +130,8 @@
 
                         <div class="et-form-group full">
                             <label>Abstract Text</label>
-                            <textarea rows="8" maxlength="500" required v-model="data.content_resume" placeholder="Your Abstract"></textarea>
-                            <div class="et-counter">{{ data.content_resume.length }}/500</div>
+                            <textarea rows="8" maxlength="1000" required v-model="data.content_resume" placeholder="Your Abstract"></textarea>
+                            <div class="et-counter">{{ data.content_resume.length }}/1000</div>
                         </div>
 
                         <div class="et-form-actions full">
@@ -149,6 +171,7 @@
         prenom: '',
         email: '',
         phone: '',
+        type: '',
         affiliation_text: '',
         authors_text: '',
         affiliation: [],

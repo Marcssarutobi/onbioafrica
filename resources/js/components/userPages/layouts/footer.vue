@@ -21,7 +21,7 @@
                         <!-- txt -->
                         <div>
                             <span class="block font-medium text-[14px]">Event Venue</span>
-                            <h5 class="font-medium text-[20px]">4648 Rocky Road Philadelphia PA, 1920</h5>
+                            <h5 class="font-medium text-[20px]">Parakou, Bénin</h5>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@
                         <!-- txt -->
                         <div>
                             <span class="block font-medium text-[14px]">Send Email</span>
-                            <h5 class="font-medium text-[20px]"><a href="mailto:info@eventek.com">info@eventek.com</a></h5>
+                            <h5 class="font-medium text-[20px]"><a href="mailto:info@onebioafrica.com">info@onebioafrica.com</a></h5>
                         </div>
                     </div>
 
@@ -61,7 +61,7 @@
                         <!-- txt -->
                         <div>
                             <span class="block font-medium text-[14px]">Call Emergency</span>
-                            <h5 class="font-medium text-[20px]"><a href="tel:88012365499">+88 0123 654 99</a></h5>
+                            <h5 class="font-medium text-[20px]"><a href="tel:+2290196975772">+229 019 697 5772</a></h5>
                         </div>
                     </div>
                 </div>
