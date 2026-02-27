@@ -25,6 +25,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/login',[UserController::class, 'login']);
+Route::post('/user/sendCode', [UserController::class, 'sendResetCode']);
+Route::post('/user/verify', [UserController::class, 'verifyResetCode']);
 
 //AbstractData
 Route::post('/addabstractdata',[AbstractdataController::class, 'store']);
@@ -58,6 +60,8 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('/logout',[UserController::class, 'logout']);
 
     Route::post('/user/profile/change-password/{id}', [UserController::class, 'changePassword']);
+    Route::post('/user/reset/{id}', [UserController::class, 'resetPassword']);
+    
 
     //User
     Route::get('/alluser',[UserController::class, 'index']);

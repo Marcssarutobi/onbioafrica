@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendCodeMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -141,6 +143,39 @@ class UserController extends Controller
         return response()->json([
             'message' => 'Le mot de passe a été changé avec succès.'
         ]);
+    }
+
+    public function sendResetCode(Request $request)
+    {
+        $request->validate([
+            'email' => "required|email"
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        if (!$user) {
+            return response()->json([
+                'message' => 'Adresse email introuvable.'
+            ], 404);
+        }
+
+        $code = rand(100000, 999999);
+
+        $user->reset_code = $code;
+        $user->save();
+
+        try {
+            
+            Mail::to($user->email)->send(new SendCodeMail($user, $code));
+
+            return response()->json([
+                'user' => $user
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' => 'Erreur lors de l\'envoi du code de réinitialisation: ' . $e->getMessage()
+            ], 500);
+        }
     }
 
 

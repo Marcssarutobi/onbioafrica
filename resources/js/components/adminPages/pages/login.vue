@@ -12,10 +12,10 @@
                     <div class="col-xxl-5 col-md-6 col-sm-8">
                         <div class="card p-4">
                             <div class="auth-brand text-center mb-2">
-                                <a href="/" class="logo-dark" style="height: 80px !important;">
+                                <a href="#" class="logo-dark" style="height: 80px !important;">
                                     <img src="/admin/assets/images/logos/logoA.png" alt="dark logo" style="height: 80px !important;" />
                                 </a>
-                                <a href="/" class="logo-light">
+                                <a href="#" class="logo-light">
                                     <img src="/admin/assets/images/logos/logoA.png" alt="logo" />
                                 </a>
                                 <h4 class="fw-bold text-dark mt-3">Ravi de vous revoir. 👋</h4>
@@ -54,7 +54,7 @@
                                     <div class="form-check">
                                         
                                     </div>
-                                    <a href="auth-reset-pass.html" class="text-decoration-underline link-offset-3 text-muted">Forgot Password?</a>
+                                    <RouterLink to="/admins/forgetpassword" class="text-decoration-underline link-offset-3 text-muted">Forgot Password?</RouterLink>
                                 </div>
 
                                 <div class="d-grid">

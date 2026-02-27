@@ -118,7 +118,16 @@ const routes =[
     {
       path:'/admins/login',
       component: ()=>import('../components/adminPages/pages/login.vue')
-    }
+    },
+    {
+      path:'/admins/forgetpassword',
+      component: ()=>import('../components/adminPages/pages/forgetpassword.vue')
+    },
+    {
+      path:'/admins/changepassword',
+      meta: { requiresAuth: true },
+      component: ()=>import('../components/adminPages/pages/password.vue')
+    },
 ]
 
 const router = createRouter({

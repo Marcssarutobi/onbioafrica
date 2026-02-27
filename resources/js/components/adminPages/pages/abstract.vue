@@ -97,7 +97,7 @@
     import DataTable from '../Datatable/Datatable.vue'
     import Swal from 'sweetalert2';
     import Modal from '../Modal/modal.vue';
-    import { acceptAbstractData, allAbstractData, rejectAbstractData, singleAbstractData } from '../api/abstract';
+    import { acceptAbstractData, allAbstractData, deleteAbstractData, rejectAbstractData, singleAbstractData } from '../api/abstract';
 
     const data = ref({
         id:'',
@@ -222,7 +222,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item text-danger" href="#" onClick="DeleteProgramFunction(${row.id})">
+                                <a class="dropdown-item text-danger" href="#" onClick="DeleteAbstractFunction(${row.id})">
                                     <i class="fa fa-trash me-1"></i> Delete
                                 </a>
                             </li>
@@ -302,6 +302,28 @@
                     'error'
                 )
             })
+        }
+    }
+
+    window.DeleteAbstractFunction = async function(id){
+        const result = await Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        })
+
+        if(result.isConfirmed){
+            await deleteAbstractData(id)
+            Swal.fire(
+                'Deleted!',
+                'Abstract has been deleted.',
+                'success'
+            )
+            AllAbstractFunction()
         }
     }
 
