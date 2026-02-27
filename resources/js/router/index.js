@@ -109,6 +109,10 @@ const routes =[
               path:'user',
               component: ()=>import('../components/adminPages/pages/user.vue')
             },
+            {
+              path:'profils',
+              component: ()=>import('../components/adminPages/pages/profils.vue')
+            },
         ]
     },
     {

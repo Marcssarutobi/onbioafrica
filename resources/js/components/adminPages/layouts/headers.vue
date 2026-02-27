@@ -255,10 +255,10 @@
                             </div>
 
                             <!-- My Profile -->
-                            <a href="#!" class="dropdown-item">
+                            <RouterLink to="/admins/profils" class="dropdown-item">
                                 <i class="ti ti-user-circle me-1 fs-lg align-middle"></i>
                                 <span class="align-middle">Profile</span>
-                            </a>
+                            </RouterLink>
 
                             <!-- Divider -->
                             <div class="dropdown-divider"></div>
