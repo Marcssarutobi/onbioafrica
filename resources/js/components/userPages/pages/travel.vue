@@ -18,8 +18,8 @@
 
             <!-- INTRO -->
             <div class="grant-header">
-                <span class="et-section-sub-title anim-text">Travel Grant Registration</span>
-                <h2 class="et-section-title anim-text">Travel Grant Application</h2>
+                <span class="et-section-sub-title ">Travel Grant Registration</span>
+                <h2 class="et-section-title ">Travel Grant Application</h2>
                 <p class="rev-slide-up">
                     Ten travel grants are available for African students and early-career
                     researchers from under-resourced institutions. Selected applicants will
@@ -654,11 +654,11 @@ import { postTravelGrant } from '../../adminPages/api/travelGrant';
     ANIMATIONS
     ============================================ */
 
-.anim-text {
+/* . {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
-}
+} */
 
 .rev-slide-up {
     opacity: 0;

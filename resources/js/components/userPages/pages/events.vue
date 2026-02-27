@@ -18,8 +18,8 @@
     <div class="py-[130px] lg:py-[80px] md:py-[60px] overflow-hidden">
 
         <div class="left xs:text-center max-w-[50%] sm:max-w-full">
-            <h6 class="et-section-sub-title anim-text">Event Timetable</h6>
-            <h2 class="et-section-title anim-text">Information Of Event Schedule</h2>
+            <h6 class="et-section-sub-title ">Event Timetable</h6>
+            <h2 class="et-section-title ">Information Of Event Schedule</h2>
         </div>
 
 
@@ -84,7 +84,7 @@
                                         </div>
 
                                         <!-- title -->
-                                        <h3 class="et-schedule-title text-[24px] sm:text-[22px] font-regular text-etBlack leading-[1.25] mb-[16px] anim-text"><a href="#" class="hover:text-etBlue">{{ data.session_title }}</a></h3>
+                                        <h3 class="et-schedule-title text-[24px] sm:text-[22px] font-regular text-etBlack leading-[1.25] mb-[16px] "><a href="#" class="hover:text-etBlue">{{ data.session_title }}</a></h3>
 
                                         <!-- location -->
                                         <div class="et-schedule-loaction flex items-center gap-[12px]">

@@ -17,8 +17,8 @@
         <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
             <!-- heading -->
             <div class="et-speakers-heading text-center mb-[46px] xl:mb-[26px] lg:mb-[16px] gap-[15px]">
-                <h6 class="et-section-sub-title anim-text">Organizing Committee</h6>
-                <h2 class="et-section-title anim-text">Scientific Committee</h2>
+                <h6 class="et-section-sub-title ">Organizing Committee</h6>
+                <h2 class="et-section-title ">Scientific Committee</h2>
                 <p class="max-w-[800px] mx-auto mt-[20px] text-etGray text-[16px] font-light leading-[1.6]" style="margin-top: 20px;">
                     The symposium is organised by an interdisciplinary committee of African and international scientists committed to advancing molecular One Health research. The scientific committee brings together experts in genomics, bioinformatics, epidemiology, and biodiversity conservation to ensure high-quality scientific programming and equitable regional representation.
                 </p>

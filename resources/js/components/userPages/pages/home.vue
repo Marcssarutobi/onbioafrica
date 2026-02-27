@@ -17,9 +17,9 @@
                         <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
                             <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
                                 <div class="left relative z-[20] w-[65%] md:w-full">
-                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] anim-text">OneBioAfrica Symposium</h6>
+                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] ">OneBioAfrica Symposium</h6>
 
-                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] anim-text">Strengthening One Health <span class="font-normal tracking-tighter"> Networks Through <br> Molecular Data</span></h1>
+                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] ">Strengthening One Health <span class="font-normal tracking-tighter"> Networks Through <br> Molecular Data</span></h1>
 
                                     <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
                                         <RouterLink to="/abouts" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Abouts us</RouterLink>
@@ -69,8 +69,8 @@
 
                 <!-- right -->
                 <div class="et-about__txt" >
-                    <h6 class="et-section-sub-title anim-text">About The Symposium</h6>
-                    <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Advancing One Health Through Molecular Science in Africa</h2>
+                    <h6 class="et-section-sub-title ">About The Symposium</h6>
+                    <h2 class="et-section-title mb-[24px] md:mb-[19px] ">Advancing One Health Through Molecular Science in Africa</h2>
 
                     <p class="mb-[30px] text-[16px] font-light text-etGray md:mb-[30px] rev-slide-up" style='text-align:justify;'>
                         OneBioAfrica is a regional scientific symposium dedicated to strengthening One Health networks across Africa through molecular biology, genomics, and bioinformatics. As emerging infectious diseases, antimicrobial resistance, biodiversity loss, and ecosystem disruptions continue to rise, the need for integrated, data-driven approaches has never been greater. This symposium brings together molecular biologists, medical and veterinary researchers, ecologists, bioinformaticians, and policymakers to foster interdisciplinary collaboration and data sharing.
@@ -96,7 +96,7 @@
     <div class="et-1-container rev-slide-up relative z-[2]">
         <div class="bg-etBlue relative z-[1] p-[60px] sm:p-[40px] xs:px-[20px] rounded-[20px] overflow-hidden -mb-[114px] shadow-[0_4px_50px_rgba(18,96,254,0.2)] after:absolute after:inset-0 after:-z-[1] after:bg-[url(../assets/img/et-counter-bg.jpg)] after:bg-cover after:bg-no-repeat after:mix-blend-screen flex items-center md:flex-wrap gap-y-[20px]">
             <div class="pr-[54px] border-r md:border-r-0 border-white/20 md:text-center md:pr-0 md:w-full">
-                <h2 class="et-section-title !text-white mb-[28px] anim-text">Advancing One Health Through Molecular Science</h2>
+                <h2 class="et-section-title !text-white mb-[28px] ">Advancing One Health Through Molecular Science</h2>
                 <RouterLink to="/abstract" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full border-white border hover:!bg-white hover:!text-etBlue">Submit Abstract</RouterLink>
             </div>
 
@@ -137,8 +137,8 @@
         <div class="et-1-container rev-slide-up">
             <!-- heading -->
             <div class="text-center mb-[52px]">
-                <h6 class="et-section-sub-title anim-text">Why Attend</h6>
-                <h2 class="et-section-title anim-text">Unifying For A Better Africa</h2>
+                <h6 class="et-section-sub-title ">Why Attend</h6>
+                <h2 class="et-section-title ">Unifying For A Better Africa</h2>
             </div>
 
             <!-- cards -->
@@ -236,7 +236,7 @@
                 </div>
             </div>
 
-            <h2 class="et-section-title anim-text !text-white text-center max-w-[55%] md:max-w-[65%] sm:max-w-full mx-auto mt-[30px] mb-[40px]">Share your research with the OneBioAfrica community</h2>
+            <h2 class="et-section-title  !text-white text-center max-w-[55%] md:max-w-[65%] sm:max-w-full mx-auto mt-[30px] mb-[40px]">Share your research with the OneBioAfrica community</h2>
 
             <RouterLink to="/abstract" class="bg-white inline-flex items-center gap-[12px] rounded-full text-etBlue h-[54px] px-[15px] text-[17px] group hover:bg-etBlue hover:text-white">
                 <span class="icon">
@@ -266,8 +266,8 @@
             <!-- heading -->
             <div class="et-schedule-heading flex sm:flex-col justify-between items-center pb-[31px] mb-[40px] gap-[15px] border-b border-[#D9D9D9]">
                 <div class="left xs:text-center max-w-[50%] sm:max-w-full">
-                    <h6 class="et-section-sub-title anim-text">Event Timetable</h6>
-                    <h2 class="et-section-title anim-text">Information Of Event Schedule</h2>
+                    <h6 class="et-section-sub-title ">Event Timetable</h6>
+                    <h2 class="et-section-title ">Information Of Event Schedule</h2>
                 </div>
 
                 <div class="right">
@@ -330,7 +330,7 @@
                                     </div>
 
                                     <!-- title -->
-                                    <h3 class="et-schedule-title text-[24px] sm:text-[22px] font-regular text-etBlack leading-[1.25] mb-[16px] anim-text"><a href="#" class="hover:text-etBlue">{{ data.session_title }}</a></h3>
+                                    <h3 class="et-schedule-title text-[24px] sm:text-[22px] font-regular text-etBlack leading-[1.25] mb-[16px] "><a href="#" class="hover:text-etBlue">{{ data.session_title }}</a></h3>
 
                                     <!-- location -->
                                     <div class="et-schedule-loaction flex items-center gap-[12px]">
@@ -364,8 +364,8 @@
             <!-- heading -->
             <div class="et-speakers-heading flex xs:flex-col justify-between items-center mb-[46px] xl:mb-[26px] lg:mb-[16px] gap-[15px]">
                 <div class="left xs:text-center">
-                    <h6 class="et-section-sub-title anim-text">Event Speakers</h6>
-                    <h2 class="et-section-title anim-text">Meet Our Speakers</h2>
+                    <h6 class="et-section-sub-title ">Event Speakers</h6>
+                    <h2 class="et-section-title ">Meet Our Speakers</h2>
                 </div>
 
                 <div class="right">
@@ -410,7 +410,7 @@
             <div class="flex items-center md:flex-col gap-x-[42px] gap-y-[25px] border border-[#D9D9D9] rounded-[20px] py-[30px] xxs:py-[20px] px-[34px] xxs:px-[16px] mb-[130px] lg:mb-[80px] md:mb-[60px]">
                 <!-- left -->
                 <div class="flex xxs:flex-wrap items-end gap-[40px] xxs:gap-x-[10px] gap-y-[10px] pr-[42px] md:pr-0 border-r md:border-r-0 border-[#D9D9D9] max-w-[230px] md:max-w-full shrink-0" v-if="allsponsors.length > 0">
-                    <h5 class="font-medium text-[20px] text-etBlack anim-text">Our Sponsors</h5>
+                    <h5 class="font-medium text-[20px] text-etBlack ">Our Sponsors</h5>
                     <a href="#" class="inline-block mb-[8px] group">
                         <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 13.4121L11.1668 2.24543H3.87542V0H15V11.1246H12.7546V3.8332L1.58789 15L0 13.4121Z" class="fill-etBlue group-hover:fill-etBlack transition duration-[400ms]"></path>
@@ -432,8 +432,8 @@
                 <!-- venue map -->
                 <div class="bg-[#EEF4FF] p-[40px] lg:p-[30px] xs:px-[20px] xs:pb-0 pb-0 lg:pb-0 rounded-[20px] overflow-hidden relative z-[1] before:absolute before:inset-0 before:bg-[url('../assets/img/cta-bg-1.jpg')] before:bg-cover before:bg-no-repeat before:bg-center before:-z-[1] before:mix-blend-multiply">
                     <div class="mb-[22px]">
-                        <h6 class="et-section-sub-title anim-text">Venue Location</h6>
-                        <h2 class="et-section-title anim-text">Find Your Way to the Event Venue</h2>
+                        <h6 class="et-section-sub-title ">Venue Location</h6>
+                        <h2 class="et-section-title ">Find Your Way to the Event Venue</h2>
                     </div>
 
                     <div class="relative">
@@ -451,8 +451,8 @@
                 <!-- join card -->
                 <div class="bg-etBlue p-[40px] lg:p-[30px] xs:px-[20px] xs:pb-0 pb-0 lg:pb-0 rounded-[20px] overflow-hidden relative z-[1] before:absolute before:inset-0 before:bg-[url('../assets/img/cta-bg-2.jpg')] before:bg-cover before:bg-no-repeat before:bg-center before:-z-[1] before:opacity-30 before:mix-blend-overlay">
                     <div class="mb-[34px]">
-                        <h6 class="et-section-sub-title !text-white before:!bg-white anim-text">Travel Grant Application</h6>
-                        <h2 class="et-section-title !text-white mb-[18px] anim-text">Apply for Travel Support</h2>
+                        <h6 class="et-section-sub-title !text-white before:!bg-white ">Travel Grant Application</h6>
+                        <h2 class="et-section-title !text-white mb-[18px] ">Apply for Travel Support</h2>
                         <p class="text-[16px] text-white font-light mb-[25px]"> The Travel Grant program is designed to support participants who require financial assistance to attend the event. Eligible applicants are encouraged to submit their request by completing the application form. Grants are awarded based on eligibility criteria and availability of funds.</p>
                         <RouterLink to="/travel-grant" class="bg-etBlue border border-white rounded-full h-[45px] px-[15px] text-[17px] text-white inline-flex items-center justify-center hover:bg-white hover:text-etBlue">Apply for Travel Grant</RouterLink>
                     </div>

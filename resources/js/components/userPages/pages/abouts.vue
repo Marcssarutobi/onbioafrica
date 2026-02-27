@@ -33,8 +33,8 @@
 
                 <!-- right -->
                 <div class="et-about__txt">
-                    <h6 class="et-section-sub-title anim-text">About The Symposium</h6>
-                    <h2 class="et-section-title mb-[24px] md:mb-[19px] anim-text">Advancing One Health Through Molecular Science in Africa</h2>
+                    <h6 class="et-section-sub-title ">About The Symposium</h6>
+                    <h2 class="et-section-title mb-[24px] md:mb-[19px] ">Advancing One Health Through Molecular Science in Africa</h2>
 
                     <p class="mb-[30px] text-[16px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
                         Africa faces interconnected challenges linking human, animal, plant, and environmental health. Yet molecular data generation, analysis, and sharing capacities remain uneven across the continent. OneBioAfrica was created to address this gap by building collaborative networks, strengthening bioinformatics expertise, and fostering genomic data exchange to support health surveillance, biodiversity conservation, and sustainable development.
@@ -59,8 +59,8 @@
 
             <!-- HEADER -->
             <header class="et-heading-center">
-                <span class="et-section-sub-title anim-text">Our Purpose</span>
-                <h2 class="et-section-title anim-text">
+                <span class="et-section-sub-title ">Our Purpose</span>
+                <h2 class="et-section-title ">
                     Mission & Scientific Objectives
                 </h2>
                 <p class="et-section-desc">
@@ -137,8 +137,8 @@
         <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
             <!-- heading -->
             <div class="et-speakers-heading text-center mb-[46px] xl:mb-[26px] lg:mb-[16px] gap-[15px]">
-                <h6 class="et-section-sub-title anim-text">Event Speakers</h6>
-                <h2 class="et-section-title anim-text">Meet Our Creative Speakers</h2>
+                <h6 class="et-section-sub-title ">Event Speakers</h6>
+                <h2 class="et-section-title ">Meet Our Creative Speakers</h2>
             </div>
 
             <div class="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 justify-center gap-[30px] lg:gap-[20px]">
@@ -163,6 +163,7 @@
 
     import { onMounted, ref } from 'vue';
     import { getData } from '../../plugins/api';
+    import { Main } from '../../plugins/main';
 
     const allspeaker = ref([])
 

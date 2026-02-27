@@ -22,8 +22,8 @@
                 <div class="et-left">
 
                     <header class="et-heading">
-                        <span class="et-section-sub-title anim-text">Guest Registration</span>
-                        <h2 class="et-section-title anim-text">Register as a Guest</h2>
+                        <span class="et-section-sub-title ">Guest Registration</span>
+                        <h2 class="et-section-title ">Register as a Guest</h2>
                         <p class="rev-slide-up">
                             Welcome! Please register as a guest to participate in our event. Whether you represent an organization or are a researcher wishing to attend, please fill in your personal information carefully. All fields are mandatory.
                         </p>
@@ -790,11 +790,11 @@ import Swal from 'sweetalert2'
     ANIMATIONS
     ============================================ */
 
-.anim-text {
+/* . {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
-}
+} */
 
 .rev-slide-up {
     opacity: 0;

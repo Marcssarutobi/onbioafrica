@@ -18,8 +18,8 @@
 
             <!-- heading -->
             <div class="et-speakers-heading text-center mb-[46px] xl:mb-[26px] lg:mb-[16px] gap-[15px]">
-                <h6 class="et-section-sub-title anim-text">Speakers</h6>
-                <h2 class="et-section-title anim-text">Meet Our Experts</h2>
+                <h6 class="et-section-sub-title ">Speakers</h6>
+                <h2 class="et-section-title ">Meet Our Experts</h2>
                 <p class="max-w-[800px] mx-auto mt-[20px] text-etGray text-[16px] font-light leading-[1.6]" style="margin-top: 20px;">
                     Meet our speakers: African and international researchers and experts specializing in <strong style="font-weight: bold;">genomics, bioinformatics, epidemiology, and biodiversity conservation</strong>.  
                     Each speaker brings their unique experience to share the latest scientific advances, inspire participants, and enrich discussions throughout the symposium.
