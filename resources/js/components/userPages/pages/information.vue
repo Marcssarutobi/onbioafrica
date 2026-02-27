@@ -30,18 +30,18 @@
                         <div class="card-header">
                             <img src="assets/img/benin.png" alt="Drapeau Bénin" class="flag-img">
                             <div>
-                                <h4 class="card-title">Bénin</h4>
-                                <p class="card-subtitle">Afrique de l'Ouest</p>
+                                <h4 class="card-title">Benin</h4>
+                                <p class="card-subtitle">West Africa</p>
                             </div>
                         </div>
                         <div class="stats-grid">
                             <div class="stat-box">
                                 <div class="stat-number">12M</div>
-                                <div class="stat-label">Habitants</div>
+                                <div class="stat-label">inhabitants</div>
                             </div>
                             <div class="stat-box">
                                 <div class="stat-number">1975</div>
-                                <div class="stat-label">Indépendance</div>
+                                <div class="stat-label">Independence</div>
                             </div>
                         </div>
                     </div>
@@ -51,30 +51,30 @@
                 <div class="hero-content-side">
                     <h6 class="section-label">
                         <span class="line-decoration"></span>
-                        Découvrir le Bénin
+                        Discover Benin
                         <span class="line-decoration"></span>
                     </h6>
                     <h2 class="hero-title">
-                        Terre d'Histoire & de <span class="highlight">Traditions</span>
+                        Land of History & <span class="highlight">Traditions</span>
                     </h2>
                     <p class="hero-description">
-                        Situé en Afrique de l'Ouest, le Bénin est un pays reconnu pour sa stabilité, son hospitalité et sa richesse culturelle. Terre d'histoire et de traditions, il offre un cadre idéal pour les échanges scientifiques, culturels et professionnels.
+                        Located in West Africa, Benin is a country known for its stability, hospitality, and cultural richness. A land steeped in history and tradition, it offers an ideal setting for scientific, cultural, and professional exchanges.
                     </p>
                     <p class="hero-description-secondary">
-                        Les visiteurs y découvrent un environnement chaleureux, dynamique et propice à la rencontre.
+                        Visitors will find a warm, dynamic environment that is conducive to meeting people.
                     </p>
                     <div class="features-list">
                         <div class="feature-item">
                             <i class="fa-solid fa-check-circle feature-icon"></i>
-                            <span>Stabilité politique</span>
+                            <span>Political stability</span>
                         </div>
                         <div class="feature-item">
                             <i class="fa-solid fa-check-circle feature-icon"></i>
-                            <span>Hospitalité légendaire</span>
+                            <span>Legendary hospitality</span>
                         </div>
                         <div class="feature-item">
                             <i class="fa-solid fa-check-circle feature-icon"></i>
-                            <span>Richesse culturelle</span>
+                            <span>Cultural richness</span>
                         </div>
                     </div>
                 </div>
@@ -92,9 +92,9 @@
         <div class="container">
             
             <div class="section-header">
-                <h6>Patrimoine & Découverte</h6>
-                <h2>Culture & Tourisme</h2>
-                <p>Le Bénin possède un patrimoine culturel exceptionnel, marqué par des traditions ancestrales et une grande diversité ethnique.</p>
+                <h6>Heritage & Discovery</h6>
+                <h2>Culture & Tourism</h2>
+                <p>Benin has an exceptional cultural heritage, marked by ancestral traditions and great ethnic diversity.</p>
             </div>
 
             <!-- Cards Grid -->
@@ -109,10 +109,10 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Patrimoine Culturel</h3>
-                        <p>Berceau du royaume du Dahomey, sites historiques, musées, palais royaux et expressions artistiques variées.</p>
+                        <h3>Cultural Heritage</h3>
+                        <p>Cradle of the Kingdom of Dahomey, historic sites, museums, royal palaces, and diverse artistic expressions.</p>
                         <div class="card-link">
-                            <span>3 sites classés</span>
+                            <span>3 listed sites</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
@@ -127,10 +127,10 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Attractions Touristiques</h3>
-                        <p>Plages atlantiques, parcs naturels comme la Pendjari, villes historiques et marchés animés.</p>
+                        <h3>Tourist Attractions</h3>
+                        <p>Atlantic beaches, nature parks such as Pendjari, historic towns, and bustling markets.</p>
                         <div class="card-link">
-                            <span>124km de côtes</span>
+                            <span>124 km of coastline</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
@@ -145,8 +145,8 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Climat & Environnement</h3>
-                        <p>Climat tropical chaud et ensoleillé toute l'année. Températures idéales pour découvrir le pays.</p>
+                        <h3>Climate & Environment</h3>
+                        <p>Warm and sunny tropical climate all year round. Ideal temperatures for exploring the country.</p>
                         <div class="card-meta">
                             <div class="meta-item">
                                 <i class="fa-solid fa-temperature-high"></i>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="meta-item">
                                 <i class="fa-solid fa-sun"></i>
-                                <span>365 jours de soleil</span>
+                                <span>365 days of sunshine</span>
                             </div>
                         </div>
                     </div>
@@ -171,8 +171,8 @@
         <div class="container">
             
             <div class="section-header">
-                <h6>Organisation</h6>
-                <h2>Informations Pratiques</h2>
+                <h6>Organization</h6>
+                <h2>Practical Information</h2>
             </div>
 
             <div class="practical-grid">
@@ -201,7 +201,7 @@
                     <!-- Center Badge -->
                     <div class="center-badge">
                         <i class="fa-solid fa-heart"></i>
-                        <span>Bénin<br>Authentique</span>
+                        <span>Benin<br>Authentic</span>
                     </div>
                 </div>
 
@@ -214,8 +214,8 @@
                             <i class="fa-solid fa-passport"></i>
                         </div>
                         <div class="info-body">
-                            <h4>Visa & Accès</h4>
-                            <p>E-visa disponible en ligne avant le départ. Aéroport international de Cotonou avec liaisons régulières depuis l'Europe et l'Afrique.</p>
+                            <h4>Visa & Access</h4>
+                            <p>E-visa available online before departure. Cotonou International Airport with regular connections from Europe and Africa.</p>
                             <div class="info-tag">
                                 <i class="fa-solid fa-globe"></i>
                                 <a href="http://evisa.gouv.bj" target="_blank" rel="noopener noreferrer"><span>evisa.gouv.bj</span></a>
@@ -230,8 +230,8 @@
                             <i class="fa-solid fa-coins"></i>
                         </div>
                         <div class="info-body">
-                            <h4>Monnaie locale</h4>
-                            <p>Franc CFA (XOF). Cartes bancaires acceptées dans les hôtels et établissements modernes. Distributeurs disponibles en ville.</p>
+                            <h4>Local currency</h4>
+                            <p>CFA franc (XOF). Credit cards accepted in hotels and modern establishments. ATMs available in town.</p>
                             <div class="info-tag">
                                 <span>1 € ≈ 655 XOF</span>
                             </div>
@@ -244,8 +244,8 @@
                             <i class="fa-solid fa-hotel"></i>
                         </div>
                         <div class="info-body">
-                            <h4>Hébergements</h4>
-                            <p>Hôtels de standing international, résidences et maisons d'hôtes confortables. Options adaptées à tous les budgets près des sites du symposium.</p>
+                            <h4>Accommodations</h4>
+                            <p>International luxury hotels, residences, and comfortable guest houses. Options to suit all budgets near the symposium venues.</p>
                             
                         </div>
                     </div>
@@ -256,8 +256,8 @@
                             <i class="fa-solid fa-shield-heart"></i>
                         </div>
                         <div class="info-body">
-                            <h4>Environnement</h4>
-                            <p>Pays stable et hospitalier. Environnement chaleureux, dynamique et propice aux échanges scientifiques et culturels.</p>
+                            <h4>Environment</h4>
+                            <p>A stable and welcoming country. A warm, dynamic environment conducive to scientific and cultural exchange.</p>
                         </div>
                     </div>
 
@@ -280,8 +280,8 @@
         <div class="container">
             
             <div class="section-header">
-                <h6 style="color: #062D63;">Galerie</h6>
-                <h2 style="color: #000;">Découvrez le Bénin</h2>
+                <h6 style="color: #062D63;">Gallery</h6>
+                <h2 style="color: #000;">Discover Benin</h2>
             </div>
 
             <!-- Gallery Grid -->
@@ -290,15 +290,15 @@
                 <div class="gallery-item">
                     <img src="assets/img/Porte.jpg" alt="Porte Non-Retour">
                     <div class="gallery-overlay">
-                        <h4>Porte du Non-Retour</h4>
-                        <p>Ouidah - Mémorial historique</p>
+                        <h4>Gate of No Return</h4>
+                        <p>Ouidah - Historical Memorial</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
                     <img src="assets/img/Palais.webp" alt="Palais Abomey">
                     <div class="gallery-overlay">
-                        <h4>Palais Royaux</h4>
+                        <h4>Royal Palaces</h4>
                         <p>Abomey - UNESCO</p>
                     </div>
                 </div>
@@ -306,32 +306,32 @@
                 <div class="gallery-item">
                     <img src="assets/img/lac.jpg" alt="Lac Nokoué">
                     <div class="gallery-overlay">
-                        <h4>Lac Nokoué</h4>
-                        <p>Ganvié - Village lacustre</p>
+                        <h4>Lake Nokoué</h4>
+                        <p>Ganvié - Lake village</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
                     <img src="assets/img/parc.jpg" alt="Parc Pendjari">
                     <div class="gallery-overlay">
-                        <h4>Parc de la Pendjari</h4>
-                        <p>Nord Bénin - Safari</p>
+                        <h4>Pendjari Park</h4>
+                        <p>Northern Benin - Safari</p>
                     </div>
                 </div>
 
                 <div class="gallery-item ">
                     <img src="assets/img/tokpa.jpg" alt="Marché Dantokpa">
                     <div class="gallery-overlay">
-                        <h4>Marché Dantokpa</h4>
-                        <p>Cotonou - Plus grand marché de l'Afrique de l'Ouest</p>
+                        <h4>Dantokpa Market</h4>
+                        <p>Cotonou - West Africa's largest market</p>
                     </div>
                 </div>
 
                 <div class="gallery-item ">
                     <img src="assets/img/plage.jpg" alt="Plage">
                     <div class="gallery-overlay">
-                        <h4>Plages de Grand-Popo</h4>
-                        <p>Côte atlantique</p>
+                        <h4>Grand Popo Beaches</h4>
+                        <p>Atlantic coast</p>
                     </div>
                 </div>
 
