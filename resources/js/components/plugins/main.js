@@ -118,6 +118,11 @@ export function Main(){
     const etSidebarOpenBtn = document.querySelector(".et-header-sidebar-open-btn");
     const etSidebarCloseBtn = document.querySelector(".et-sidebar-close-btn");
     const etOverlay = document.querySelector(".et-overlay");
+    const etHeaderNavLinks = document.querySelectorAll(".et-header-nav a[href]");
+
+    function closeSidebar() {
+        etSidebar.classList.remove("active");
+    }
 
     if (etSidebarOpenBtn) {
         etSidebarOpenBtn.addEventListener("click", (e) => {
@@ -129,6 +134,15 @@ export function Main(){
     etSidebarCloseBtn.addEventListener("click", () => {
         etSidebar.classList.remove("active");
         etOverlay.classList.remove("active");
+    });
+
+    etHeaderNavLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            if (window.innerWidth < 768) {
+                etSidebar.classList.remove("active");
+                etOverlay.classList.remove("active");
+            }
+        });
     });
 
     document.addEventListener("click", (e) => {
@@ -145,6 +159,9 @@ export function Main(){
     const etMobileMenuContainer = document.querySelector(".et-header-nav-in-mobile");
     const etHeaderNav = document.querySelectorAll(".et-header-nav li");
     const etHeaderNavContainer = document.querySelector(".et-header-right");
+
+
+    
 
     if (window.innerWidth < 992) {
         etMobileMenuContainer.appendChild(etMobileMenuContent);

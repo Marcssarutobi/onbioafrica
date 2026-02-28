@@ -13,90 +13,45 @@
     </section>
     <!-- BREADCRUMB SECTION END -->
 
-    <!-- CONTACT SECTION START -->
-    <div class="py-[120px] xl:py-[80px] md:py-[60px]">
-        <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
-            <div class="grid grid-cols-2 md:grid-cols-1 gap-[60px] xl:gap-[40px] items-center">
-                <!-- left side contact infos -->
-                <div>
-                    <div class="bg-etBlue p-[40px] sm:p-[30px] space-y-[24px] text-[16px]">
-                        <!-- single contact info -->
-                        <div class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
-                            <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                                <img src="assets/img/call-msg.svg" alt="icon">
-                            </span>
+    <section class="et-contact-section">
+        <div class="et-contact-wrapper">
 
-                            <div class="txt">
-                                <span class="font-light">Call Us 7/24</span>
-                                <h4 class="font-semibold text-[24px]"><a href="tel:+208-555-0112">+208-555-0112</a></h4>
-                            </div>
-                        </div>
+            <!-- LEFT -->
+            <div class="et-contact-info">
+                <span class="et-contact-label">CONTACT</span>
+                <h2 class="et-contact-title">Conference Secretariat</h2>
 
-                        <!-- single contact info -->
-                        <div class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
-                            <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                                <img src="assets/img/mail.svg" alt="icon">
-                            </span>
-
-                            <div class="txt">
-                                <span class="font-light">Make a Quote</span>
-                                <h4 class="font-semibold text-[24px]"><a href="mailto:eventek@gmail.com">eventek@gmail.com</a></h4>
-                            </div>
-                        </div>
-
-                        <!-- single contact info -->
-                        <div class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
-                            <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                                <img src="assets/img/location-dot-circle.svg" alt="icon">
-                            </span>
-
-                            <div class="txt">
-                                <span class="font-light">Location</span>
-                                <h4 class="font-semibold text-[24px]">4517 Washington ave.</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- video cover -->
-                    <div class="relative">
-                        <img src="assets/img/contact-video-cover.jpg" alt="video cover" class="w-full">
-                        <a href="https://youtu.be/6KmuL6RcdNA?si=s1RJZZwk6XcqZAwX" data-fslightbox class="video-btn-shadow w-[58px] aspect-square rounded-full bg-white text-[18px] text-etBlue flex items-center justify-center absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]">
-                            <i class="fa-solid fa-play"></i>
-                        </a>
-                    </div>
+                <div class="et-contact-item">
+                    <span class="et-contact-icon"><i class="fa-regular fa-building"></i></span>
+                    <p style="font-size:15px;">
+                        Society for Molecular Biology and Evolution Conference 2026<br>
+                        C/O CAP Partner<br>
+                        Nordre Fasanvej 113<br>
+                        2000 Frederiksberg, Denmark
+                    </p>
                 </div>
 
-                <!-- right side contact form -->
-                <div>
-                    <h2 class="text-[40px] md:text-[35px] sm:text-[30px] xxs:text-[28px] font-medium text-etBlack mb-[7px]">Ready to Get Started?</h2>
-                    <p class="text-etGray font-light text-[16px] mb-[38px]">Nullam varius, erat quis iaculis dictum, eros urna varius eros, ut blandit felis odio in turpis. Quisque rhoncus, eros in auctor ultrices,</p>
+                <div class="et-contact-item">
+                    <span class="et-contact-icon"><i class="fa-regular fa-envelope"></i></span>
+                    <a href="mailto:info@onebioafrica.com">info@onebioafrica.com</a>
+                </div>
 
-                    <form action="#" class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
-                        <div>
-                            <label for="et-contact-name" class="font-lato font-semibold text-etBlack block mb-[12px]">Your Name*</label>
-                            <input type="text" name="name" id="et-contact-name" placeholder="Your Name" class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
-                        </div>
-                        <div>
-                            <label for="et-contact-email" class="font-lato font-semibold text-etBlack block mb-[12px]">Your Email*</label>
-                            <input type="email" name="email" id="et-contact-email" placeholder="Your Email" class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
-                        </div>
-                        <div class="col-span-2 xxs:col-span-1">
-                            <label for="et-contact-message" class="font-lato font-semibold text-etBlack block mb-[12px]">Your Message*</label>
-                            <textarea name="message" id="et-contact-message" placeholder="Your Message" class="border border-[#ECECEC] h-[145px] p-[20px] rounded-[4px] w-full focus:outline-none"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="bg-etBlue h-[55px] px-[24px] rounded-[10px] text-[16px] font-medium text-white hover:bg-etBlack">Send Message <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span></button>
-                        </div>
-                    </form>
+                <div class="et-contact-item">
+                    <span class="et-contact-icon"><i class="fa-regular fa-phone"></i></span>
+                    <a href="tel:+2290196975772">+229 019 697 5772</a>
                 </div>
             </div>
+
+            <!-- RIGHT -->
+            <div class="et-contact-map">
+                <iframe
+                    src="https://www.google.com/maps?q=Nordre%20Fasanvej%20113%2C%202000%20Frederiksberg&output=embed"
+                    loading="lazy">
+                </iframe>
+            </div>
+
         </div>
-    </div>
-    <!-- CONTACT SECTION END -->
-
-
-    <!-- map -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17361.523329457763!2d90.46439825796337!3d23.825330202730832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c967e0e4e467%3A0x7c43720137a9b4e9!2sBashundhara%20Kings%20Arena!5e0!3m2!1sen!2sbd!4v1712131260359!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-[600px] lg:h-[500px] md:h-[400px] sm:h-[350px]"></iframe>
+    </section>
 
 </template>
 <script setup>
@@ -127,5 +82,80 @@
 
     opacity: 0.3;
     z-index: -1;
+}
+
+.et-contact-section {
+    padding: 80px 40px;
+}
+
+.et-contact-wrapper {
+    background: #062d63;
+    border-radius: 16px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    color: white;
+}
+
+/* LEFT */
+.et-contact-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+}
+
+.et-contact-title {
+    font-size: 44px;
+    font-weight: 600;
+    margin: 14px 0 40px;
+    line-height: 1.2;
+}
+
+.et-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+    max-width: 480px;
+}
+
+.et-contact-icon {
+    color: #fff;
+    font-size: 25px;
+    margin-top: 3px;
+}
+
+.et-contact-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.et-contact-item a:hover {
+    color: #fff;
+}
+
+/* MAP */
+.et-contact-map {
+    border-radius: 14px;
+    overflow: hidden;
+    height: 360px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.et-contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .et-contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
 }
 </style>

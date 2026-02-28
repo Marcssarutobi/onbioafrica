@@ -21,7 +21,7 @@
                         <!-- txt -->
                         <div>
                             <span class="block font-medium text-[14px]">Event Venue</span>
-                            <h5 class="font-medium text-[20px]">Parakou, Bénin</h5>
+                            <h5 class="font-medium text-[20px]">Chant d'Oiseau Cotonou, Bénin</h5>
                         </div>
                     </div>
 
@@ -106,6 +106,17 @@
                                     <span class="txt">Submit an Travel grant</span>
                                 </RouterLink>
                             </li>
+
+                            <li>
+                                <RouterLink to="/guest" class="flex items-center gap-[10px] hover:text-etBlue group">
+                                    <span class="icon">
+                                        <svg width="12" height="16" viewbox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="txt">Guest Registration</span>
+                                </RouterLink>
+                            </li>
                            
                         </ul>
                     </div>
@@ -174,9 +185,9 @@
 
                         <div class="space-y-[30px]">
                             <!-- single upcoming events -->
-                            <div class="flex items-center gap-x-[30px] xxs:gap-x-[15px]">
+                            <div v-for="item in recentProgram" :key="item.id" class="flex items-center gap-x-[30px] xxs:gap-x-[15px]">
                                 <div class="rounded-[15px] overflow-hidden shrink-0">
-                                    <img src="assets/img/cta-bg-2.jpg" alt="Event Image" class="w-[80px] aspect-square">
+                                    <img :src="`/storage/${item.photo}`" alt="Event Image" width="80" class="w-[80px] aspect-square">
                                 </div>
 
                                 <div>
@@ -202,48 +213,13 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span>24, jan - 2024</span>
+                                        <span>{{ formatDate(item.date) }}</span>
                                     </span>
 
-                                    <h6 class="font-medium text-[20px] text-white"><a href="news-details.html" class="hover:text-etBlue">Web Developer Meetup</a></h6>
+                                    <h6 class="font-medium text-[20px] text-white"><a href="#" class="hover:text-etBlue">{{ item.session_title }}</a></h6>
                                 </div>
                             </div>
 
-                            <!-- single upcoming events -->
-                            <div class="flex items-center gap-x-[30px] xxs:gap-x-[15px]">
-                                <div class="rounded-[15px] overflow-hidden shrink-0">
-                                    <img src="assets/img/evenet-sched-2.jpg" alt="Event Image" class="w-[80px] aspect-square">
-                                </div>
-
-                                <div>
-                                    <span class="date text-[16px] text-etGray flex items-center gap-[12px] mb-[8px]">
-                                        <span class="icon">
-                                            <svg width="16" height="17" viewbox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_2043_1443)">
-                                                    <path d="M14.125 1.75H13.375V0.5H12.125V1.75H3.875V0.5H2.625V1.75H1.875C0.841125 1.75 0 2.59113 0 3.625V14.625C0 15.6589 0.841125 16.5 1.875 16.5H14.125C15.1589 16.5 16 15.6589 16 14.625V3.625C16 2.59113 15.1589 1.75 14.125 1.75ZM14.75 14.625C14.75 14.9696 14.4696 15.25 14.125 15.25H1.875C1.53038 15.25 1.25 14.9696 1.25 14.625V6.375H14.75V14.625ZM14.75 5.125H1.25V3.625C1.25 3.28038 1.53038 3 1.875 3H2.625V4.25H3.875V3H12.125V4.25H13.375V3H14.125C14.4696 3 14.75 3.28038 14.75 3.625V5.125Z" fill="var(--et-blue)"></path>
-                                                    <path d="M3.625 7.6875H2.375V8.9375H3.625V7.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M6.125 7.6875H4.875V8.9375H6.125V7.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M8.625 7.6875H7.375V8.9375H8.625V7.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M11.125 7.6875H9.875V8.9375H11.125V7.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M13.625 7.6875H12.375V8.9375H13.625V7.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M3.625 10.1875H2.375V11.4375H3.625V10.1875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M6.125 10.1875H4.875V11.4375H6.125V10.1875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M8.625 10.1875H7.375V11.4375H8.625V10.1875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M11.125 10.1875H9.875V11.4375H11.125V10.1875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M3.625 12.6875H2.375V13.9375H3.625V12.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M6.125 12.6875H4.875V13.9375H6.125V12.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M8.625 12.6875H7.375V13.9375H8.625V12.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M11.125 12.6875H9.875V13.9375H11.125V12.6875Z" fill="var(--et-blue)"></path>
-                                                    <path d="M13.625 10.1875H12.375V11.4375H13.625V10.1875Z" fill="var(--et-blue)"></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span>24, jan - 2024</span>
-                                    </span>
-
-                                    <h6 class="font-medium text-[20px] text-white"><a href="news-details.html" class="hover:text-etBlue">Web Developer Meetup</a></h6>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -251,7 +227,7 @@
 
             <!-- footer bottom -->
             <div class="et-footer-bottom border-t border-white/20 py-[34px]">
-                <p class="font-light text-[#f2f2f2] text-center text-[16px]">&copy; 2024, Eventek All Rights Reserved.</p>
+                <p class="font-light text-[#f2f2f2] text-center text-[16px]">&copy; 2026, OneBioAfrica All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -259,8 +235,53 @@
 
 </template>
 <script setup>
+    import { onMounted, ref } from 'vue';
+    import { getData } from '../../plugins/api';
+
+
+    const recentProgram = ref([])
+
+    async function RecentProgramFunction() {
+        await getData('/programrecent').then(res=>{
+            if (res.status === 200) {
+                recentProgram.value = res.data.data
+            }
+        })
+    }
+
+    const formatDate = (dateStr) => {
+        return new Date(dateStr).toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        })
+    }
+
+    onMounted(()=>{
+        RecentProgramFunction()
+    })
 
 </script>
-<style>
-    
+<style scoped>
+.et-footer {
+    position: relative;
+    z-index: 1;
+    background-color: #0b0b0be5; /* équivalent bg-etBlack */
+    color: white;
+}
+
+.et-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image: url("../assets/img/footer-1-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* 🎯 CENTRAGE */
+
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+}
 </style>

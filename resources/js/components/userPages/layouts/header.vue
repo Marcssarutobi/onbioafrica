@@ -12,7 +12,7 @@
             <!-- heading -->
             <div class="et-sidebar-heading">
                 <div class="logo flex justify-between items-center">
-                    <RouterLink to="/"><img src="assets/img/LogoW.png" alt="logo"></RouterLink>
+                    <RouterLink to="/"><img src="assets/img/LogoW.png" width="100" alt="logo"></RouterLink>
 
                     <button type="button" class="et-sidebar-close-btn border border-white/50 w-[45px] aspect-square shrink-0 text-white text-[22px] rounded-full hover:text-etBlue hover:bg-white"><i class="fa-solid fa-xmark"></i></button>
                 </div>
@@ -96,6 +96,13 @@
 </template>
 <script setup>
 import { onMounted } from 'vue'
+import { Main } from '../../plugins/main';
+
+function initializePlugins(){
+    setTimeout(()=>{
+        Main()
+    },0)
+}
 
 
 onMounted(()=>{
@@ -120,6 +127,8 @@ onMounted(()=>{
     }
 
     document.body.appendChild(script)
+
+    initializePlugins()
 })
 
 </script>

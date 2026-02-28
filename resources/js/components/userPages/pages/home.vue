@@ -432,17 +432,17 @@
                 <!-- venue map -->
                 <div class="bg-[#EEF4FF] p-[40px] lg:p-[30px] xs:px-[20px] xs:pb-0 pb-0 lg:pb-0 rounded-[20px] overflow-hidden relative z-[1] before:absolute before:inset-0 before:bg-[url('../assets/img/cta-bg-1.jpg')] before:bg-cover before:bg-no-repeat before:bg-center before:-z-[1] before:mix-blend-multiply">
                     <div class="mb-[22px]">
-                        <h6 class="et-section-sub-title ">Venue Location</h6>
+                        <h6 class="et-section-sub-title ">View Location</h6>
                         <h2 class="et-section-title ">Find Your Way to the Event Venue</h2>
                     </div>
 
                     <div class="relative">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7299.7865598218705!2d90.41595849268677!3d23.822393686713387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7305eea2015%3A0x8805755fb04e861c!2sKuril%20Flyover!5e0!3m2!1sen!2sbd!4v1713418656214!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-[303px] rounded-tl-[20px] rounded-tr-[20px]"></iframe>
+                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4703.614351231086!2d2.4039516!3d6.356974699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023544b019c445b%3A0xb49c6db44438965c!2sChant%20d&#39;Oiseau!5e1!3m2!1sfr!2sbj!4v1772294259038!5m2!1sfr!2sbj" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-[303px] rounded-tl-[20px] rounded-tr-[20px]"></iframe>
 
                         <div class="absolute inset-[40px] top-auto flex rounded-[20px] overflow-hidden bg-white xxs:flex-col">
-                            <img src="assets/img/cta-venue-img.jpg" alt="venue image" class="shrink-0 w-[50%] xxs:w-full">
+                            <img src="assets/img/cta-venue-img.jpg" alt="venue image" style="height: 100px; width: 150px;" class="shrink-0 w-[50%] xxs:w-full">
                             <div class="flex items-center justify-center w-full">
-                                <a href="#" class="bg-etBlue rounded-full text-white h-[45px] px-[15px] text-[17px] my-[10px] flex items-center justify-center hover:bg-white hover:text-etBlue">Get Direction</a>
+                                <a href="https://maps.app.goo.gl/cVGBRyBMyQbJwWQEA" class="bg-etBlue rounded-full text-white h-[45px] px-[15px] text-[17px] my-[10px] flex items-center justify-center hover:bg-white hover:text-etBlue">Get Direction</a>
                             </div>
                         </div>
                     </div>

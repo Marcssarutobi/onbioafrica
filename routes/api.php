@@ -37,6 +37,7 @@ Route::post('/addtravel',[TravelGrantController::class, 'store']);
 
 //Program
 Route::get('/programbyday',[ProgramController::class, 'programsByDays']);
+Route::get('/programrecent',[ProgramController::class, 'recentProgram']);
 Route::get('/showprogram/{id}',[ProgramController::class, 'show']);
 
 //Speakers

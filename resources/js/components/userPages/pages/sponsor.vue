@@ -27,19 +27,19 @@
                     </p>
 
                     <div class="et-card-profile">
-                        <img src="assets/img/et-3-team-member-3.jpg" alt="Coordinator">
+                        <img src="assets/img/user123.jpg" alt="Coordinator">
                     </div>
 
-                    <h4 class="et-card-name">Jakob Sandager</h4>
+                    <h4 class="et-card-name">Basile Gbètondji HOUNWANOU</h4>
 
                     <ul class="et-card-contact">
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:jj@cap-partner.eu">jj@cap-partner.eu</a>
+                            <a href="mailto:hounwanou.basile@gmail.com">hounwanou.basile@gmail.com</a>
                         </li>
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+4538429597">+45 38 42 95 97</a>
+                            <a href="tel:+2290167267768">+229 016 726 7768</a>
                         </li>
                     </ul>
 

@@ -228,5 +228,17 @@ class ProgramController extends Controller
         ]);
     }
 
+    public function recentProgram(){
+        $programs = Program::with('speaker')
+            ->where('isPublished', true)
+            ->orderBy('id', 'desc')
+            ->limit(2)
+            ->get();
+
+        return response()->json([
+            'success' => true,
+            'data' => $programs
+        ]);
+    }
 
 }
