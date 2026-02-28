@@ -1,7 +1,7 @@
 <template>
     
     <!-- FOOTER SECTION START -->
-    <footer class="et-footer bg-etBlack relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/footer-1-bg.jpg')] before:opacity-30 before:mix-blend-overlay text-white">
+    <footer class="et-footer bg-etBlack relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/footer-1-bg.jpg')] before:opacity-30 before:mix-blend-overlay text-white" style="">
         <div class="et-1-container">
 
             <!-- footer top -->
@@ -276,7 +276,7 @@
     inset: 0;
     z-index: -1;
 
-    background-image: url("../assets/img/footer-1-bg.jpg");
+    background-image: url("/assets/img/footer-1-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; /* 🎯 CENTRAGE */
