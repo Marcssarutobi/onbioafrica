@@ -108,7 +108,7 @@
     import DataTable from '../Datatable/Datatable.vue'
     import Swal from 'sweetalert2';
     import Modal from '../Modal/modal.vue';
-    import { acceptTravelGrant, allTravelGrants, rejectTravelGrant, singleTravelGrant } from '../api/travelGrant';
+    import { acceptTravelGrant, allTravelGrants, deleteTravelGrant, rejectTravelGrant, singleTravelGrant } from '../api/travelGrant';
 
     const isLoader = ref(false)
     const modalTitle = ref('')
@@ -187,7 +187,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item text-danger" href="#" onClick="DeleteProgramFunction(${row.id})">
+                                <a class="dropdown-item text-danger" href="#" onClick="DeleteTravelFunction(${row.id})">
                                     <i class="fa fa-trash me-1"></i> Delete
                                 </a>
                             </li>
@@ -270,6 +270,28 @@
             })
         }
 
+    }
+    
+    window.DeleteTravelFunction = async function (id) {
+        const result = await Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        })
+
+        if(result.isConfirmed){
+            await deleteTravelGrant(id)
+            Swal.fire(
+                'Deleted!',
+                'Abstract has been deleted.',
+                'success'
+            )
+            AllTravelGrantFunction()
+        }
     }
 
     onMounted(() => {

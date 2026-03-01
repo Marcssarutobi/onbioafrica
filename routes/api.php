@@ -30,6 +30,7 @@ Route::post('/user/verify', [UserController::class, 'verifyResetCode']);
 
 //AbstractData
 Route::post('/addabstractdata',[AbstractdataController::class, 'store']);
+Route::get('/showabstractdata/{id}',[AbstractdataController::class, 'show']);
 Route::post('/verifier-paiement',[AbstractdataController::class, 'verifier']);
 
 //Travel Grant
@@ -103,7 +104,7 @@ Route::middleware('auth:sanctum')->group(function(){
 
     //AbstractData
     Route::get('/allabstractdata',[AbstractdataController::class, 'index']);
-    Route::get('/showabstractdata/{id}',[AbstractdataController::class, 'show']);
+    
     Route::put('/updateabstractdata/{id}',[AbstractdataController::class, 'update']);
     Route::put('/acceptabstractdata/{id}',[AbstractdataController::class, 'accept']);
     Route::put('/rejectabstractdata/{id}',[AbstractdataController::class, 'reject']);
