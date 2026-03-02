@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('email');
             $table->string('phone');
-            $table->json('affiliation');
+            $table->string('affiliation');
             $table->json('authors');
             $table->string('title_resume');
             $table->text('content_resume');

@@ -42,16 +42,17 @@ class AbstractdataController extends Controller
             'phone'          => 'nullable|string|max:255',
             'type'           => 'nullable|string|max:255',
 
-            // JSON → tableaux
-            'affiliation'    => 'nullable|array',
-            'affiliation.*'  => 'string|max:255',
+            // affiliation unique par abstract
+            'affiliation'    => 'nullable|string|max:255',
 
+            // authors : tableau de ['fullname' => ..., 'affiliation' => ...]
             'authors'        => 'nullable|array',
-            'authors.*' => 'required|string|max:255',
+            'authors.*.fullname'    => 'required|string|max:255',
+            'authors.*.affiliation' => 'nullable|string|max:255',
 
             'title_resume'   => 'required|string|max:255',
             'content_resume' => 'required|string',
-            'status'         => 'nullable|string|in:pending,accepted,rejected',
+            'status'         => 'nullable|string|in:pending,approved,rejected',
             'ispaid'         => 'nullable|string|in:pending,paid',
             'isinvite'       => 'nullable|string|in:nosent,sent',
         ]);
@@ -60,6 +61,11 @@ class AbstractdataController extends Controller
         $validated['status'] = $validated['status'] ?? 'pending';
         $validated['ispaid'] = $validated['ispaid'] ?? 'pending';
         $validated['isinvite'] = $validated['isinvite'] ?? 'nosent';
+
+        // Convertir authors en JSON
+        if (!empty($validated['authors'])) {
+            $validated['authors'] = json_encode($validated['authors']);
+        }
 
         $abstract = Abstractdata::create($validated);
 
@@ -118,12 +124,19 @@ class AbstractdataController extends Controller
             'phone'          => 'nullable|string|max:255',
             'type'           => 'nullable|string|max:255',
             'affiliation'    => 'nullable|string|max:255',
+            'authors'        => 'nullable|array',
+            'authors.*.fullname'    => 'required|string|max:255',
+            'authors.*.affiliation' => 'nullable|string|max:255',
             'title_resume'   => 'sometimes|required|string|max:255',
             'content_resume' => 'sometimes|required|string',
-            'status'         => 'nullable|string|in:pending,accepted,rejected',
-            'ispaid'         => 'nullable|boolean',
-            'isinvite'       => 'nullable|boolean',
+            'status'         => 'nullable|string|in:pending,approved,rejected',
+            'ispaid'         => 'nullable|string|in:pending,paid',
+            'isinvite'       => 'nullable|string|in:nosent,sent',
         ]);
+
+        if (!empty($validated['authors'])) {
+            $validated['authors'] = json_encode($validated['authors']);
+        }
 
         $abstract->update($validated);
 
