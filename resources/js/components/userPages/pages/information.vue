@@ -21,7 +21,9 @@
                 <!-- Image Side -->
                 <div class="hero-image-side">
                     <div class="hero-image-wrapper">
-                        <img src="assets/img/benin-hero.jpg" alt="Bénin paysage">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/video/video.mp4" type="video/mp4">
+                        </video>
                         <div class="hero-image-overlay"></div>
                     </div>
                     
@@ -121,7 +123,7 @@
                 <!-- Card 2: Tourism -->
                 <div class="info-card">
                     <div class="card-image">
-                        <img src="assets/img/tourisme.webp" alt="Tourisme Bénin">
+                        <img src="assets/img/tourisme.jpg" alt="Tourisme Bénin">
                         <div class="card-badge">
                             <span>Nature</span>
                         </div>
@@ -461,6 +463,13 @@ body {
     overflow: hidden;
     aspect-ratio: 4/3;
     box-shadow: 0 25px 80px -20px rgba(6, 45, 99, 0.25);
+}
+
+.hero-image-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* empêche les marges par défaut */
 }
 
 .hero-image-wrapper img {

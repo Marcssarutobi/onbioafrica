@@ -193,7 +193,7 @@
                   <div>
                    <br>
                   </div>
-                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;">We thank you for your interest in this initiative and wish you the best of luck.</span>
+                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;">We thank you for your interest in this initiative and wish you the best luck.</span>
                   </div>
                  </div>
                 </div>

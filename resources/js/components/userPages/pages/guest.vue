@@ -307,6 +307,25 @@ import Swal from 'sweetalert2'
     padding-bottom: 130px;
 }
 
+/* Image de fond en overlay */
+.et-breadcrumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/assets/img/carou2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.is-invalid{
+    border: 2px solid #e90017;
+}
+
  /* ============================================
     GUEST REGISTRATION - BASED ON output.css
 ============================================ */

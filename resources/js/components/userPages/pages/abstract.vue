@@ -85,27 +85,27 @@
 
                         <div class="et-form-group">
                             <label>First Name</label>
-                            <input type="text" required v-model="data.nom" placeholder="ex: Jane">
+                            <input type="text" :class="isEmpty.nom ? 'is-invalid' : ''" v-model="data.nom" placeholder="ex: Jane">
                         </div>
 
                         <div class="et-form-group">
                             <label>Last Name</label>
-                            <input type="text" required v-model="data.prenom" placeholder="ex: Smith">
+                            <input type="text" :class="isEmpty.prenom ? 'is-invalid' : ''" v-model="data.prenom" placeholder="ex: Smith">
                         </div>
 
                         <div class="et-form-group">
                             <label>Email</label>
-                            <input type="email" required v-model="data.email" placeholder="ex: jane@example.com">
+                            <input type="email" :class="isEmpty.email ? 'is-invalid' : ''" v-model="data.email" placeholder="ex: jane@example.com">
                         </div>
 
                         <div class="et-form-group">
                             <label>Phone</label>
-                            <input type="tel" required v-model="data.phone" placeholder="ex: 0161000000">
+                            <input type="tel" :class="isEmpty.phone ? 'is-invalid' : ''" v-model="data.phone" placeholder="ex: 0161000000">
                         </div>
 
                         <div class="et-form-group full">
                             <label>Profile</label>
-                            <select name="" id="" v-model="data.type">
+                            <select name="" id="" v-model="data.type" :class="isEmpty.type ? 'is-invalid' : ''">
                                 <option value="" disabled selected>Select your profile</option>
                                 <option value="etudiant/doctorants">Students/Doctoral students</option>
                                 <option value="postdoctorant/chercheurs/enseignant">Postdoctoral Fellow/Researchers/Teacher</option>
@@ -115,7 +115,7 @@
 
                         <div class="et-form-group full">
                             <label>Affiliation</label>
-                            <input type="text" required v-model="data.affiliation" placeholder="ex: University A">
+                            <input type="text" :class="isEmpty.affiliation ? 'is-invalid' : ''" v-model="data.affiliation" placeholder="ex: University A">
                         </div>
 
                         <div class="et-form-group full">
@@ -163,12 +163,12 @@
 
                         <div class="et-form-group full">
                             <label>Abstract Title</label>
-                            <input type="text" required v-model="data.title_resume" placeholder="Your Title">
+                            <input type="text" :class="isEmpty.title_resume ? 'is-invalid' : ''" v-model="data.title_resume" placeholder="Your Title">
                         </div>
 
                         <div class="et-form-group full">
                             <label>Abstract Text</label>
-                            <textarea rows="8" maxlength="1000" required v-model="data.content_resume" placeholder="Your Abstract"></textarea>
+                            <textarea rows="8" maxlength="1000" :class="isEmpty.content_resume ? 'is-invalid' : ''" v-model="data.content_resume" placeholder="Your Abstract"></textarea>
                             <div class="et-counter">{{ data.content_resume.length }}/1000</div>
                         </div>
 
@@ -302,11 +302,29 @@
     padding-top: 210px;
     padding-bottom: 130px;
 }
+
+/* Image de fond en overlay */
+.et-breadcrumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/assets/img/carou2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.3;
+    z-index: -1;
+}
 .btn-add{
     background: #062d63;
     color: #fff;
     padding: 10px;
     font-size: 14px;
     border-radius: 15px;
+}
+.is-invalid{
+    border: 2px solid #e90017;
 }
 </style>

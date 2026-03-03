@@ -6,13 +6,9 @@
             <div class="swiper-wrapper">
                 <!-- single slide -->
                 <div class="swiper-slide">
-                    <div class="bg-no-repeat bg-cover bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]">
+                    <div class="bg-no-repeat bg-cover bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]" style="background: url('/assets/img/carou1.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
 
-                        <!-- 🎥 VIDEO BACKGROUND -->
-                        <video autoplay muted loop playsinline
-                            class="absolute inset-0 w-full h-full object-cover -z-[2]">
-                            <source src="assets/video/video.mp4" type="video/mp4">
-                        </video>
+                        
 
                         <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
                             <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">

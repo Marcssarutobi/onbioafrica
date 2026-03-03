@@ -75,18 +75,18 @@
                     <form @submit.prevent="SubmitTravelGrant">
 
                         <div class="form-row">
-                            <input type="text" placeholder="First name" v-model="data.prenom" required>
-                            <input type="text" placeholder="Last name" v-model="data.nom" required>
+                            <input type="text" placeholder="First name" v-model="data.prenom" :class="isEmpty.prenom ? 'is-invalid' : ''" required>
+                            <input type="text" placeholder="Last name" v-model="data.nom" :class="isEmpty.nom ? 'is-invalid' : ''" required>
                         </div>
 
                         <div class="form-row">
-                            <input type="email" placeholder="Email address" v-model="data.email" required>
-                            <input type="text" placeholder="Phone number" v-model="data.phone" required>
+                            <input type="email" placeholder="Email address" v-model="data.email" :class="isEmpty.email ? 'is-invalid' : ''" required>
+                            <input type="text" placeholder="Phone number" v-model="data.phone" :class="isEmpty.phone ? 'is-invalid' : ''" required>
                         </div>
 
                         <div class="form-row">
-                            <input type="text" placeholder="Country" v-model="data.country" required>
-                            <input type="text" placeholder="Institution" v-model="data.institution" required>
+                            <input type="text" placeholder="Country" v-model="data.country" :class="isEmpty.country ? 'is-invalid' : ''" required>
+                            <input type="text" placeholder="Institution" v-model="data.institution" :class="isEmpty.institution ? 'is-invalid' : ''" required>
                         </div>
 
                         <label class="file-input">
@@ -94,7 +94,7 @@
                                 <i class="fa-solid fa-cloud-arrow-up mr-2"></i>
                                 Upload CV (PDF – max 3 pages)
                             </span>
-                            <input type="file" accept=".pdf" @change="handleFilescv" required>
+                            <input type="file" accept=".pdf"  @change="handleFilescv" required>
                         </label>
 
                         <label class="file-input">
@@ -221,39 +221,53 @@ import { postTravelGrant } from '../../adminPages/api/travelGrant';
     }
 
     async function SubmitTravelGrant() {
-        isLoader.value = true
 
-        const formData = new FormData()
-
-        for(const key in data.value){
-            if (key === 'documents') continue;
-            formData.append(key, data.value[key])
+        for (const field in data.value) {
+            isEmpty.value[field] = !data.value[field]
+            msgInput.value[field] = `Please enter ${field.replace('_', ' ')}`;
         }
 
-        for(const key in data.value.documents){
-            const fileObj = data.value.documents[key]
-            formData.append('documents[]', fileObj.file)
-        }
+        const allEmpty = Object.values(isEmpty.value).every(value => value === false)
 
-        await postTravelGrant(formData).then(res =>{
-            isLoader.value = false
-            for (const key in data.value) {
-                if (key === 'documents') {
-                    data.value.documents = {}
-                } else {
-                    data.value[key] = ''
-                }
+        if (allEmpty){
+
+            isLoader.value = true
+
+            const formData = new FormData()
+
+            for(const key in data.value){
+                if (key === 'documents') continue;
+                formData.append(key, data.value[key])
             }
 
-            alertMsg.value = 'Application submitted successfully'
-            alertType.value = 'success'
-        }).catch(err => {
-            isLoader.value = false
-            alertMsg.value = 'Error submitting application'
-            alertType.value = 'error'
-        }).finally(() => {
-            isLoader.value = false
-        })
+            for(const key in data.value.documents){
+                const fileObj = data.value.documents[key]
+                formData.append('documents[]', fileObj.file)
+            }
+
+            await postTravelGrant(formData).then(res =>{
+                isLoader.value = false
+                for (const key in data.value) {
+                    if (key === 'documents') {
+                        data.value.documents = {}
+                    } else {
+                        data.value[key] = ''
+                    }
+                }
+
+                alertMsg.value = 'Application submitted successfully'
+                alertType.value = 'success'
+            }).catch(err => {
+                isLoader.value = false
+                alertMsg.value = 'Error submitting application'
+                alertType.value = 'error'
+            }).finally(() => {
+                isLoader.value = false
+            })
+
+        }
+
+        
     }
 
 </script>
@@ -269,6 +283,25 @@ import { postTravelGrant } from '../../adminPages/api/travelGrant';
     /* Padding desktop */
     padding-top: 210px;
     padding-bottom: 130px;
+}
+
+/* Image de fond en overlay */
+.et-breadcrumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/assets/img/carou2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.is-invalid{
+    border: 2px solid #e90017;
 }
 
 /* ============================================
