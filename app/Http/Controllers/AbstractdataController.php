@@ -62,10 +62,6 @@ class AbstractdataController extends Controller
         $validated['ispaid'] = $validated['ispaid'] ?? 'pending';
         $validated['isinvite'] = $validated['isinvite'] ?? 'nosent';
 
-        // Convertir authors en JSON
-        if (!empty($validated['authors'])) {
-            $validated['authors'] = json_encode($validated['authors']);
-        }
 
         $abstract = Abstractdata::create($validated);
 

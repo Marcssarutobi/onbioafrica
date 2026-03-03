@@ -29,8 +29,11 @@
             <td style="font-size:16px; line-height:24px; color:#4b4b4b; padding-bottom:15px;">
                 <strong>Email :</strong> {{ $abstract->email }}<br>
                 <strong>Phone :</strong> {{ $abstract->phone ?? 'N/A' }}<br>
-                <strong>Affiliation :</strong> {{ implode(', ', $abstract->affiliation ?? []) }}<br>
-                <strong>Authors :</strong> {{ implode(', ', $abstract->authors ?? []) }}<br>
+                <strong>Affiliation :</strong> {{ $abstract->affiliation }}<br>
+                <strong>Authors :</strong> 
+                @foreach ($abstract->authors ?? [] as $author)
+                    {{ $author['fullname'] }} ({{ $author['affiliation'] ?? 'N/A' }})<br>
+                @endforeach
                 <strong>Title :</strong> {{ $abstract->title_resume }}<br>
                 <strong>Summary :</strong> {{ $abstract->content_resume }}
             </td>

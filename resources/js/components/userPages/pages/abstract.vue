@@ -113,14 +113,52 @@
                             </select>
                         </div>
 
-                        <div class="et-form-group">
-                            <label>Affiliation (separated by commas)</label>
-                            <input type="text" required v-model="data.affiliation_text" placeholder="ex: University A, University B">
+                        <div class="et-form-group full">
+                            <label>Affiliation</label>
+                            <input type="text" required v-model="data.affiliation" placeholder="ex: University A">
                         </div>
 
-                        <div class="et-form-group">
-                            <label>Authors (separated by commas)</label>
-                            <input type="text" required v-model="data.authors_text" placeholder="ex: John Doe, Jane Smith">
+                        <div class="et-form-group full">
+                            <label>Authors</label>
+
+                            <div
+                                v-for="(author, index) in data.authors"
+                                :key="index"
+                                class="author-row"
+                                style="display:flex; gap:10px; margin-bottom:10px;"
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Full name"
+                                    v-model="author.fullname"
+                                    required
+                                >
+
+                                <input
+                                    type="text"
+                                    placeholder="Affiliation"
+                                    v-model="author.affiliation"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    @click="removeAuthor(index)"
+                                    v-if="data.authors.length > 1"
+                                    class="btn-remove"
+                                >
+                                    ❌
+                                </button>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="btn-add"
+                                @click="addAuthor"
+                                style="margin-top:8px;"
+                            >
+                                ➕ Add author
+                            </button>
                         </div>
 
                         <div class="et-form-group full">
@@ -172,9 +210,7 @@
         email: '',
         phone: '',
         type: '',
-        affiliation_text: '',
-        authors_text: '',
-        affiliation: [],
+        affiliation: '',
         authors: [],
         title_resume: '',
         content_resume: '',
@@ -185,17 +221,18 @@
     const alertMsg = ref('')
     const alertType = ref('')
 
-    async function AddAbstractFunction() {
-        
-        data.value.affiliation = data.value.affiliation_text
-            .split(',')
-            .map(item => item.trim())
-            .filter(item => item !== '')
+    const addAuthor = () => {
+        data.value.authors.push({
+            fullname: '',
+            affiliation: ''
+        })
+    }
 
-        data.value.authors = data.value.authors_text
-            .split(',')
-            .map(item => item.trim())
-            .filter(item => item !== '')
+    const removeAuthor = (index) => {
+        data.value.authors.splice(index, 1)
+    }
+
+    async function AddAbstractFunction() {
 
         for (const field in data.value) {
             isEmpty.value[field] = !data.value[field]
@@ -239,7 +276,7 @@
 
 </script>
 <style scoped>
-    .alert.success {
+.alert.success {
     color: #155724;
     background-color: #d4edda;
     border: 1px solid #c3e6cb;
@@ -264,5 +301,12 @@
     /* Padding desktop */
     padding-top: 210px;
     padding-bottom: 130px;
+}
+.btn-add{
+    background: #062d63;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 15px;
 }
 </style>

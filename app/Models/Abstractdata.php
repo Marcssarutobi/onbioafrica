@@ -25,7 +25,6 @@ class Abstractdata extends Model
     ];
 
     protected $casts = [
-        'affiliation' => 'array',
-        'authors'     => 'array',
+        'authors' => 'array',
     ];
 }

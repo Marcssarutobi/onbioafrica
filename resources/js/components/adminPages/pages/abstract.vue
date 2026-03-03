@@ -67,7 +67,7 @@
 
                     <div class="col-md-6 mb-3">
                         <small class="text-muted">Affiliation</small>
-                        <div class="fw-bold">{{ data.affiliation.join(', ') }}</div>
+                        <div class="fw-bold">{{ data.affiliation }}</div>
                     </div>
 
                     <div class="col-12 mb-3">
@@ -82,7 +82,14 @@
 
                     <div class="col-md-6 mb-3">
                         <small class="text-muted">Authors</small>
-                        <div class="fw-bold">{{ data.authors.join(', ') }}</div>
+                        <div class="fw-bold">
+                            <span
+                                v-for="(author, index) in data.authors"
+                                :key="index"
+                            >
+                                {{ author.fullname }} ({{ author.affiliation }})<span v-if="index < data.authors.length - 1">, </span>
+                            </span>
+                        </div>
                     </div>
 
                 </div>
@@ -105,7 +112,7 @@
         prenom: '',
         email: '',
         phone: '',
-        affiliation: [],
+        affiliation: '',
         authors: [],
         title_resume: '',
         content_resume: '',
@@ -233,7 +240,12 @@
     ]
 
     window.getAbstractFunction = async (id)=>{
-        data.value = await singleAbstractData(id)
+        const res = await singleAbstractData(id)
+
+        data.value = {
+            ...res,
+            authors: res.authors ? JSON.parse(res.authors) : []
+        }
         modalTitle.value = 'Abstract Details'
         modalBtn.value = 'Approved'
         addmodal.value.show()
