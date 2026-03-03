@@ -33,11 +33,14 @@
 
                 <!-- right -->
                 <div class="et-about__txt">
-                    <h6 class="et-section-sub-title ">About The Symposium</h6>
-                    <h2 class="et-section-title mb-[24px] md:mb-[19px] ">Advancing One Health Through Molecular Science in Africa</h2>
+                    <h6 class="et-section-sub-title ">Welcome to OneBioAfrica</h6>
+                    <h2 class="et-section-title mb-[24px] md:mb-[19px] ">OneBioAfrica: Connecting Science, Health, and Nature</h2>
 
                     <p class="mb-[30px] text-[16px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
-                        Africa faces interconnected challenges linking human, animal, plant, and environmental health. Yet molecular data generation, analysis, and sharing capacities remain uneven across the continent. OneBioAfrica was created to address this gap by building collaborative networks, strengthening bioinformatics expertise, and fostering genomic data exchange to support health surveillance, biodiversity conservation, and sustainable development.
+                        Africa stands at a decisive moment. The challenges we face, emerging diseases, biodiversity loss, antimicrobial resistance, and ecosystem degradation are interconnected and require integrated, molecular-driven solutions within the One Health framework. <br>
+                        OneBioAfrica was initiated to strengthen Africa’s capacity in molecular biology, bioinformatics, and evolutionary science, and to build a collaborative continental network capable of transforming genomic data into real-world health and conservation impact. <br>
+                        We bring together researchers, students, early-career scientists, and policymakers to share knowledge, exchange ideas, and shape the future of molecular science in Africa. <br>
+                        Together, we are building resilient scientific networks that serve both people and the planet.
                     </p>
 
                     
@@ -184,6 +187,22 @@
 
 </script>
 <style scoped>
+
+.et-member__img{
+    width: 422px;
+    height: 422px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.et-member__img img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
 
 .et-breadcrumb {
     position: relative;

@@ -95,6 +95,22 @@ onMounted(()=>{
 
 <style scoped>
 
+.et-member__img{
+    width: 422px;
+    height: 422px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.et-member__img img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
 .et-breadcrumb {
     position: relative;
     z-index: 1;

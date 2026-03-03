@@ -670,6 +670,22 @@
 </script>
 <style scoped>
 
+.et-member__img{
+    width: 363px;
+    height: 363px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.et-member__img img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
 .images{
     display: flex;
     align-items: center;
