@@ -37,6 +37,68 @@
                         <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">OneBioAfrica </span>
                     </div>
                 </div>
+
+                <!-- single slide -->
+                <div class="swiper-slide">
+                    <div class="bg-no-repeat bg-cover bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]" style="background: url('/assets/img/carou2.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                        <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
+                            <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
+                                <div class="left relative z-[20] w-[65%] md:w-full">
+                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] ">Genomics & Biodiversity</h6>
+
+                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] ">Connecting Genomics, Biodiversity <span class="font-normal tracking-tighter"> and Health for <br> Sustainable African Futures</span></h1>
+
+                                    <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
+                                        <RouterLink to="/abstract" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Submit Abstract</RouterLink>
+
+                                        <RouterLink to="/contact" class="et-btn bg-white inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-etBlue font-normal text-[17px] rounded-full">Contact us</RouterLink>
+                                    </div>
+
+                                    <!-- vectors -->
+                                    <div class="et-banner-vectors">
+                                        <div class="absolute left-[457px] bottom-[calc(100%+40px)]"><img src="assets/img/banner-vector.png" alt="vector" class="w-[45px] h-[45px]"></div>
+                                        <div class="absolute bottom-0 right-[6px]"><img src="assets/img/banner-vector.png" alt="vector" class="w-[21px] h-[21px]"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- bottom title -->
+                        <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">OneBioAfrica </span>
+                    </div>
+                </div>
+
+                <!-- single slide -->
+                <div class="swiper-slide">
+                    <div class="bg-no-repeat bg-cover bg-center pt-[clamp(150px,17.3vw,333px)] pb-[clamp(120px,22vw,422px)] text-white relative overflow-hidden z-[1] before:content-normal before:absolute before:inset-0 before:bg-etBlue/40 before:-z-[1]" style="background: url('/assets/img/carou3.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                        <div class="mx-[15.5em] xxxl:mx-[10em] xxl:mx-[40px] xs:mx-[12px]">
+                            <div class="flex md:flex-col items-center justify-between gap-x-[30px] gap-y-[30px] md:grid-cols-1">
+                                <div class="left relative z-[20] w-[65%] md:w-full">
+                                    <h6 class="font-kalam font-bold text-[2.4rem] mb-[3px] ">Molecular Science & Policy</h6>
+
+                                    <h1 class="text-[clamp(42px,6.25vw,12rem)] font-semibold leading-[1.1] mb-[36px] md:mb-[36px] ">Advancing Molecular Science <span class="font-normal tracking-tighter"> to Tackle Africa’s <br> One Health Challenges</span></h1>
+
+                                    <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
+                                        <RouterLink to="/guest" class="et-btn bg-etBlue inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-white font-normal text-[17px] rounded-full hover:!bg-white hover:!text-etBlue">Guest Registration</RouterLink>
+
+                                        <RouterLink to="/contact" class="et-btn bg-white inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-etBlue font-normal text-[17px] rounded-full">Contact us</RouterLink>
+                                    </div>
+
+                                    <!-- vectors -->
+                                    <div class="et-banner-vectors">
+                                        <div class="absolute left-[457px] bottom-[calc(100%+40px)]"><img src="assets/img/banner-vector.png" alt="vector" class="w-[45px] h-[45px]"></div>
+                                        <div class="absolute bottom-0 right-[6px]"><img src="assets/img/banner-vector.png" alt="vector" class="w-[21px] h-[21px]"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- bottom title -->
+                        <span class="et-banner-bottom-title text-[clamp(30px,13vw,250px)] font-bold text-white/10 text-center block absolute bottom-[40px] left-0 w-full">OneBioAfrica </span>
+                    </div>
+                </div>
             </div>
 
             <div class="et-banner-slider-dots absolute flex flex-col right-[40px] xxs:right-[15px] !left-auto z-[1] !top-[50%] -translate-y-[50%] !w-auto"></div>
