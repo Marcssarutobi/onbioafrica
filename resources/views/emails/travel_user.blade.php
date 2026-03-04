@@ -152,7 +152,7 @@
                <td valign="top" align="left">
                 <div class="pc-font-alt" style="text-decoration: none;">
                  <div style="font-size:24px;line-height:34px;text-align:left;text-align-last:left;color:#151515;font-family:'Fira Sans', Arial, Helvetica, sans-serif;letter-spacing:-0.4px;font-style:normal;">
-                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-size: 24px; line-height: 34px; font-weight: 700;">Hi {{$travelGrant->nom}} {{$travelGrant->prenom}}</span><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-size: 24px; line-height: 34px; font-weight: 700;"> ,</span>
+                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-size: 24px; line-height: 34px; font-weight: 700;">Dear {{$travelGrant->nom}} {{$travelGrant->prenom}}</span><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-size: 24px; line-height: 34px; font-weight: 700;"> ,</span>
                   </div>
                  </div>
                 </div>

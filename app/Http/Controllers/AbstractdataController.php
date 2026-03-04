@@ -44,6 +44,8 @@ class AbstractdataController extends Controller
 
             // affiliation unique par abstract
             'affiliation'    => 'nullable|string|max:255',
+            'session'        => 'nullable|string|max:255',
+            'type_presentation'           => 'nullable|string|max:255',
 
             // authors : tableau de ['fullname' => ..., 'affiliation' => ...]
             'authors'        => 'nullable|array',
@@ -120,6 +122,8 @@ class AbstractdataController extends Controller
             'phone'          => 'nullable|string|max:255',
             'type'           => 'nullable|string|max:255',
             'affiliation'    => 'nullable|string|max:255',
+            'session'        => 'nullable|string|max:255',
+            'type_presentation'           => 'nullable|string|max:255',
             'authors'        => 'nullable|array',
             'authors.*.fullname'    => 'required|string|max:255',
             'authors.*.affiliation' => 'nullable|string|max:255',

@@ -17,7 +17,7 @@
         </tr>
         <tr>
             <td style="font-size:24px; font-weight:700; color:#151515; padding-bottom:20px;">
-                Bonjour {{ $admin->fullname }},
+                Dear {{ $admin->fullname }},
             </td>
         </tr>
         <tr>

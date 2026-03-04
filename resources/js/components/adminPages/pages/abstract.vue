@@ -70,6 +70,16 @@
                         <div class="fw-bold">{{ data.affiliation }}</div>
                     </div>
 
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Session</small>
+                        <div class="fw-bold">{{ data.session }}</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <small class="text-muted">Presentation</small>
+                        <div class="fw-bold">{{ data.type_presentation }}</div>
+                    </div>
+
                     <div class="col-12 mb-3">
                         <small class="text-muted">Title</small>
                         <div class="fw-bold h4">{{ data.title_resume }}</div>

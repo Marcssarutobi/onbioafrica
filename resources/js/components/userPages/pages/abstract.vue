@@ -30,7 +30,7 @@
                     </header>
 
                     <div class="image">
-                        <img src="assets/img/abstracts.jpg" alt="Abstract Submission" class="w-full rounded-lg">
+                        <img src="assets/img/abstracts1.jpg" alt="Abstract Submission" class="w-full rounded-lg">
                     </div>
 
                     <ul class="et-info-list">
@@ -38,7 +38,7 @@
                             <span class="et-icon"><i class="fa-solid fa-pencil"></i></span>
                             <div>
                                 <strong>Submission format</strong>
-                                <span>Text only, maximum 30 characters</span>
+                                <span>Text only, maximum 1000 characters</span>
                             </div>
                         </li>
 
@@ -103,7 +103,7 @@
                             <input type="tel" :class="isEmpty.phone ? 'is-invalid' : ''" v-model="data.phone" placeholder="ex: 0161000000">
                         </div>
 
-                        <div class="et-form-group full">
+                        <div class="et-form-group ">
                             <label>Profile</label>
                             <select name="" id="" v-model="data.type" :class="isEmpty.type ? 'is-invalid' : ''">
                                 <option value="" disabled selected>Select your profile</option>
@@ -113,9 +113,29 @@
                             </select>
                         </div>
 
-                        <div class="et-form-group full">
+                        <div class="et-form-group">
                             <label>Affiliation</label>
                             <input type="text" :class="isEmpty.affiliation ? 'is-invalid' : ''" v-model="data.affiliation" placeholder="ex: University A">
+                        </div>
+
+                        <div class="et-form-group ">
+                            <label>Session</label>
+                            <select name="" id="" v-model="data.session" :class="isEmpty.session ? 'is-invalid' : ''">
+                                <option value="" disabled selected>Select your session</option>
+                                <option value="Molecular Biology and Biodiversity Conservation">Molecular Biology and Biodiversity Conservation</option>
+                                <option value="Molecular Approaches in Human and Animal Health">Molecular Approaches in Human and Animal Health</option>
+                                <option value="Environment and Society within the One Health Framework">Environment and Society within the One Health Framework</option>
+                                <option value="One Health Solutions in the Era of Molecular Biology: Success Stories">One Health Solutions in the Era of Molecular Biology: Success Stories</option>
+                            </select>
+                        </div>
+
+                        <div class="et-form-group ">
+                            <label>Presentation</label>
+                            <select name="" id="" v-model="data.type_presentation" :class="isEmpty.type_presentation ? 'is-invalid' : ''">
+                                <option value="" disabled selected>Select your presentation</option>
+                                <option value="Talk">Talk</option>
+                                <option value="Posters">Posters</option>
+                            </select>
                         </div>
 
                         <div class="et-form-group full">
@@ -210,6 +230,8 @@
         email: '',
         phone: '',
         type: '',
+        session: '',
+        type_presentation: '',
         affiliation: '',
         authors: [],
         title_resume: '',
@@ -252,18 +274,14 @@
                 alertMsg.value = 'Abstract submitted successfully'
                 alertType.value = 'success'
                 Swal.fire({
-                    toast: true,
-                    position: 'bottom-end',
                     icon: 'success',
-                    title: 'Abstract submitted successfully',
+                    title: '<span style="font-size: 20px; font-weight: 700;">Abstract submitted successfully</span>',
                     showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.onmouseenter = Swal.stopTimer;
-                        toast.onmouseleave = Swal.resumeTimer;
+                    timer: 1500,
+                    customClass: {
+                        title: 'swal-title-large'
                     }
-                })
+                });
             }).catch(err => {
                 isLoader.value = false
                 alertMsg.value = 'The email has already been taken. Please use a different email address.'

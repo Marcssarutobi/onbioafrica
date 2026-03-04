@@ -260,6 +260,15 @@ import Swal from 'sweetalert2'
             isLoader.value = false
             alertMsg.value = 'Registration successful! Please check your email for confirmation.'
             alertType.value = 'success'
+            Swal.fire({
+                icon: 'success',
+                title: '<span style="font-size: 20px; font-weight: 700;">Registration successful! Please check your email for confirmation.</span>',
+                showConfirmButton: false,
+                timer: 1500,
+                customClass: {
+                    title: 'swal-title-large'
+                }
+            });
             data.value = {
                 nom:'',
                 prenom:'',

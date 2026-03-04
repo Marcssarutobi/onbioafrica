@@ -35,7 +35,7 @@
                     <ul class="et-card-contact">
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:hounwanou.basile@gmail.com">hounwanou.basile@gmail.com</a>
+                            <a href="mailto:hounwanou.basile@gmail.com">hounwanou.basile@onebioafrica.com</a>
                         </li>
                         <li>
                             <i class="fa-solid fa-phone"></i>

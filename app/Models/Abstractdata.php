@@ -16,6 +16,8 @@ class Abstractdata extends Model
         'phone',
         'type',
         'affiliation',
+        'session',
+        'type_presentation',
         'authors',
         'title_resume',
         'content_resume',

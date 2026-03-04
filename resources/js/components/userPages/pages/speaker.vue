@@ -96,8 +96,8 @@ onMounted(()=>{
 <style scoped>
 
 .et-member__img{
-    width: 422px;
-    height: 422px;
+    width: 366px;
+    height: 366px;
     display: flex;
     align-items: center;
     justify-content: center;

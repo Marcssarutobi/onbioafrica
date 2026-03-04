@@ -38,7 +38,7 @@
                         </div>
                         <div class="stats-grid">
                             <div class="stat-box">
-                                <div class="stat-number">12M</div>
+                                <div class="stat-number">15M</div>
                                 <div class="stat-label">inhabitants</div>
                             </div>
                             <div class="stat-box">

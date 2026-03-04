@@ -154,6 +154,7 @@
 <script setup>
 import { ref } from 'vue';
 import { postTravelGrant } from '../../adminPages/api/travelGrant';
+import Swal from 'sweetalert2';
 
 
     const data = ref({
@@ -254,6 +255,16 @@ import { postTravelGrant } from '../../adminPages/api/travelGrant';
                         data.value[key] = ''
                     }
                 }
+
+                Swal.fire({
+                    icon: 'success',
+                    title: '<span style="font-size: 20px; font-weight: 700;">Application submitted successfully</span>',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    customClass: {
+                        title: 'swal-title-large'
+                    }
+                });
 
                 alertMsg.value = 'Application submitted successfully'
                 alertType.value = 'success'

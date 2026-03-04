@@ -117,7 +117,7 @@
                             Result of your Travel Grant application
                         </div>
 
-                        <h2>Hi {{ $travelGrant->nom }} {{ $travelGrant->prenom }},</h2>
+                        <h2>Dear {{ $travelGrant->nom }} {{ $travelGrant->prenom }},</h2>
 
                         <p>
                             We are pleased to inform you that your application for the <strong>Travel Grant</strong>

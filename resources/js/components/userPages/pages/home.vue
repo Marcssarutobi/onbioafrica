@@ -112,7 +112,7 @@
             <div class="flex items-center md:flex-wrap gap-x-[60px] xxl:gap-x-[40px] lg:gap-x-[30px] gap-y-[40px] sm:gap-y-[40px] lg:justify-center">
                 <!-- left -->
                 <div class="et-about-img relative z-[1] md:w-auto shrink-0 max-w-full mr-[70px] md:mr-0 ml-[28px] xxxl:ml-[47px] md:ml-0 xs:w-[70%] xxs:w-[90%] xxs:ml-[47px]">
-                    <img src="assets/img/about7.jpeg" alt="image" width="423" height="526" class="shrink-0 rounded-[10px]">
+                    <img src="assets/img/aboutR.jpeg" alt="image" width="423" height="526" class="shrink-0 rounded-[10px]">
                     <img src="assets/img/aboutH.JPG.jpeg" width="201" height="241" alt="image" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden">
 
                     <!-- vectors -->
@@ -128,10 +128,16 @@
                 <!-- right -->
                 <div class="et-about__txt" >
                     <h6 class="et-section-sub-title ">About The Symposium</h6>
-                    <h2 class="et-section-title mb-[24px] md:mb-[19px] ">Advancing One Health Through Molecular Science in Africa</h2>
+                    <h2 class="et-section-title mb-[24px] md:mb-[19px] ">OneBioAfrica: Connecting Science, Health, and Nature</h2>
 
-                    <p class="mb-[30px] text-[16px] font-light text-etGray md:mb-[30px] rev-slide-up" style='text-align:justify;'>
-                        OneBioAfrica is a regional scientific symposium dedicated to strengthening One Health networks across Africa through molecular biology, genomics, and bioinformatics. As emerging infectious diseases, antimicrobial resistance, biodiversity loss, and ecosystem disruptions continue to rise, the need for integrated, data-driven approaches has never been greater. This symposium brings together molecular biologists, medical and veterinary researchers, ecologists, bioinformaticians, and policymakers to foster interdisciplinary collaboration and data sharing.
+                    <p class="mb-[30px] text-[16px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
+                        Africa stands at a decisive moment. The challenges we face, emerging diseases, biodiversity loss, antimicrobial resistance, and ecosystem degradation are interconnected and require integrated, molecular-driven solutions within the One Health framework. <br>
+                        OneBioAfrica was initiated to strengthen Africa’s capacity in molecular biology, bioinformatics, and evolutionary science, and to build a collaborative continental network capable of transforming genomic data into real-world health and conservation impact. <br>
+                        We bring together researchers, students, early-career scientists, and policymakers to share knowledge, exchange ideas, and shape the future of molecular science in Africa. <br>
+                        Together, we are building resilient scientific networks that serve both people and the planet. <br> <br>
+
+                        <strong style="font-weight: 800;">Dr. Boris Armel OLOU</strong><br>
+                        Chair, OneBioAfrica Symposium
                     </p>
 
                     <div class="flex flex-wrap items-center gap-x-[30px] gap-y-[16px] rev-slide-up">

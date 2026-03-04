@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('affiliation');
+            $table->string('session');
+            $table->string('type_presentation');
             $table->json('authors');
             $table->string('title_resume');
             $table->text('content_resume');
