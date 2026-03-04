@@ -80,7 +80,7 @@
                         <div class="border rounded p-3 bg-white fs-4" style="white-space:pre-wrap; text-align: justify;">{{ data.content_resume }}</div>
                     </div>
 
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-12 mb-3">
                         <small class="text-muted">Authors</small>
                         <div class="fw-bold">
                             <span
@@ -244,7 +244,11 @@
 
         data.value = {
             ...res,
-            authors: res.authors ? JSON.parse(res.authors) : []
+            authors: Array.isArray(res.authors)
+            ? res.authors
+            : res.authors
+                ? JSON.parse(res.authors)
+                : []
         }
         modalTitle.value = 'Abstract Details'
         modalBtn.value = 'Approved'
