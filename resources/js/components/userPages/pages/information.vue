@@ -187,7 +187,7 @@
                                 <img src="assets/img/rue.jpg" alt="Rue Bénin">
                             </div>
                             <div class="image-box image-landscape">
-                                <img src="assets/img/Gastronomie.png" alt="Gastronomie Bénin">
+                                <img src="assets/img/plage2.jpg" alt="Plage Bénin">
                             </div>
                         </div>
                         <div class="image-column">
@@ -314,18 +314,18 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/img/parc.jpg" alt="Parc Pendjari">
+                    <img src="assets/img/ganvier.jpg" alt="PGanvié">
                     <div class="gallery-overlay">
-                        <h4>Pendjari Park</h4>
-                        <p>Northern Benin - Safari</p>
+                        <h4>Ganvié</h4>
+                        <p>The floating village of Ganvié</p>
                     </div>
                 </div>
 
                 <div class="gallery-item ">
-                    <img src="assets/img/tokpa.jpg" alt="Marché Dantokpa">
+                    <img src="assets/img/marcher.jpg" alt="Marché Dantokpa">
                     <div class="gallery-overlay">
-                        <h4>Dantokpa Market</h4>
-                        <p>Cotonou - West Africa's largest market</p>
+                        <h4>Ganhi Market</h4>
+                        <p>Cotonou – Benin's new modern markets</p>
                     </div>
                 </div>
 
