@@ -13,6 +13,7 @@ use App\Mail\GuestInvitation;
 use App\Models\User;
 use FedaPay\FedaPay;
 use FedaPay\Transaction;
+use PhpOffice\PhpWord\TemplateProcessor;
 
 class AbstractdataController extends Controller
 {
@@ -269,9 +270,67 @@ class AbstractdataController extends Controller
             ], 404);
         }
 
-        Mail::to($abstract->email)->send(new GuestInvitation($abstract));
+        /* =========================
+        1️⃣ GÉNÉRER LE WORD
+        ========================= */
+
+        $templatePath = storage_path('app/templates/invitation.docx');
+        $tmpDir = storage_path('app/tmp');
+        $wordPath = storage_path("app/tmp/invitation_{$abstract->id}.docx");
+
+        if (!is_dir($tmpDir)) {
+            mkdir($tmpDir, 0755, true);
+        }
+
+        if (!file_exists($templatePath)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Template Word introuvable'
+            ], 500);
+        }
+
+        $template = new TemplateProcessor($templatePath);
+        $template->setValue('prenom', $abstract->prenom);
+        $template->setValue('nom', $abstract->nom);
+        $template->saveAs($wordPath);
+
+        /* =========================
+        2️⃣ CONVERTIR WORD → PDF
+        ========================= */
+
+        $outputDir = storage_path('app/tmp');
+
+        exec(
+            "libreoffice --headless --convert-to pdf --outdir {$outputDir} {$wordPath}"
+        );
+
+        $pdfPath = str_replace('.docx', '.pdf', $wordPath);
+
+        if (!file_exists($pdfPath)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Échec de la génération du PDF'
+            ], 500);
+        }
+
+        /* =========================
+        3️⃣ ENVOYER L’EMAIL
+        ========================= */
+
+        Mail::to($abstract->email)->send(new GuestInvitation($abstract, $pdfPath));
+
+        /* =========================
+        4️⃣ METTRE À JOUR LE STATUT
+        ========================= */
 
         $abstract->update(['isinvite' => 'sent']);
+
+        /* =========================
+        5️⃣ NETTOYAGE (OPTIONNEL)
+        ========================= */
+
+        @unlink($wordPath);
+        @unlink($pdfPath);
 
         return response()->json([
             'success' => true,

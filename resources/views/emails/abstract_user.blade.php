@@ -170,7 +170,7 @@
                <td valign="top" align="left">
                 <div class="pc-font-alt" style="text-decoration: none;">
                  <div style="font-size:18px;line-height:28px;text-align:left;text-align-last:left;color:#4b4b4b;font-family:'Fira Sans', Arial, Helvetica, sans-serif;font-style:normal;letter-spacing:-0.2px;">
-                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;">Your abstract “{{ $abstract->title_resume}}” has been successfully submitted and is currently being processed.</span>
+                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;">We hereby confirm receipt of your abstract entitled “{{ $abstract->title_resume}}” submitted to OneBioAfrica 2026.</span>
                   </div>
                  </div>
                 </div>
@@ -188,7 +188,7 @@
                <td valign="top" align="left">
                 <div class="pc-font-alt" style="text-decoration: none;">
                  <div style="font-size:18px;line-height:28px;text-align:left;text-align-last:left;color:#4b4b4b;font-family:'Fira Sans', Arial, Helvetica, sans-serif;font-style:normal;letter-spacing:-0.2px;">
-                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;"> You will receive a notification as soon as it has been validated, whether it has been accepted or rejected.</span>
+                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;"> Please note that your submission is currently under review by the Scientific Committee. You will be notified of the committee’s decision by email once the evaluation process has been completed. <br> A formal notification of acceptance or rejection will be sent to you accordingly. <br>Thank you for your interest in and contribution to OneBioAfrica.</span>
                   </div>
                  </div>
                 </div>
@@ -224,7 +224,7 @@
                <td valign="top" align="left">
                 <div class="pc-font-alt" style="text-decoration: none;">
                  <div style="font-size:18px;line-height:28px;text-align:left;text-align-last:left;color:#4b4b4b;font-family:'Fira Sans', Arial, Helvetica, sans-serif;font-style:normal;letter-spacing:-0.2px;">
-                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;">Best regards, OneBioAfrica.</span>
+                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;">Kind regards, <br> OneBioAfrica, <br>Scientific Committee.</span>
                   </div>
                  </div>
                 </div>
