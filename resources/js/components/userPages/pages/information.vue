@@ -14,12 +14,12 @@
     <!-- BREADCRUMB SECTION END -->
 
     <!-- BENIN HERO SECTION START -->
-    <section class="benin-hero">
+    <section class="benin-hero" id="explore-benin">
         <div class="container">
             <div class="benin-hero-inner">
                 
                 <!-- Image Side -->
-                <div class="hero-image-side">
+                <div class="hero-image-side" >
                     <div class="hero-image-wrapper">
                         <video autoplay muted loop playsinline>
                             <source src="assets/video/video.mp4" type="video/mp4">
@@ -50,7 +50,7 @@
                 </div>
 
                 <!-- Content Side -->
-                <div class="hero-content-side">
+                <div class="hero-content-side" >
                     <h6 class="section-label">
                         <span class="line-decoration"></span>
                         Discover Benin
@@ -87,7 +87,7 @@
     <!-- BENIN HERO SECTION END -->
 
     <!-- CULTURE & TOURISM SECTION START -->
-    <section class="culture-section">
+    <section class="culture-section" id="culture-and-tourist-presentation">
         <div class="bg-pattern bg-pattern-1"></div>
         <div class="bg-pattern bg-pattern-2"></div>
 
@@ -169,7 +169,7 @@
     <!-- CULTURE & TOURISM SECTION END -->
 
     <!-- PRACTICAL INFO SECTION START -->
-    <section class="practical-section">
+    <section class="practical-section" id="pratical-information">
         <div class="container">
             
             <div class="section-header">
@@ -272,7 +272,7 @@
     <!-- PRACTICAL INFO SECTION END -->
 
     <!-- GALLERY SECTION START -->
-    <section class="gallery-section">
+    <section class="gallery-section" id="gallery">
         <!-- Background Elements -->
         <div class="gallery-bg">
             <div class="gallery-bg-blob"></div>

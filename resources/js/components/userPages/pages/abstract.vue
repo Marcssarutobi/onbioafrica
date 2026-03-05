@@ -27,6 +27,28 @@
                         <p class="mb-[30px] text-[18px] font-light text-etGray md:mb-[30px] rev-slide-up" style="text-align: justify;">
                             Abstract submission is open to researchers, students, and professionals working in molecular biology and One Health-related fields. Submissions will be evaluated based on scientific quality, originality, and relevance to the symposium themes. Accepted abstracts will be presented as oral or poster communications. Detailed submission guidelines, templates, and deadlines are available on the submission portal.
                         </p>
+                        <div class="important-dates mb-[40px]">
+                            <h3>Important Dates</h3>
+                            <ul>
+                                <li>
+                                    <div class="date">12 March 2026</div>
+                                    <div class="label">Call for Abstracts</div>
+                                </li>
+
+                                <li>
+                                    <div class="date">12 April 2026</div>
+                                    <div class="label">
+                                        Abstract submission deadline for oral presentations,
+                                        short talks, and poster presentations
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="date">30 April 2026</div>
+                                    <div class="label">Notification of review outcome</div>
+                                </li>
+                            </ul>
+                        </div>
                     </header>
 
                     <div class="image">
@@ -188,7 +210,7 @@
 
                         <div class="et-form-group full">
                             <label>Abstract Text</label>
-                            <textarea rows="8" maxlength="1000" :class="isEmpty.content_resume ? 'is-invalid' : ''" v-model="data.content_resume" placeholder="Your Abstract"></textarea>
+                            <textarea rows="18" maxlength="1000" :class="isEmpty.content_resume ? 'is-invalid' : ''" v-model="data.content_resume" placeholder="Your Abstract (max: 1000 characters)"></textarea>
                             <div class="et-counter">{{ data.content_resume.length }}/1000</div>
                         </div>
 
@@ -344,5 +366,100 @@
 }
 .is-invalid{
     border: 2px solid #e90017;
+}
+
+/* ================================
+   IMPORTANT DATES – UX PRO
+================================ */
+
+.important-dates {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid #062d63;
+    border-radius: 12px;
+    padding: 28px 30px;
+}
+
+.important-dates h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #062d63;
+    margin-bottom: 22px;
+}
+
+.important-dates h3::before {
+    content: "";
+    font-size: 22px;
+}
+
+.important-dates ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.important-dates li {
+    position: relative;
+    padding-left: 48px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #d1d5db;
+}
+
+.important-dates li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.important-dates li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #062d63;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.important-dates li::after {
+    content: "✓";
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.important-dates .date {
+    font-size: 15px;
+    font-weight: 700;
+    color: #062d63;
+    margin-bottom: 4px;
+}
+
+.important-dates .label {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .important-dates {
+        padding: 22px;
+    }
+
+    .important-dates li {
+        padding-left: 42px;
+    }
 }
 </style>

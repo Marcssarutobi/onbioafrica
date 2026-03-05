@@ -13,7 +13,7 @@ use App\Mail\GuestInvitation;
 use App\Models\User;
 use FedaPay\FedaPay;
 use FedaPay\Transaction;
-use PhpOffice\PhpWord\TemplateProcessor;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class AbstractdataController extends Controller
 {
@@ -271,66 +271,32 @@ class AbstractdataController extends Controller
         }
 
         /* =========================
-        1️⃣ GÉNÉRER LE WORD
+        1️⃣ GÉNÉRER LE PDF
         ========================= */
 
-        $templatePath = storage_path('app/templates/invitation.docx');
-        $tmpDir = storage_path('app/tmp');
-        $wordPath = storage_path("app/tmp/invitation_{$abstract->id}.docx");
+        $pdfPath = storage_path("app/invitations/invitation_{$abstract->id}.pdf");
 
-        if (!is_dir($tmpDir)) {
-            mkdir($tmpDir, 0755, true);
+        if (!file_exists(dirname($pdfPath))) {
+            mkdir(dirname($pdfPath), 0755, true);
         }
 
-        if (!file_exists($templatePath)) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Template Word introuvable'
-            ], 500);
-        }
-
-        $template = new TemplateProcessor($templatePath);
-        $template->setValue('prenom', $abstract->prenom);
-        $template->setValue('nom', $abstract->nom);
-        $template->saveAs($wordPath);
+        Pdf::loadView('pdf.invitation', [
+            'guest' => $abstract
+        ])
+        ->setPaper('A4', 'portrait')
+        ->save($pdfPath);
 
         /* =========================
-        2️⃣ CONVERTIR WORD → PDF
+        2️⃣ ENVOYER LE MAIL
         ========================= */
-
-        $outputDir = storage_path('app/tmp');
-
-        exec(
-            "libreoffice --headless --convert-to pdf --outdir {$outputDir} {$wordPath}"
-        );
-
-        $pdfPath = str_replace('.docx', '.pdf', $wordPath);
-
-        if (!file_exists($pdfPath)) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Échec de la génération du PDF'
-            ], 500);
-        }
-
-        /* =========================
-        3️⃣ ENVOYER L’EMAIL
-        ========================= */
-
+       
         Mail::to($abstract->email)->send(new GuestInvitation($abstract, $pdfPath));
 
         /* =========================
-        4️⃣ METTRE À JOUR LE STATUT
+        3️⃣ METTRE À JOUR LE STATUT
         ========================= */
 
         $abstract->update(['isinvite' => 'sent']);
-
-        /* =========================
-        5️⃣ NETTOYAGE (OPTIONNEL)
-        ========================= */
-
-        @unlink($wordPath);
-        @unlink($pdfPath);
 
         return response()->json([
             'success' => true,

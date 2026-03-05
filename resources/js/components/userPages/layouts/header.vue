@@ -52,8 +52,14 @@
                                 <li><RouterLink to="/speaker">Speakers</RouterLink></li>
                             </ul>
                         </li>
-                        <li>
-                            <RouterLink to="/general-information">General Information</RouterLink>
+                        <li class="has-sub-menu relative">
+                            <RouterLink role="button" to="/general-information">General Information</RouterLink>
+                            <ul class="et-header-submenu">
+                                <li><RouterLink to="/general-information#explore-benin">Explore Benin</RouterLink></li>
+                                <li><RouterLink to="/general-information#culture-and-tourist-presentation">Cultural and tourist presentation</RouterLink></li>
+                                <li><RouterLink to="/general-information#pratical-information">Pratical information</RouterLink></li>
+                                <li><RouterLink to="/general-information#gallery">Gallery</RouterLink></li>
+                            </ul>
                         </li>
                         <li class="has-sub-menu relative">
                             <a role="button" style="cursor: pointer;">Registration</a>

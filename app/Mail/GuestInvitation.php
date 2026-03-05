@@ -55,7 +55,7 @@ class GuestInvitation extends Mailable
     {
         return [
             Attachment::fromPath($this->pdfPath)
-            ->as('Invitation_OneBioAfrica.pdf')
+            ->as('Official_Invitation_OneBioAfrica_2026.pdf')
             ->withMime('application/pdf'),
         ];
     }
