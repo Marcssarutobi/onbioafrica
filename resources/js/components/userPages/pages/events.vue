@@ -166,7 +166,7 @@ onMounted(() => {
     position: absolute;
     inset: 0;
 
-    background-image: url("/assets/img/carou2.jpeg");
+    background-image: url("/assets/img/banner2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

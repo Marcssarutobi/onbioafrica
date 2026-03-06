@@ -302,7 +302,7 @@ import Swal from 'sweetalert2';
     position: absolute;
     inset: 0;
 
-    background-image: url("/assets/img/carou2.jpeg");
+    background-image: url("/assets/img/banner4.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

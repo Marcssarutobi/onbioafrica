@@ -195,7 +195,7 @@ import Swal from 'sweetalert2'
         if(allEmpty){
             isLoader.value = true
             FedaPay.init({
-                public_key: 'pk_sandbox_5OnNHVYU_bEh8gKO4RpLXF2F',
+                public_key: 'pk_live_lfaaLwCVRv1sZpEkRztU0ANt',
                 transaction: {
                     amount: montant.value,
                     description: `Registration fee - ${data.value.type}`,
@@ -322,7 +322,7 @@ import Swal from 'sweetalert2'
     position: absolute;
     inset: 0;
 
-    background-image: url("/assets/img/carou2.jpeg");
+    background-image: url("/assets/img/banner4.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

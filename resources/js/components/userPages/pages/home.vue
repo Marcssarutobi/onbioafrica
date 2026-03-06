@@ -584,7 +584,7 @@
 
             if(data.ispaid === 'pending'){
                 FedaPay.init({
-                    public_key: 'pk_sandbox_5OnNHVYU_bEh8gKO4RpLXF2F',
+                    public_key: 'pk_live_lfaaLwCVRv1sZpEkRztU0ANt',
                     transaction: {
                         amount: montant,
                         description: "Abstract Payment",
