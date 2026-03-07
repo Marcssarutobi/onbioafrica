@@ -104,6 +104,7 @@ Route::middleware('auth:sanctum')->group(function(){
 
     //AbstractData
     Route::get('/allabstractdata',[AbstractdataController::class, 'index']);
+    Route::get('/pdf/download',[AbstractdataController::class, 'generateAbstractsPdf']);
     
     Route::put('/updateabstractdata/{id}',[AbstractdataController::class, 'update']);
     Route::put('/acceptabstractdata/{id}',[AbstractdataController::class, 'accept']);

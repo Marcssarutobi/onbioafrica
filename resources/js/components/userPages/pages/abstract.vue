@@ -122,7 +122,7 @@
 
                         <div class="et-form-group">
                             <label>Phone</label>
-                            <input type="tel" :class="isEmpty.phone ? 'is-invalid' : ''" v-model="data.phone" placeholder="ex: 0161000000">
+                            <input type="tel" :class="isEmpty.phone ? 'is-invalid' : ''" v-model="data.phone" @input="onlyNumbers" placeholder="ex: 0161000000">
                         </div>
 
                         <div class="et-form-group ">
@@ -312,6 +312,11 @@
                 isLoader.value = false
             })
         }
+    }
+
+    function onlyNumbers(e) {
+        e.target.value = e.target.value.replace(/\D+/g, '')
+        data.value.phone = e.target.value
     }
 
 </script>

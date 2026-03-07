@@ -322,4 +322,31 @@ class AbstractdataController extends Controller
         ], 400);
     }
 
+    public function generateAbstractsPdf()
+    {
+        // Récupérer uniquement les abstracts approuvés
+        $abstracts = Abstractdata::where('status', 'approved')
+            ->orderBy('session')
+            ->orderBy('nom')
+            ->get();
+
+        if ($abstracts->isEmpty()) {
+            return back()->with('error', 'Aucun abstract approuvé trouvé.');
+        }
+
+        // Grouper par session pour une meilleure organisation
+        $abstractsBySession = $abstracts->groupBy('session');
+
+        // Générer le PDF depuis la vue Blade
+        $pdf = Pdf::loadView('pdf.abstracts', [
+            'abstractsBySession' => $abstractsBySession,
+            'totalCount'         => $abstracts->count(),
+            'generatedAt'        => now()->format('d/m/Y à H:i'),
+        ])
+        ->setPaper('a4', 'portrait');
+
+        // Retourner le PDF en téléchargement
+        return $pdf->download('abstracts_approuves_' . now()->format('Ymd_His') . '.pdf');
+    }
+
 }

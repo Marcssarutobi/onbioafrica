@@ -21,7 +21,7 @@
 
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <div></div>
-                            <!-- <button class="btn btn-primary" @click="showModal"><i class="fas fa-plus me-1"></i> Add Program</button> -->
+                            <button class="btn btn-danger mb-3" @click="downloadAbstractsPdf"><i class="fa-regular fa-download me-2"></i> Download PDF</button>
                         </div>
 
                         <div class="table-responsive">
@@ -115,6 +115,7 @@
     import Swal from 'sweetalert2';
     import Modal from '../Modal/modal.vue';
     import { acceptAbstractData, allAbstractData, deleteAbstractData, rejectAbstractData, singleAbstractData } from '../api/abstract';
+    import axiosInstance from '../../plugins/axios';
 
     const data = ref({
         id:'',
@@ -350,6 +351,30 @@
                 'success'
             )
             AllAbstractFunction()
+        }
+    }
+
+    async function downloadAbstractsPdf() {
+        try {
+            const response = await axiosInstance.get('/pdf/download',{
+                responseType: 'blob'
+            })
+
+            // Créer un lien temporaire pour déclencher le téléchargement
+            const url = window.URL.createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+
+            link.href = url;
+            link.setAttribute('download', 'abstracts_approuves.pdf');
+            document.body.appendChild(link);
+            link.click();
+
+            // Nettoyer
+            link.remove();
+            window.URL.revokeObjectURL(url);
+
+        } catch (error) {
+            console.error('Erreur lors du téléchargement :', error);
         }
     }
 
