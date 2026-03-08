@@ -24,6 +24,10 @@
             font-size: 11pt;
             line-height: 1.7;
             color: #2c3e50;
+            margin-top: 15mm;
+            margin-bottom: 15mm;
+            margin-left: 20mm;
+            margin-right: 20mm;
         }
 
         h1, h2, h3 {
