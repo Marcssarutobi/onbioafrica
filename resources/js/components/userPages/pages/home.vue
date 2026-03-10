@@ -113,7 +113,7 @@
                 <!-- left -->
                 <div class="et-about-img relative z-[1] md:w-auto shrink-0 max-w-full mr-[70px] md:mr-0 ml-[28px] xxxl:ml-[47px] md:ml-0 xs:w-[70%] xxs:w-[90%] xxs:ml-[47px]">
                     <img src="assets/img/aboutR.jpeg" alt="image" width="423" height="526" class="shrink-0 rounded-[10px]">
-                    <img src="assets/img/aboutH.JPG.jpeg" width="201" height="241" alt="image" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden">
+                    <!-- <img src="assets/img/aboutH.JPG.jpeg" width="201" height="241" alt="image" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden"> -->
 
                     <!-- vectors -->
                     <div class="et-about-vectors xs:hidden">
@@ -275,7 +275,7 @@
     <!-- FEATURES SECTION end -->
 
     <!-- STATS SECTION START -->
-    <section class="text-center py-[130px] xl:py-[80px] md:py-[60px] bg-[url(../assets/img/stats-bg.jpg)] bg-no-repeat bg-cover relative z-[1] before:absolute before:inset-0 before:bg-etBlue/85 before:-z-[1]">
+    <section class="text-center py-[130px] xl:py-[80px] md:py-[60px] bg-[url(../assets/img/stats-bg.jpeg)] bg-no-repeat bg-cover relative z-[1] before:absolute before:inset-0 before:bg-etBlue/85 before:-z-[1]" style="background: url('../assets/img/stats-bg.jpeg');">
         <div class="et-1-container rev-slide-up">
             <div class="flex xs:flex-col gap-x-[77px] sm:gap-x-[57px] gap-y-[15px] justify-center border-b border-white/20 pb-[35px]">
                 <!-- single stat -->
