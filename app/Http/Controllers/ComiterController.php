@@ -14,7 +14,7 @@ class ComiterController extends Controller
      */
     public function index()
     {
-        $comiters = Comiter::orderBy('created_at', 'desc')->get();
+        $comiters = Comiter::with('typecomite')->orderBy('created_at', 'desc')->get();
 
         return response()->json([
             'success' => true,
@@ -39,7 +39,8 @@ class ComiterController extends Controller
     {
         $validated = $request->validate([
             'fullname' => 'required|string|max:255',
-            'post'     => 'nullable|string|max:255',
+            'affiliation'     => 'nullable|string|max:255',
+            'typecomite_id'  => 'nullable',
             'image'    => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -94,7 +95,8 @@ class ComiterController extends Controller
 
         $validated = $request->validate([
             'fullname' => 'sometimes|required|string|max:255',
-            'post'     => 'nullable|string|max:255',
+            'affiliation'     => 'nullable|string|max:255',
+            'typecomite_id'  => 'nullable',
             'image'    => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 

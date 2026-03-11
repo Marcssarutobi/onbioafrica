@@ -138,7 +138,14 @@
                         <span class="menu-icon"><i class="fa-light fa-handshake-simple"></i></span>
                         <span class="menu-text" data-lang="dashboards">Sponsor</span>
                     </RouterLink>
-                </li>   
+                </li>
+                
+                <li class="side-nav-item" :class="{ active: $route.path === '/admins/comiter-type' }">
+                    <RouterLink to="/admins/comiter-type" class="side-nav-link">
+                        <span class="menu-icon"><i class="fa-light fa-tag"></i></span>
+                        <span class="menu-text" data-lang="dashboards">Comite Type</span>
+                    </RouterLink>
+                </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/comite' }">
                     <RouterLink to="/admins/comite" class="side-nav-link">

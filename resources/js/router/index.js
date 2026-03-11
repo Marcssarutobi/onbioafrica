@@ -102,6 +102,10 @@ const routes =[
               component: ()=>import('../components/adminPages/pages/sponsor.vue')
             },
             {
+              path:'comiter-type',
+              component: ()=>import('../components/adminPages/pages/comiterType.vue')
+            },
+            {
               path:'comite',
               component: ()=>import('../components/adminPages/pages/comite.vue')
             },

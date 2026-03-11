@@ -70,7 +70,7 @@
                     <div v-for="(sponsors, type) in allsponsors" :key="type" class="mb-[70px]">
 
                         <!-- Type title -->
-                        <h3 class="text-start text-[24px] md:text-[20px] font-semibold text-etBlack mb-[30px]">
+                        <h3 class="text-start text-[24px] md:text-[20px] font-semibold text-etBlack mb-[10px]">
                             {{ type }}
                         </h3>
 
@@ -293,7 +293,7 @@
 }
 
 .et-sponsors-logos img {
-    max-height: 60px;
+    max-height: 120px;
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }

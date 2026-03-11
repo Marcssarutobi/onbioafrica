@@ -7,6 +7,7 @@ use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\SpeakerController;
 use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\TravelGrantController;
+use App\Http\Controllers\TypecomiteController;
 use App\Http\Controllers\TypeSpeakerController;
 use App\Http\Controllers\TypeSponsorsController;
 use App\Http\Controllers\UserController;
@@ -142,5 +143,12 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('/addcomiter',[ComiterController::class, 'store']);
     Route::post('/updatecomiter/{id}',[ComiterController::class, 'update']);
     Route::delete('/deletecomiter/{id}',[ComiterController::class, 'destroy']);
+
+    //Type Comiter
+    Route::get('/allcomitertype',[TypecomiteController::class, 'index']);
+    Route::post('/addcomitertype',[TypecomiteController::class, 'store']);
+    Route::get('/showcomitertype/{id}',[TypecomiteController::class, 'show']);
+    Route::put('/updatecomitertype/{id}',[TypecomiteController::class, 'update']);
+    Route::delete('/deletecomitertype/{id}',[TypecomiteController::class, 'destroy']);
 
 });

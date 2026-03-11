@@ -11,7 +11,13 @@ class Comiter extends Model
 
     protected $fillable = [
         'fullname',
-        'post',
+        'affiliation',
         'image',
+        'typecomite_id'
     ];
+
+    public function typecomite()
+    {
+        return $this->belongsTo(Typecomite::class);
+    }
 }

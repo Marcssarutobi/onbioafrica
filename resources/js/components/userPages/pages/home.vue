@@ -483,10 +483,10 @@
                 </div>
 
                 <!-- right -->
-                <div class="flex flex-wrap items-center justify-between md:justify-center gap-[30px] md:gap-[50px] w-full xxs:*:w-[40%]">
+                <div class="flex flex-wrap items-center justify-start md:justify-center gap-[30px] md:gap-[50px] w-full xxs:*:w-[40%]">
                     <!-- single sponsor -->
                     <a v-for="(sps,index) in allsponsors" :key="index" href="#" class="group">
-                        <img :src="'/storage/'+sps.logo" width="80" height="60" alt="sponsor image">
+                        <img :src="'/storage/'+sps.logo" width="100" height="100" alt="sponsor image">
                     </a>
                 </div>
             </div>

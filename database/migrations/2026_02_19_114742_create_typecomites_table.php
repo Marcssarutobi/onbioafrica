@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comiters', function (Blueprint $table) {
+        Schema::create('typecomites', function (Blueprint $table) {
             $table->id();
-            $table->string('fullname');
-            $table->string('affiliation');
-            $table->string('image');
-            $table->foreignId('typecomite_id')->constrained('typecomites')->onDelete('cascade');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comiters');
+        Schema::dropIfExists('typecomites');
     }
 };

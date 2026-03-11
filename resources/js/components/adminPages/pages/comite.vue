@@ -52,16 +52,25 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 mb-3">
+                <div class="col-lg-6 mb-3">
                     <label for="name" class="form-label">Full Name</label>
                     <input type="text" class="form-control" id="name" v-model="data.fullname">
                     <div class="text-danger mt-1" v-if="isEmpty.fullname">{{ msgInput.fullname }}</div>
                 </div>
 
+                <div class="col-lg-6 mb-3">
+                    <label for="name" class="form-label">Type Comite</label>
+                    <select class="form-select" v-model="data.typecomite_id">
+                        <option selected disabled value="">Select a type</option>
+                        <option v-for="type in allcomitetype" :key="type.id" :value="type.id">{{ type.name }}</option>
+                    </select>
+                    <div class="text-danger mt-1" v-if="isEmpty.typecomite_id">{{ msgInput.typecomite_id }}</div>
+                </div>
+
                 <div class="col-lg-12 mb-3">
-                    <label for="post" class="form-label">Post</label>
-                    <input type="text" class="form-control" id="post" v-model="data.post">
-                    <div class="text-danger mt-1" v-if="isEmpty.post">{{ msgInput.post }}</div>
+                    <label for="post" class="form-label">Affiliation</label>
+                    <input type="text" class="form-control" id="post" v-model="data.affiliation">
+                    <div class="text-danger mt-1" v-if="isEmpty.affiliation">{{ msgInput.affiliation }}</div>
                 </div>  
 
             </div>
@@ -77,13 +86,15 @@
     import Swal from 'sweetalert2';
     import Modal from '../Modal/modal.vue';
     import { allComiters, deleteComiter, postComiter, singleComiter, updateComiter } from '../api/commiter';
+    import { allTypeComite } from '../api/typecomiter';
 
 
     const data = ref({
         id:'',
         fullname:'',
-        post:'',
-        image:''
+        affiliation:'',
+        image:'',
+        typecomite_id:''
     })
 
     const isEmpty = ref({})
@@ -93,6 +104,7 @@
     const modalTitle = ref('')
     const modalBtn = ref('')
     const allcommittees = ref([])
+    const allcomitetype = ref([])
     const addmodal = ref(null)
     const preview = ref('')
 
@@ -100,8 +112,9 @@
         data.value = {
             id:'',
             fullname:'',
-            post:'',
-            image:''
+            affiliation:'',
+            image:'',
+            typecomite_id:''
         }
         isEdite.value = false
         modalTitle.value = 'Add Committee'
@@ -114,6 +127,10 @@
 
     async function AllCommitteeFunction() {
         allcommittees.value = await allComiters()
+    }
+
+    async function AllComiteTypeFunction() {
+        allcomitetype.value = await allTypeComite()
     }
 
     const columns = [
@@ -132,10 +149,17 @@
             }
         },
         {
-            title: 'Post', 
+            title: 'Affiliation', 
             data: null,
             render: (data, type, row)=>{
-                return `<span class=''>${row.post}</span>`
+                return `<span class=''>${row.affiliation}</span>`
+            }
+        },
+        {
+            title: 'Type', 
+            data: null,
+            render: (data, type, row)=>{
+                return `<span class=''>${row.typecomite.name}</span>`
             }
         },
         {
@@ -316,6 +340,7 @@
 
     onMounted(()=>{
         AllCommitteeFunction()
+        AllComiteTypeFunction()
     })
 
 </script>

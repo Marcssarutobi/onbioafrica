@@ -14,7 +14,7 @@ class SponsorController extends Controller
      */
     public function index()
     {
-        $sponsors = Sponsor::with('typeSponsor')->orderBy('id','desc')->get();
+        $sponsors = Sponsor::with('typeSponsor')->orderBy('id','asc')->get();
 
         // Grouper les sponsors par type de sponsor
         $sponsorsByType = $sponsors->groupBy(function ($sponsor) {
