@@ -27,7 +27,9 @@
                 <div class="member-content">
                     <div class="member-header">
                         <h1 class="member-name">{{ getSpeaker.firstname }} {{ getSpeaker.lastname }}</h1>
-                        <span class="member-role">{{ getSpeaker.affiliation }}</span>
+                        <span class="member-role"> <strong>Affiliation :</strong> {{ getSpeaker.affiliation }}</span>
+                        <span class="member-role"> <strong>Country :</strong> {{ getSpeaker.country }}</span>
+                        <span class="member-role"> <strong>Expert Session :</strong> {{ getSpeaker.session }}</span>
                     </div>
 
                     <div class="divider"></div>
@@ -157,7 +159,11 @@
 }
 
 .member-header {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
 }
 
 .member-name {
@@ -185,7 +191,6 @@
     height: 4px;
     background: linear-gradient(90deg, var(--primary-color), #8b5cf6);
     border-radius: 2px;
-    margin: 24px 0;
 }
 
 .member-bio {

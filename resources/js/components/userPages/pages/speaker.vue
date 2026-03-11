@@ -20,10 +20,14 @@
             <div class="et-speakers-heading text-center mb-[46px] xl:mb-[26px] lg:mb-[16px] gap-[15px]">
                 <h6 class="et-section-sub-title ">Speakers</h6>
                 <h2 class="et-section-title ">Meet Our Experts</h2>
-                <p class="max-w-[800px] mx-auto mt-[20px] text-etGray text-[16px] font-light leading-[1.6]" style="margin-top: 20px;">
+                <p class="max-w-[800px] mx-auto mt-[20px] text-etGray text-[16px] font-light leading-[1.6]" style="margin-top: 20px; max-width: 800px;">
                     Meet our speakers: African and international researchers and experts specializing in <strong style="font-weight: bold;">genomics, bioinformatics, epidemiology, and biodiversity conservation</strong>.  
                     Each speaker brings their unique experience to share the latest scientific advances, inspire participants, and enrich discussions throughout the symposium.
                 </p>
+            </div>
+
+            <div v-if="isLoader" id="loader">
+                <div class="spinner"></div>
             </div>
 
             <!-- Speakers by type -->
@@ -51,11 +55,11 @@
                             >
                         </div>
 
-                        <div class="et-member__txt bg-white relative z-[1] mx-[25px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] md:px-[15px] pb-[30px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
+                        <div class="et-member__txt bg-white relative z-[1] mx-[25px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] md:px-[15px] pb-[30px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[0deg]">
                             
                             <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]">
                                 <RouterLink :to="'/singleSpeaker/'+speaker.id" class="hover:text-etBlue">
-                                    {{ speaker.firstname }} {{ speaker.lastname }}
+                                    {{ speaker.firstname }} {{ speaker.lastname }} ({{ speaker.country }})
                                 </RouterLink>
                             </h5>
 
@@ -78,10 +82,13 @@ import { onMounted, ref } from 'vue';
 import { getData } from '../../plugins/api';
 
 const allspeaker = ref([])
+const isLoader = ref(false)
 
 async function AllSpeakerFunction() {
+     isLoader.value = true
     await getData('/allpublicspeakers').then(res=>{
         if (res.status === 200) {
+             isLoader.value = false
             allspeaker.value = res.data.byType
         }
     })
@@ -94,6 +101,32 @@ onMounted(()=>{
 </script>
 
 <style scoped>
+
+#loader {
+    
+    width: 100%;
+    height: 150px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Spinner */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #e5e7eb;
+    border-top: 6px solid #1260FE;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 .et-member__img{
     width: 366px;

@@ -75,7 +75,7 @@
     position: absolute;
     inset: 0;
 
-    background-image: url("/assets/img/banner.jpeg");
+    background-image: url("/assets/img/bg-4.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

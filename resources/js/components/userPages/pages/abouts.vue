@@ -20,7 +20,7 @@
                 <!-- left -->
                 <div class="et-about-img relative z-[1] md:w-auto shrink-0 max-w-full mr-[70px] md:mr-0 ml-[28px] xxxl:ml-[47px] md:ml-0 xs:w-[70%] xxs:w-[90%] xxs:ml-[47px]">
                     <img src="assets/img/aboutR.jpeg" alt="image" width="423" height="526" class="shrink-0 rounded-[10px]">
-                    <img src="assets/img/aboutH.JPG.jpeg" alt="image" width="201" height="241" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden">
+                    <!-- <img src="assets/img/aboutH.JPG.jpeg" alt="image" width="201" height="241" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden"> -->
 
                     <!-- vectors -->
                     <div class="et-about-vectors xs:hidden">
@@ -246,7 +246,7 @@
                     </div>
 
                     <div class="et-member__txt bg-white relative z-[1] mx-[25px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] md:px-[15px] pb-[30px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
-                        <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]"><RouterLink :to="'/singleSpeaker/'+speaker.id" class="hover:text-etBlue">{{ speaker.firstname }} {{ speaker.lastname }}</RouterLink></h5>
+                        <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]"><RouterLink :to="'/singleSpeaker/'+speaker.id" class="hover:text-etBlue">{{ speaker.firstname }} {{ speaker.lastname }} ({{ speaker.country }})</RouterLink></h5>
                         <span class="text-etGray text-[16px]">{{ speaker.affiliation }}</span>
                     </div>
                 </div>
@@ -316,7 +316,7 @@
     position: absolute;
     inset: 0;
 
-    background-image: url("/assets/img/banner.jpeg");
+    background-image: url("/assets/img/bg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

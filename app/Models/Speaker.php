@@ -14,6 +14,7 @@ class Speaker extends Model
         'lastname',
         'email',
         'country',
+        'session',
         'affiliation',
         'bio',
         'photo',

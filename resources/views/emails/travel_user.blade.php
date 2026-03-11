@@ -229,7 +229,7 @@
                <td valign="top" align="left">
                 <div class="pc-font-alt" style="text-decoration: none;">
                  <div style="font-size:18px;line-height:28px;text-align:left;text-align-last:left;color:#4b4b4b;font-family:'Fira Sans', Arial, Helvetica, sans-serif;font-style:normal;letter-spacing:-0.2px;">
-                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;">Best regards, OneBioAfrica.</span>
+                  <div style="font-family:'Fira Sans', Arial, Helvetica, sans-serif;"><span style="font-family: 'Fira Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 18px; line-height: 28px;">Best regards, <br> OneBioAfrica.</span>
                   </div>
                  </div>
                 </div>

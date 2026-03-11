@@ -123,6 +123,16 @@
 
                             <div class="col-lg-12 mb-3">
                                 <div class="form-group">
+                                    <label for="affiliation">Expert session</label>
+                                    <input type="text" class="form-control" :class="isEmpty.session ? 'is-invalid border border-danger' : ''" id="session" placeholder="ex: Molecular Biology and Biodiversity Conservation" v-model="data.session">
+                                    <div v-if="isEmpty.session" class="invalid-feedback">
+                                        {{ msgInput.session }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 mb-3">
+                                <div class="form-group">
                                     <label for="bio">Biography</label>
                                     <textarea class="form-control" id="my-editor" :class="isEmpty.bio ? 'is-invalid border border-danger' : ''" rows="5" v-model="data.bio"></textarea>
                                     <div v-if="isEmpty.bio" class="invalid-feedback">
@@ -163,6 +173,7 @@ const data = ref({
     lastname:'',
     email:'',
     country:'',
+    session:'',
     affiliation:'',
     bio:'',
     photo:'',
@@ -187,6 +198,7 @@ function showModal(){
         lastname:'',
         email:'',
         country:'',
+        session:'',
         affiliation:'',
         bio:'',
         photo:'',

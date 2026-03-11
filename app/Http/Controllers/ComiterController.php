@@ -23,7 +23,7 @@ class ComiterController extends Controller
     }
 
     public function allComiters(){
-        $data = Comiter::orderBy('created_at', 'desc')->get();
+        $data = Comiter::with('typecomite')->orderBy('created_at', 'desc')->get()->groupBy('typecomite.name');
         return response()->json([
             'success' => true,
             'data' => $data

@@ -22,6 +22,9 @@
             <h2 class="et-section-title ">Information Of Event Schedule</h2>
         </div>
 
+        <div v-if="isLoader" id="loader">
+            <div class="spinner"></div>
+        </div>
 
         <!-- EVENTS SECTION START -->
         <section class="et-all-events">
@@ -120,12 +123,15 @@
 import { onMounted, ref } from 'vue';
 import { getData } from '../../plugins/api';
 import { Main } from '../../plugins/main';
+const isLoader = ref(false)
 
 const allprograms = ref([])
 const activeIndex = ref(0)
 
 async function AllProgramFunction() {
+    isLoader.value = true
     await getData('/programbyday').then(res=>{
+        isLoader.value = false
         allprograms.value = res.data.data
         setTimeout(()=>{
             Main()
@@ -148,6 +154,33 @@ onMounted(() => {
 
 </script>
 <style scoped>
+
+#loader {
+    
+    width: 100%;
+    height: 150px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Spinner */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #e5e7eb;
+    border-top: 6px solid #1260FE;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .et-breadcrumb {
     position: relative;
     z-index: 1;

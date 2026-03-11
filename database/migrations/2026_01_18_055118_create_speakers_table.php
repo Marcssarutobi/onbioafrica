@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('email')->unique();
             $table->string('country');
+            $table->string('session');
             $table->string('affiliation');
             $table->longText('bio');
             $table->string('photo')->nullable();

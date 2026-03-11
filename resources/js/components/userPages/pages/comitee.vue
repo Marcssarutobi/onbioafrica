@@ -17,24 +17,34 @@
         <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
             <!-- heading -->
             <div class="et-speakers-heading text-center mb-[46px] xl:mb-[26px] lg:mb-[16px] gap-[15px]">
-                <h6 class="et-section-sub-title ">Organizing Committee</h6>
-                <h2 class="et-section-title ">Scientific Committee</h2>
-                <p class="max-w-[800px] mx-auto mt-[20px] text-etGray text-[16px] font-light leading-[1.6]" style="margin-top: 20px;">
+                <h6 class="et-section-sub-title ">Our Committees</h6>
+                <h2 class="et-section-title ">Meet the Members of Our Committees</h2>
+                <p class="max-w-[800px] mx-auto mt-[20px] text-etGray text-[16px] font-light leading-[1.6]" style="margin-top: 20px; max-width: 800px;">
                     The symposium is organised by an interdisciplinary committee of African and international scientists committed to advancing molecular One Health research. The scientific committee brings together experts in genomics, bioinformatics, epidemiology, and biodiversity conservation to ensure high-quality scientific programming and equitable regional representation.
                 </p>
             </div>
 
-            <div class="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 justify-center gap-[30px] lg:gap-[20px]">
-                <!-- single team member -->
-                <div v-for="(comite,index) in allcommitter" :key="index" class="et-member group">
-                    <div class="et-member__img rounded-[16px] overflow-hidden">
-                        <img :src="'/storage/'+comite.image" alt="Team Member Image" class="w-full duration-[400ms] group-hover:scale-110">
-                    </div>
+            <div v-if="isLoader" id="loader">
+                <div class="spinner"></div>
+            </div>
 
-                    <div class="et-member__txt bg-white relative z-[1] mx-[25px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] md:px-[15px] pb-[30px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
-                        
-                        <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]"><a href="#" class="hover:text-etBlue">{{ comite.fullname }}</a></h5>
-                        <span class="text-etGray text-[16px]">{{ comite.post }}</span>
+            <div v-for="(comites, type) in allcommitter" :key="type">
+                <h2 class="et-section-title" style="margin-bottom: 10px;">
+                    {{ type }} Committee
+                </h2>
+
+                <div class="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 justify-center gap-[30px] lg:gap-[20px]">
+                    <!-- single team member -->
+                    <div v-for="(comite,index) in comites" :key="index" class="et-member group">
+                        <div class="et-member__img rounded-[16px] overflow-hidden">
+                            <img :src="'/storage/'+comite.image" alt="Team Member Image" class="w-full duration-[400ms] group-hover:scale-110">
+                        </div>
+    
+                        <div class="et-member__txt bg-white relative z-[1] mx-[25px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] md:px-[15px] pb-[30px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
+                            
+                            <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]"><a href="#" class="hover:text-etBlue">{{ comite.fullname }}</a></h5>
+                            <span class="text-etGray text-[16px]">{{ comite.affiliation }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,9 +60,12 @@
 import { getData } from '../../plugins/api';
 
     const allcommitter = ref([])
+    const isLoader = ref(false)
 
     async function AllCommitteeFunction(params) {
+        isLoader.value = true
         await getData('/allpubliccomiters').then(res=>{
+            isLoader.value = false
             allcommitter.value = res.data.data
         })
     }
@@ -63,6 +76,33 @@ import { getData } from '../../plugins/api';
 
 </script>
 <style scoped>
+
+/* Loader container */
+#loader {
+    
+    width: 100%;
+    height: 150px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Spinner */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #e5e7eb;
+    border-top: 6px solid #1260FE;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 .et-member__img{
     width: 366px;
@@ -98,7 +138,7 @@ import { getData } from '../../plugins/api';
     position: absolute;
     inset: 0;
 
-    background-image: url("/assets/img/banner1.jpeg");
+    background-image: url("/assets/img/about6.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

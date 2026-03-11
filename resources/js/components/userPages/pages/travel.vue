@@ -81,7 +81,7 @@
 
                         <div class="form-row">
                             <input type="email" placeholder="Email address" v-model="data.email" :class="isEmpty.email ? 'is-invalid' : ''" required>
-                            <input type="text" placeholder="Phone number" v-model="data.phone" :class="isEmpty.phone ? 'is-invalid' : ''" required>
+                            <input type="text" placeholder="Phone number" v-model="data.phone" :class="isEmpty.phone ? 'is-invalid' : ''" @input="onlyNumbers" required>
                         </div>
 
                         <div class="form-row">
@@ -187,6 +187,11 @@ import Swal from 'sweetalert2';
                 }
             }, 300)
         })
+    }
+
+    function onlyNumbers(e) {
+        e.target.value = e.target.value.replace(/\D+/g, '')
+        data.value.phone = e.target.value
     }
 
     const handleFilescv = async (e)=>{
