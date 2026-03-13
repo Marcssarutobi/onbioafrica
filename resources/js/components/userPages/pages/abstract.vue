@@ -31,21 +31,25 @@
                             <h3>Important Dates</h3>
                             <ul>
                                 <li>
-                                    <div class="date">12 March 2026</div>
-                                    <div class="label">Call for Abstracts</div>
+                                    <div class="date">18 March 2026</div>
+                                    <div class="label">Call for abstracts and travel grant applications opens</div>
                                 </li>
 
                                 <li>
-                                    <div class="date">12 April 2026</div>
+                                    <div class="date">17 April 2026</div>
                                     <div class="label">
-                                        Abstract submission deadline for oral presentations,
-                                        short talks, and poster presentations
+                                        Deadline for abstract submission and travel grant applications
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="date">30 April 2026</div>
-                                    <div class="label">Notification of review outcome</div>
+                                    <div class="label">Notification of review results</div>
+                                </li>
+
+                                <li>
+                                    <div class="date">1-20 May 2026</div>
+                                    <div class="label">Registration period</div>
                                 </li>
                             </ul>
                         </div>

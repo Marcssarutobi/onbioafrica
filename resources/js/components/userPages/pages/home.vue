@@ -420,7 +420,50 @@
     </section>
     <!-- EVENT SCHEDULE SECTION END -->
 
-    
+    <section class="dates-section">
+
+        <div class="container">
+
+            <div class="section-header">
+                <h6 class="et-section-sub-title">Conference Timeline</h6>
+                <h2 class="et-section-title mb-[24px] md:mb-[19px]">Important Dates</h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-date">18 March 2026</div>
+                    <div class="timeline-card">
+                        Call for abstracts and travel grant applications opens
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">17 April 2026</div>
+                    <div class="timeline-card">
+                        Deadline for abstract submission and travel grant applications
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">30 April 2026</div>
+                    <div class="timeline-card">
+                        Notification of review results
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">1 - 20 May 2026</div>
+                    <div class="timeline-card">
+                        Registration period
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- SPEAKERS SECTION START -->
     <section class="et-speakers py-[130px] lg:py-[80px] md:py-[60px] relative overflow-hidden" style="padding: 70px 0 !important;" v-if="allspeaker.length > 0">
@@ -454,10 +497,10 @@
                                 <img :src="`/storage/${speaker.photo}`" alt="Team Member Image" class="w-full duration-[400ms] group-hover:scale-110">
                             </div>
 
-                            <div class="et-member__txt bg-white relative z-[1] mx-[25px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] md:px-[15px] pb-[30px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
+                            <div class="et-member__txt bg-white relative z-[1] mx-[25px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] md:px-[15px] pb-[30px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[0deg]">
                                 
                                 <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]"><RouterLink :to="'/singleSpeaker/'+speaker.id" class="hover:text-etBlue">{{ speaker.firstname }} {{ speaker.lastname }}</RouterLink></h5>
-                                <span class="text-etGray text-[16px]">{{ speaker.affiliation }}</span>
+                                <span class="text-etGray text-[16px]">{{ speaker.affiliation }} ({{ speaker.country }})</span>
                             </div>
                         </div>
                     </div>
@@ -766,4 +809,101 @@
     object-fit: cover;
 }
     
+.dates-section{
+    padding:90px 20px;
+    background:#f7f9fc;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-header h6{
+    color:#062D63;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:14px;
+}
+
+.section-header h2{
+    font-size:36px;
+    margin-top:10px;
+    color:#111;
+}
+
+/* timeline */
+
+.timeline{
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+}
+
+/* ligne */
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:35px;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#e4e8f0;
+}
+
+/* item */
+
+.timeline-item{
+    width:23%;
+    text-align:center;
+    position:relative;
+}
+
+/* point */
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    top:27px;
+    left:50%;
+    transform:translateX(-50%);
+    width:16px;
+    height:16px;
+    background:#062D63;
+    border-radius:50%;
+    z-index:2;
+}
+
+/* date */
+
+.timeline-date{
+    font-weight:bold;
+    color:#062D63;
+    margin-bottom:40px;
+    font-size: 18px;
+}
+
+/* card */
+
+.timeline-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    font-size:15px;
+    line-height:1.5;
+    transition:0.3s;
+}
+
+.timeline-card:hover{
+    transform:translateY(-6px);
+}
+
 </style>

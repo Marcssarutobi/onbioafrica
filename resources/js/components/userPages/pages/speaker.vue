@@ -59,12 +59,12 @@
                             
                             <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]">
                                 <RouterLink :to="'/singleSpeaker/'+speaker.id" class="hover:text-etBlue">
-                                    {{ speaker.firstname }} {{ speaker.lastname }} ({{ speaker.country }})
+                                    {{ speaker.firstname }} {{ speaker.lastname }} 
                                 </RouterLink>
                             </h5>
 
                             <span class="text-etGray text-[16px] block">
-                                {{ speaker.affiliation }}
+                                {{ speaker.affiliation }} ({{ speaker.country }})
                             </span>
                         </div>
                     </div>
