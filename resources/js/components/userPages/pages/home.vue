@@ -844,9 +844,10 @@
     display:flex;
     justify-content:space-between;
     position:relative;
+    gap:20px;
 }
 
-/* ligne */
+/* ligne horizontale */
 
 .timeline::before{
     content:"";
@@ -861,7 +862,7 @@
 /* item */
 
 .timeline-item{
-    width:23%;
+    flex:1;
     text-align:center;
     position:relative;
 }
@@ -887,7 +888,7 @@
     font-weight:bold;
     color:#062D63;
     margin-bottom:40px;
-    font-size: 18px;
+    font-size:18px;
 }
 
 /* card */
@@ -904,6 +905,49 @@
 
 .timeline-card:hover{
     transform:translateY(-6px);
+}
+
+/* ================= */
+/* MOBILE RESPONSIVE */
+/* ================= */
+
+@media (max-width:768px){
+
+.timeline{
+    flex-direction:column;
+    gap:40px;
+}
+
+/* ligne verticale */
+
+.timeline::before{
+    width:4px;
+    height:100%;
+    left:10px;
+    top:0;
+}
+
+/* item */
+
+.timeline-item{
+    text-align:left;
+    padding-left:40px;
+}
+
+/* point */
+
+.timeline-item::before{
+    left:10px;
+    top:5px;
+    transform:none;
+}
+
+/* date */
+
+.timeline-date{
+    margin-bottom:10px;
+}
+
 }
 
 </style>
