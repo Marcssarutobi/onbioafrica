@@ -68,6 +68,17 @@
                 <div class="text-danger mt-1" v-if="msgInput.email">{{ msgInput.email }}</div>
             </div>
 
+            <div class="col-lg-12 mb-3">
+                <label>Profile</label>
+                <select name="" id="" class="form-select" v-model="data.type">
+                    <option value="" disabled selected>Select your profile</option>
+                    <option value="etudiant/doctorants">Students/Doctoral students</option>
+                    <option value="postdoctorant/chercheurs/enseignant">Postdoctoral Fellow/Researchers/Teacher</option>
+                    <option value="institution/ongs">Institution/NGOs</option>
+                </select>
+                <div class="text-danger mt-1" v-if="msgInput.type">{{ msgInput.type }}</div>
+            </div>
+
         </div>
 
     </Modal>
@@ -87,6 +98,7 @@
         id:'',
         nom:'',
         prenom:'',
+        type:'',
         phone:'',
         email:'',
     })
@@ -105,6 +117,7 @@
             id:'',
             nom:'',
             prenom:'',
+            type:'',
             phone:'',
             email:'',
         }

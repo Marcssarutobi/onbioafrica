@@ -112,7 +112,7 @@
             <div class="flex items-center md:flex-wrap gap-x-[60px] xxl:gap-x-[40px] lg:gap-x-[30px] gap-y-[40px] sm:gap-y-[40px] lg:justify-center">
                 <!-- left -->
                 <div class="et-about-img relative z-[1] md:w-auto shrink-0 max-w-full mr-[70px] md:mr-0 ml-[28px] xxxl:ml-[47px] md:ml-0 xs:w-[70%] xxs:w-[90%] xxs:ml-[47px]">
-                    <img src="assets/img/aboutR.jpeg" alt="image" width="423" height="526" class="shrink-0 rounded-[10px]">
+                    <img src="assets/img/aboutR1.jpeg" alt="image" width="423" height="526" class="shrink-0 rounded-[10px]">
                     <!-- <img src="assets/img/aboutH.JPG.jpeg" width="201" height="241" alt="image" class="et-about-floating-img absolute top-[45px] -right-[70px] shrink-0 rounded-[20px] border-white border-[10px] xs:hidden"> -->
 
                     <!-- vectors -->
