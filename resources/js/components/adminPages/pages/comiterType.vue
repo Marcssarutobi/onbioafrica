@@ -21,7 +21,7 @@
 
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <div></div>
-                            <button class="btn btn-primary" @click="showModal"><i class="fas fa-plus me-1"></i> Add Sponsor Type</button>
+                            <button class="btn btn-primary" @click="showModal"><i class="fas fa-plus me-1"></i> Add Comite Type</button>
                         </div>
 
                         <div class="table-responsive">
