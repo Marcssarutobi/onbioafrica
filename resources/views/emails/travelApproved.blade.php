@@ -129,6 +129,10 @@
                         </div>
 
                         <p>
+                            Please find attached your <strong>official invitation letter</strong> for the event.
+                        </p>
+
+                        <p>
                             The grant will support your participation by covering travel and accommodation costs,
                             in accordance with the program guidelines.
                         </p>

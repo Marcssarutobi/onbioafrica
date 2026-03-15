@@ -6,6 +6,7 @@ use App\Mail\GuestInvitation;
 use App\Models\Guest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class GuestController extends Controller
 {
@@ -46,7 +47,23 @@ class GuestController extends Controller
             $guest->save();
         }
 
-        Mail::to($guest->email)->send(new GuestInvitation($guest));
+        /* =========================
+        1️⃣ GÉNÉRER LE PDF
+        ========================= */
+
+        $pdfPath = storage_path("app/invitations/invitation_{$guest->id}.pdf");
+
+        if (!file_exists(dirname($pdfPath))) {
+            mkdir(dirname($pdfPath), 0755, true);
+        }
+
+        Pdf::loadView('pdf.invitation', [
+            'guest' => $guest
+        ])
+        ->setPaper('A4', 'portrait')
+        ->save($pdfPath);
+
+        Mail::to($guest->email)->send(new GuestInvitation($guest,$pdfPath));
 
         return response()->json([
             'success' => true,

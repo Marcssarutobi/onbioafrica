@@ -8,19 +8,22 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Attachment;
 
 class TravelApproved extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $travelGrant;
+    public $pdfPath;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($travelGrant)
+    public function __construct($travelGrant,$pdfPath)
     {
         $this->travelGrant = $travelGrant;
+        $this->pdfPath = $pdfPath;
     }
 
     /**
@@ -50,6 +53,10 @@ class TravelApproved extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return [
+            Attachment::fromPath($this->pdfPath)
+            ->as('Official_Invitation_OneBioAfrica_2026.pdf')
+            ->withMime('application/pdf'),
+        ];
     }
 }

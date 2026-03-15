@@ -12,6 +12,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class TravelGrantController extends Controller
 {
@@ -243,8 +244,24 @@ class TravelGrantController extends Controller
 
         $travelGrant->update(['status' => 'approved']);
 
-        Mail::to($travelGrant->email)->send(new TravelApproved($travelGrant));
-        Mail::to($travelGrant->email)->send(new GuestInvitation($travelGrant));
+         /* =========================
+        1️⃣ GÉNÉRER LE PDF
+        ========================= */
+
+        $pdfPath = storage_path("app/invitations/invitation_{$travelGrant->id}.pdf");
+
+        if (!file_exists(dirname($pdfPath))) {
+            mkdir(dirname($pdfPath), 0755, true);
+        }
+
+        Pdf::loadView('pdf.invitation', [
+            'guest' => $travelGrant
+        ])
+        ->setPaper('A4', 'portrait')
+        ->save($pdfPath);
+
+        Mail::to($travelGrant->email)->send(new TravelApproved($travelGrant,$pdfPath));
+        // Mail::to($travelGrant->email)->send(new GuestInvitation($travelGrant));
 
         return response()->json([
             'success' => true,
