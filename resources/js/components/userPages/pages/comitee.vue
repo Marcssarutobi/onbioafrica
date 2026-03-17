@@ -29,7 +29,7 @@
             </div>
 
             <div v-for="(comites, type) in allcommitter" :key="type">
-                <h2 class="et-section-title" style="margin-bottom: 10px;">
+                <h2 class="et-section-title" style="margin-bottom: 20px; margin-top: 25px; text-align: center;">
                     {{ type }} Committee
                 </h2>
 
@@ -42,7 +42,7 @@
     
                         <div class="et-member__txt bg-white relative z-[1] mx-[25px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] md:px-[15px] pb-[30px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
                             
-                            <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]"><a href="#" class="hover:text-etBlue">{{ comite.fullname }}</a></h5>
+                            <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]"><RouterLink :to="'/singleComite/'+comite.id" class="hover:text-etBlue">{{ comite.fullname }} ({{ comite.country }})</RouterLink></h5>
                             <span class="text-etGray text-[16px]">{{ comite.affiliation }}</span>
                         </div>
                     </div>

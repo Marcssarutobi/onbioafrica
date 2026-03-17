@@ -51,6 +51,7 @@ Route::post('/addguest',[GuestController::class, 'store']);
 
 //Comiter
 Route::get('/allpubliccomiters',[ComiterController::class, 'allComiters']);
+Route::get('/showcomiter/{id}',[ComiterController::class, 'show']);
 
 //Sponsors
 Route::get('/allsponsor',[SponsorController::class, 'index']);
@@ -139,7 +140,6 @@ Route::middleware('auth:sanctum')->group(function(){
 
     //Comiter
     Route::get('/allcomiter',[ComiterController::class, 'index']);
-    Route::get('/showcomiter/{id}',[ComiterController::class, 'show']);
     Route::post('/addcomiter',[ComiterController::class, 'store']);
     Route::post('/updatecomiter/{id}',[ComiterController::class, 'update']);
     Route::delete('/deletecomiter/{id}',[ComiterController::class, 'destroy']);

@@ -24,10 +24,9 @@
                 <div class="et-contact-item">
                     <span class="et-contact-icon"><i class="fa-regular fa-building"></i></span>
                     <p style="font-size:15px;">
-                        Society for Molecular Biology and Evolution Conference 2026<br>
-                        C/O CAP Partner<br>
-                        Nordre Fasanvej 113<br>
-                        2000 Frederiksberg, Denmark
+                        Entre l’Archevêché de Cotonou et le <br> Collège Catholique Père Aupiais <br>
+                        Cadjèhoun - 04 BP 578 <br>
+                        Cotonou - Bénin
                     </p>
                 </div>
 
@@ -45,7 +44,7 @@
             <!-- RIGHT -->
             <div class="et-contact-map">
                 <iframe
-                    src="https://www.google.com/maps?q=Nordre%20Fasanvej%20113%2C%202000%20Frederiksberg&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4703.614351231086!2d2.4039516!3d6.356974699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023544b019c445b%3A0xb49c6db44438965c!2sChant%20d&#39;Oiseau!5e1!3m2!1sfr!2sbj!4v1772294259038!5m2!1sfr!2sbj"
                     loading="lazy">
                 </iframe>
             </div>

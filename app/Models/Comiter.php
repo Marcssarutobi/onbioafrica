@@ -12,6 +12,9 @@ class Comiter extends Model
     protected $fillable = [
         'fullname',
         'affiliation',
+        'session',
+        'bio',
+        'country',
         'image',
         'typecomite_id'
     ];

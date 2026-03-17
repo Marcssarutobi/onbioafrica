@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('fullname');
             $table->string('affiliation');
+            $table->string('session')->nullable();
+            $table->string('country')->nullable();
+            $table->longText('bio');
             $table->string('image');
             $table->foreignId('typecomite_id')->constrained('typecomites')->onDelete('cascade');
             $table->timestamps();

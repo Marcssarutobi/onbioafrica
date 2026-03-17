@@ -40,6 +40,9 @@ class ComiterController extends Controller
         $validated = $request->validate([
             'fullname' => 'required|string|max:255',
             'affiliation'     => 'nullable|string|max:255',
+            'session'     => 'nullable|string|max:255',
+            'bio'         => 'nullable|string',
+            'country'         => 'nullable|string',
             'typecomite_id'  => 'nullable',
             'image'    => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -96,6 +99,9 @@ class ComiterController extends Controller
         $validated = $request->validate([
             'fullname' => 'sometimes|required|string|max:255',
             'affiliation'     => 'nullable|string|max:255',
+            'session'     => 'nullable|string|max:255',
+            'bio'         => 'nullable|string',
+            'country'         => 'nullable|string',
             'typecomite_id'  => 'nullable',
             'image'    => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);

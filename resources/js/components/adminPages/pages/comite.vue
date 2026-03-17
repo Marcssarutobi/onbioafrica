@@ -67,11 +67,37 @@
                     <div class="text-danger mt-1" v-if="isEmpty.typecomite_id">{{ msgInput.typecomite_id }}</div>
                 </div>
 
-                <div class="col-lg-12 mb-3">
+                <div class="col-lg-6 mb-3">
                     <label for="post" class="form-label">Affiliation</label>
                     <input type="text" class="form-control" id="post" v-model="data.affiliation">
                     <div class="text-danger mt-1" v-if="isEmpty.affiliation">{{ msgInput.affiliation }}</div>
                 </div>  
+
+                <div class="col-lg-6 mb-3">
+                    <label for="post" class="form-label">Country</label>
+                    <input type="text" class="form-control" id="post" v-model="data.country">
+                    <div class="text-danger mt-1" v-if="isEmpty.country">{{ msgInput.country }}</div>
+                </div>  
+
+                <div class="col-lg-12 mb-3">
+                    <div class="form-group">
+                        <label for="affiliation" class="mb-1">Expert session</label>
+                        <input type="text" class="form-control" :class="isEmpty.session ? 'is-invalid border border-danger' : ''" id="session" placeholder="ex: Molecular Biology and Biodiversity Conservation" v-model="data.session">
+                        <div v-if="isEmpty.session" class="invalid-feedback">
+                            {{ msgInput.session }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 mb-3">
+                    <div class="form-group">
+                        <label for="bio">Biography</label>
+                        <textarea class="form-control" id="my-editor" :class="isEmpty.bio ? 'is-invalid border border-danger' : ''" rows="5" v-model="data.bio"></textarea>
+                        <div v-if="isEmpty.bio" class="invalid-feedback">
+                            {{ msgInput.bio }}
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -85,6 +111,7 @@
     import DataTable from '../Datatable/Datatable.vue'
     import Swal from 'sweetalert2';
     import Modal from '../Modal/modal.vue';
+    import {initTinyMCE,destroyTinyMCE} from '../../plugins/tinymce';
     import { allComiters, deleteComiter, postComiter, singleComiter, updateComiter } from '../api/commiter';
     import { allTypeComite } from '../api/typecomiter';
 
@@ -93,6 +120,9 @@
         id:'',
         fullname:'',
         affiliation:'',
+        session:'',
+        country:'',
+        bio:'',
         image:'',
         typecomite_id:''
     })
@@ -113,6 +143,9 @@
             id:'',
             fullname:'',
             affiliation:'',
+            session:'',
+            country:'',
+            bio:'',
             image:'',
             typecomite_id:''
         }
@@ -341,6 +374,34 @@
     onMounted(()=>{
         AllCommitteeFunction()
         AllComiteTypeFunction()
+
+        const modal = document.getElementById('addcommittee')
+
+        if (modal) {
+            // Lorsque le modal est affiché, init TinyMCE
+            modal.addEventListener('shown.bs.modal', () => {
+                const editor = document.getElementById('my-editor');
+                if (editor) {
+                    initTinyMCE('my-editor',{
+                        height: 500,
+                        setup: (editor) => {
+                            editor.on('init', () => {
+                                editor.setContent(data.value.bio);
+                            });
+                            editor.on('change', () => {
+                                data.value.bio = editor.getContent();
+                            });
+                        }
+                    })
+                }
+            });
+
+            modal.addEventListener('hidden.bs.modal', () => {
+                destroyTinyMCE('my-editor');
+            });
+        }
+
+        
     })
 
 </script>
