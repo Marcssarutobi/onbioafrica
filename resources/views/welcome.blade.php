@@ -27,72 +27,475 @@
         <!-- tailwind css -->
         <link href="{{asset('src/output.css')}}" rel="stylesheet">
 
-        <link
+         <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-9bfef9490b20015e12c0a8e2a5c3f285.css?vsn=d"
+    >
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
         rel="stylesheet"
-        data-purpose="Layout StyleSheet"
-        title="Web Awesome"
-        href="/css/app-wa-86cd56275caec687041f80b17dc62e32.css?vsn=d"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/fontawesome.css"
       >
-  
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/fontawesome.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/whiteboard-semibold.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-thin.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/whiteboard-semibold.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/utility-fill-semibold.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-solid.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/utility-fill-semibold.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/utility-duo-semibold.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-regular.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/utility-duo-semibold.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/utility-semibold.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-light.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/utility-semibold.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/thumbprint-light.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-thin.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/thumbprint-light.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/slab-press-regular.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/slab-press-regular.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/slab-regular.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/slab-regular.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-duotone-thin.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-duotone-thin.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-duotone-solid.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-thin.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-duotone-solid.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-duotone-regular.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-regular.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-duotone-regular.css"
         >
-  
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-duotone-light.css"
+      >
+      <noscript>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-light.css"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-duotone-light.css"
         >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-thin.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-thin.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-solid.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-solid.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-regular.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-regular.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-light.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/sharp-light.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/notdog-duo-solid.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/notdog-duo-solid.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/notdog-solid.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/notdog-solid.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/jelly-fill-regular.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/jelly-fill-regular.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/jelly-duo-regular.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/jelly-duo-regular.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/jelly-regular.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/jelly-regular.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/graphite-thin.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/graphite-thin.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/etch-solid.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/etch-solid.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/duotone-thin.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/duotone-thin.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/duotone.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/duotone.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/duotone-regular.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/duotone-regular.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/duotone-light.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/duotone-light.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/thin.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/thin.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/solid.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/solid.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/regular.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/regular.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/light.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/light.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/brands.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/brands.css"
+        >
+      </noscript>
+
+      <link
+        defer
+        media="print"
+        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v7.2.0/css/chisel-regular.css"
+      >
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v7.2.0/css/chisel-regular.css"
+        >
+      </noscript>
+
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         
