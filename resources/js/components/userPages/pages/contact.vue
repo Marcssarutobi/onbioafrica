@@ -19,7 +19,7 @@
             <!-- LEFT -->
             <div class="et-contact-info">
                 <span class="et-contact-label">CONTACT</span>
-                <h2 class="et-contact-title">Conference Secretariat</h2>
+                <h2 class="et-contact-title">Symposium Secretariat</h2>
 
                 <div class="et-contact-item">
                     <span class="et-contact-icon"><i class="fa-regular fa-building"></i></span>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="et-contact-item">
-                    <span class="et-contact-icon"><i class="fa-regular fa-phone"></i></span>
+                    <span class="et-contact-icon"><i class="fa-solid fa-phone"></i></span>
                     <a href="tel:+2290196975772">+229 019 697 5772</a>
                 </div>
             </div>

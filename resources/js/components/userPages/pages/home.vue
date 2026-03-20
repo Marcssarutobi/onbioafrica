@@ -432,14 +432,14 @@
             <div class="timeline">
 
                 <div class="timeline-item">
-                    <div class="timeline-date">18 March 2026</div>
+                    <div class="timeline-date">22 March 2026</div>
                     <div class="timeline-card">
                         Call for abstracts and travel grant applications opens
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">17 April 2026</div>
+                    <div class="timeline-date">20 April 2026</div>
                     <div class="timeline-card">
                         Deadline for abstract submission and travel grant applications
                     </div>

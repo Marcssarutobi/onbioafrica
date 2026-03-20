@@ -30,7 +30,7 @@
 
             <div v-for="(comites, type) in allcommitter" :key="type">
                 <h2 class="et-section-title" style="margin-bottom: 20px; margin-top: 25px; text-align: center;">
-                    {{ type }} Committee
+                    {{ type }}
                 </h2>
 
                 <div class="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 justify-center gap-[30px] lg:gap-[20px]">
@@ -44,7 +44,7 @@
                             
                             <h5 class="font-semibold text-[22px] md:text-[20px] text-etBlack mb-[4px]"><RouterLink :to="'/singleComite/'+comite.id" class="hover:text-etBlue">{{ comite.fullname }} ({{ comite.country }})</RouterLink></h5>
                             <span class="text-etGray text-[16px]">{{ comite.affiliation }}</span> <br>
-                            <span class="text-etGray text-[16px]"><strong>Session :</strong>{{ comite.session }}</span>
+                            <span class="text-etGray text-[16px]"><strong>{{ isOrganizing(comite.typecomite.name) ? 'Post : ' : 'Session : ' }}</strong>{{ comite.session }}</span>
                         </div>
                     </div>
                 </div>
@@ -57,11 +57,15 @@
 </template>
 <script setup>
 
-    import { onMounted, ref } from 'vue';
-import { getData } from '../../plugins/api';
+    import { onMounted, ref, computed  } from 'vue';
+    import { getData } from '../../plugins/api';
 
     const allcommitter = ref([])
     const isLoader = ref(false)
+
+    const props = defineProps({
+        comite: Object
+    })
 
     async function AllCommitteeFunction(params) {
         isLoader.value = true
@@ -69,6 +73,13 @@ import { getData } from '../../plugins/api';
             isLoader.value = false
             allcommitter.value = res.data.data
         })
+    }
+
+    // Normaliser type de comité
+    function isOrganizing(typeName) {
+        if (!typeName) return false
+        const name = typeName.toLowerCase().trim()
+        return name.includes('organizing') || name.includes('organising')
     }
 
     onMounted(() => {
