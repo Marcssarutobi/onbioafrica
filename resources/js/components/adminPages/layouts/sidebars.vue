@@ -79,84 +79,84 @@
                 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins' }">
                     <RouterLink to="/admins" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-gauge"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-gauge"></i></span>
                         <span class="menu-text" data-lang="dashboards">Dashboard</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/speaker-type' }">
                     <RouterLink to="/admins/speaker-type" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-tag"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-tag"></i></span>
                         <span class="menu-text" data-lang="dashboards">Speaker Type</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/speaker' }">
                     <RouterLink to="/admins/speaker" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-microphone"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-microphone"></i></span>
                         <span class="menu-text" data-lang="dashboards">Speaker</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/program' }">
                     <RouterLink to="/admins/program" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-calendar-days"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-calendar-days"></i></span>
                         <span class="menu-text" data-lang="dashboards">Program</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/guest' }">
                         <RouterLink to="/admins/guest" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-users"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-users"></i></span>
                         <span class="menu-text" data-lang="dashboards">Guest</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/abstract' }">
                     <RouterLink to="/admins/abstract" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-file-text"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-file-text"></i></span>
                         <span class="menu-text" data-lang="dashboards">Abstract</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/travel' }">
                     <RouterLink to="/admins/travel" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-plane"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-plane"></i></span>
                         <span class="menu-text" data-lang="dashboards">Travel</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/sponsor-type' }">
                     <RouterLink to="/admins/sponsor-type" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-tag"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-tag"></i></span>
                         <span class="menu-text" data-lang="dashboards">Sponsor Type</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/sponsor' }">
                     <RouterLink to="/admins/sponsor" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-handshake-simple"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-handshake-simple"></i></span>
                         <span class="menu-text" data-lang="dashboards">Sponsor</span>
                     </RouterLink>
                 </li>
                 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/comiter-type' }">
                     <RouterLink to="/admins/comiter-type" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-tag"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-tag"></i></span>
                         <span class="menu-text" data-lang="dashboards">Comite Type</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/comite' }">
                     <RouterLink to="/admins/comite" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-user-hat-tie"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-user-graduate"></i></span>
                         <span class="menu-text" data-lang="dashboards">Comite</span>
                     </RouterLink>
                 </li>
 
                 <li class="side-nav-item" :class="{ active: $route.path === '/admins/user' }">
                     <RouterLink to="/admins/user" class="side-nav-link">
-                        <span class="menu-icon"><i class="fa-light fa-user"></i></span>
+                        <span class="menu-icon"><i class="fa-solid fa-user"></i></span>
                         <span class="menu-text" data-lang="dashboards">Users</span>
                     </RouterLink>
                 </li>

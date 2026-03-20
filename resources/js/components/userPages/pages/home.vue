@@ -211,7 +211,7 @@
                 <div class="rounded-[20px] bg-white overflow-hidden group">
                     <!-- icon -->
                     <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <i class="fa-light fa-user-group transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
+                        <i class="fa-solid fa-user-group transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
                     </div>
 
                     <!-- text -->
@@ -225,7 +225,7 @@
                 <div class="rounded-[20px] bg-white overflow-hidden group">
                     <!-- icon -->
                     <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <i class="fa-light fa-atom transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
+                        <i class="fa-solid fa-atom transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
                     </div>
 
                     <!-- text -->
@@ -239,7 +239,7 @@
                 <div class="rounded-[20px] bg-white overflow-hidden group">
                     <!-- icon -->
                     <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <i class="fa-light fa-database transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
+                        <i class="fa-solid fa-database transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
                     </div>
 
                     <!-- text -->
@@ -253,7 +253,7 @@
                 <div class="rounded-[20px] bg-white overflow-hidden group">
                     <!-- icon -->
                     <div class="w-[146px] aspect-square border-[20px] bg-etBlue border-[#EDF3FE] rounded-full rounded-tr-none ml-auto flex items-center justify-center">
-                        <i class="fa-light fa-comments transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
+                        <i class="fa-solid fa-comments transition duration-[0.4s] group-hover:-scale-x-100" style="font-size:40px; color:#fff;"></i>
                     </div>
 
                     <!-- text -->
