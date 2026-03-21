@@ -204,7 +204,10 @@ export function Main(){
     new Swiper(".et-banner-slider", {
         slidesPerView: 1,
         loop: true,
-        autoplay: true,
+        autoplay: {
+            delay: 5000, // 5 secondes entre chaque slide
+            disableOnInteraction: false
+        },
         pagination: {
             el: ".et-banner-slider-dots",
             clickable: true,
