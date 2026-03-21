@@ -25,25 +25,36 @@ class ComiterController extends Controller
     public function allComiters() {
         $data = Comiter::with('typecomite')
             ->get()
-            // 1. On trie la liste plate avant de grouper
             ->sort(function ($a, $b) {
-                $nameA = $a->typecomite->name ?? '';
-                $nameB = $b->typecomite->name ?? '';
+                $typeA = $a->typecomite->name ?? '';
+                $typeB = $b->typecomite->name ?? '';
 
-                // PRIORITÉ 1 : Le groupe "Organizing Committee" passe en haut
-                if ($nameA === 'Organizing Committee' && $nameB !== 'Organizing Committee') return -1;
-                if ($nameA !== 'Organizing Committee' && $nameB === 'Organizing Committee') return 1;
+                // --- PRIORITÉ 1 : Le groupe "Organizing Committee" en premier ---
+                if ($typeA === 'Organizing Committee' && $typeB !== 'Organizing Committee') return -1;
+                if ($typeA !== 'Organizing Committee' && $typeB === 'Organizing Committee') return 1;
 
-                // PRIORITÉ 2 : Si les types sont identiques, on trie par pays (A-Z)
-                if ($nameA === $nameB) {
+                // --- PRIORITÉ 2 : Si on est dans le même type de comité ---
+                if ($typeA === $typeB) {
+                    $isChairA = str_starts_with($a->session, 'Chair');
+                    $isChairB = str_starts_with($b->session, 'Chair');
+
+                    // Si l'un est Chair et pas l'autre, le Chair passe devant
+                    if ($isChairA && !$isChairB) return -1;
+                    if (!$isChairA && $isChairB) return 1;
+
+                    // Si les deux sont "Chair", tri par date de création (Ancienneté - ASC)
+                    if ($isChairA && $isChairB) {
+                        return strtotime($a->created_at) <=> strtotime($b->created_at);
+                    }
+
+                    // Sinon (aucun n'est Chair), tri par pays (ASC)
                     return strcmp($a->country, $b->country);
                 }
 
-                // Pour les autres types, on les laisse par défaut ou par ordre alphabétique de type
-                return strcmp($nameA, $nameB);
+                // Tri par défaut pour les autres noms de groupes (alphabétique)
+                return strcmp($typeA, $typeB);
             })
-            // 2. On groupe (l'ordre des clés du JSON suivra l'ordre des données triées)
-            ->values() // Réinitialise les index numériques avant le groupement
+            ->values()
             ->groupBy('typecomite.name');
 
         return response()->json([
