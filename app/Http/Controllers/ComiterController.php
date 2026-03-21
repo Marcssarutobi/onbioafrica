@@ -14,7 +14,7 @@ class ComiterController extends Controller
      */
     public function index()
     {
-        $comiters = Comiter::with('typecomite')->orderBy('created_at', 'desc')->get();
+        $comiters = Comiter::with('typecomite')->orderBy('country', 'asc')->get();
 
         return response()->json([
             'success' => true,
@@ -22,8 +22,30 @@ class ComiterController extends Controller
         ]);
     }
 
-    public function allComiters(){
-        $data = Comiter::with('typecomite')->orderBy('created_at', 'desc')->get()->groupBy('typecomite.name');
+    public function allComiters() {
+        $data = Comiter::with('typecomite')
+            ->get()
+            // 1. On trie la liste plate avant de grouper
+            ->sort(function ($a, $b) {
+                $nameA = $a->typecomite->name ?? '';
+                $nameB = $b->typecomite->name ?? '';
+
+                // PRIORITÉ 1 : Le groupe "Organizing Committee" passe en haut
+                if ($nameA === 'Organizing Committee' && $nameB !== 'Organizing Committee') return -1;
+                if ($nameA !== 'Organizing Committee' && $nameB === 'Organizing Committee') return 1;
+
+                // PRIORITÉ 2 : Si les types sont identiques, on trie par pays (A-Z)
+                if ($nameA === $nameB) {
+                    return strcmp($a->country, $b->country);
+                }
+
+                // Pour les autres types, on les laisse par défaut ou par ordre alphabétique de type
+                return strcmp($nameA, $nameB);
+            })
+            // 2. On groupe (l'ordre des clés du JSON suivra l'ordre des données triées)
+            ->values() // Réinitialise les index numériques avant le groupement
+            ->groupBy('typecomite.name');
+
         return response()->json([
             'success' => true,
             'data' => $data
