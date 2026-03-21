@@ -13,7 +13,7 @@ class SpeakerController extends Controller
      */
     public function index()
     {
-        $speakers = Speaker::with(['programs','typeSpeaker'])->orderBy('id','desc')->get();
+        $speakers = Speaker::with(['programs','typeSpeaker'])->orderBy('country','asc')->get();
 
         return response()->json([
             'success' => true,
@@ -22,7 +22,7 @@ class SpeakerController extends Controller
     }
 
     public function allSpeakers(){
-        $data = Speaker::with('typeSpeaker')->orderBy('id','desc')->get();
+        $data = Speaker::with('typeSpeaker')->orderBy('country', 'asc')->get();
 
         // Regroupe par type de speaker
         $speakersByType = $data->groupBy(function($speaker) {

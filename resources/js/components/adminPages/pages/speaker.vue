@@ -265,6 +265,13 @@ const columns = [
         data: 'affiliation',
     },
     {
+        title: 'Country', 
+        data: null,
+        render: (data, type, row)=>{
+            return `<span class=''>${row.country}</span>`
+        }
+    },
+    {
         title: 'Created At', data: 'created_at', render: (data, type, row) => {
             // Formater la date
             const date = new Date(row.created_at); // Assure-toi que `created_at` est au format ISO ou timestamp

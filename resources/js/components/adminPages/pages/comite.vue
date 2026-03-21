@@ -189,6 +189,13 @@
             }
         },
         {
+            title: 'Country', 
+            data: null,
+            render: (data, type, row)=>{
+                return `<span class=''>${row.country}</span>`
+            }
+        },
+        {
             title: 'Type', 
             data: null,
             render: (data, type, row)=>{
