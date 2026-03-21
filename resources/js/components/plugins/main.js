@@ -205,7 +205,7 @@ export function Main(){
         slidesPerView: 1,
         loop: true,
         autoplay: {
-            delay: 5000, // 5 secondes entre chaque slide
+            delay: 8000, // 5 secondes entre chaque slide
             disableOnInteraction: false
         },
         pagination: {
