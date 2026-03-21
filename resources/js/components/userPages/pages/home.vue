@@ -513,9 +513,9 @@
     <!-- SPONSORS & CTA SECTION START -->
     <section class="et-cta py-[130px] lg:py-[80px] md:py-[60px] relative z-[1]" style="padding: 50px 0 !important;" >
         <div class="et-1-container">
-            <!-- sponsors -->
-            <div class="flex items-center md:flex-col gap-x-[42px] gap-y-[25px] border border-[#D9D9D9] rounded-[20px] py-[30px] xxs:py-[20px] px-[34px] xxs:px-[16px] mb-[130px] lg:mb-[80px] md:mb-[60px]">
-                <!-- left -->
+            
+            <!-- <div class="flex items-center md:flex-col gap-x-[42px] gap-y-[25px] border border-[#D9D9D9] rounded-[20px] py-[30px] xxs:py-[20px] px-[34px] xxs:px-[16px] mb-[130px] lg:mb-[80px] md:mb-[60px]">
+                
                 <div class="flex xxs:flex-wrap items-end gap-[40px] xxs:gap-x-[10px] gap-y-[10px] pr-[42px] md:pr-0 border-r md:border-r-0 border-[#D9D9D9] max-w-[230px] md:max-w-full shrink-0" v-if="allsponsors.length > 0">
                     <h5 class="font-medium text-[20px] text-etBlack ">Our Sponsors</h5>
                     <a href="#" class="inline-block mb-[8px] group">
@@ -525,14 +525,13 @@
                     </a>
                 </div>
 
-                <!-- right -->
                 <div class="flex flex-wrap items-center justify-start md:justify-center gap-[30px] md:gap-[50px] w-full xxs:*:w-[40%]">
-                    <!-- single sponsor -->
+                   
                     <a v-for="(sps,index) in allsponsors" :key="index" href="#" class="group">
                         <img :src="'/storage/'+sps.logo" width="100" height="100" alt="sponsor image">
                     </a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- cta -->
             <div class="grid grid-cols-2 sm:grid-cols-1 gap-[30px]">

@@ -48,7 +48,7 @@
 
                             <ul class="et-header-submenu">
                                 <li><RouterLink to="/abouts">Abouts</RouterLink></li>
-                                <li><RouterLink to="/comitee">Local Committee</RouterLink></li>
+                                <li><RouterLink to="/comitee">Committees</RouterLink></li>
                                 <li><RouterLink to="/speaker">Speakers</RouterLink></li>
                             </ul>
                         </li>
