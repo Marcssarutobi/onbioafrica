@@ -29,32 +29,35 @@ class ComiterController extends Controller
                 $typeA = $a->typecomite->name ?? '';
                 $typeB = $b->typecomite->name ?? '';
 
-                // --- PRIORITÉ 1 : Le groupe "Organizing Committee" en premier ---
+                // 1. Priorité absolue au groupe "Organizing Committee"
                 if ($typeA === 'Organizing Committee' && $typeB !== 'Organizing Committee') return -1;
                 if ($typeA !== 'Organizing Committee' && $typeB === 'Organizing Committee') return 1;
 
-                // --- PRIORITÉ 2 : Si on est dans le même type de comité ---
+                // 2. Si les deux sont dans le même type de comité
                 if ($typeA === $typeB) {
+                    // On vérifie si la session commence par "Chair"
                     $isChairA = str_starts_with($a->session, 'Chair');
                     $isChairB = str_starts_with($b->session, 'Chair');
 
-                    // Si l'un est Chair et pas l'autre, le Chair passe devant
+                    // CAS A : L'un est Chair et l'autre non
                     if ($isChairA && !$isChairB) return -1;
                     if (!$isChairA && $isChairB) return 1;
 
-                    // Si les deux sont "Chair", tri par date de création (Ancienneté - ASC)
+                    // CAS B : Les deux (ou plus) sont des "Chairs"
+                    // On les trie entre eux par date de création (DESC - Plus récent d'abord)
                     if ($isChairA && $isChairB) {
-                        return strtotime($a->created_at) <=> strtotime($b->created_at);
+                        return strtotime($b->created_at) <=> strtotime($a->created_at);
                     }
 
-                    // Sinon (aucun n'est Chair), tri par pays (ASC)
+                    // CAS C : Aucun n'est Chair
+                    // On les trie entre eux par pays (ASC - A-Z)
                     return strcmp($a->country, $b->country);
                 }
 
-                // Tri par défaut pour les autres noms de groupes (alphabétique)
+                // 3. Tri alphabétique pour les autres types de groupes (Scientific Committee, etc.)
                 return strcmp($typeA, $typeB);
             })
-            ->values()
+            ->values() // Réinitialise les clés pour éviter des problèmes d'index dans le JSON
             ->groupBy('typecomite.name');
 
         return response()->json([
